@@ -1,0 +1,421 @@
+{%- if section.settings.fullwidth -%}
+	{%- assign container = 'container-full' -%}
+{%- elsif section.settings.max_width != blank -%}
+	{%- assign container = 'bwp-container' -%}
+{%- else -%}
+	{%- assign container = 'container' -%}
+{%- endif -%}
+
+{%- assign max_width = '' -%}
+{%- if section.settings.fullwidth == blank and section.settings.max_width != blank -%}
+	{%- capture max_width -%}style="max-width: {{ section.settings.max_width }};"{%- endcapture -%}
+{%- endif -%}
+
+{%- assign title 		= section.settings.title -%}
+{%- assign description 	= section.settings.description -%}
+{%- assign button-banner 		= section.settings.button-banner -%}
+{%- assign image_url-2 	= section.settings.url-2 -%}
+{%- assign nav = section.settings.navigation -%}
+{%- assign infinite = section.settings.infinite -%}
+{%- assign autoplay = section.settings.autoplay -%}
+{%- assign autoplay_speed = section.settings.autoplay_speed | escape -%}
+{%- assign columns = section.settings.columns -%}
+{%- assign column1440 = section.settings.column1440 -%}
+{%- assign column1 = section.settings.column1 -%}
+{%- assign column2 = section.settings.column2 -%}
+{%- assign column3 = section.settings.column3 -%}
+{%- assign column4 = section.settings.column4 -%}
+
+{%- assign effect = section.settings.effect -%}
+{% assign margin 	= section.settings.margin | split: "|" %}
+{% assign padding 	= section.settings.padding | split: "|" %}
+{%- style -%}
+	{%- if margin[0] != blank or padding[0] != blank -%}
+		#shopify-section-{{ section.id }} .kretoss-section--banner-slide{
+			{%- if margin[0] != blank -%}margin: {{ margin[0] }};{%- endif -%}
+			{%- if padding[0] != blank -%}padding:{{ padding[0] }};{%- endif -%}
+		}
+	{%- endif -%}
+	{%- if margin[1] != blank or padding[1] != blank -%}
+		@media (max-width:1200px){
+			#shopify-section-{{ section.id }} .kretoss-section--banner-slide{
+				{%- if margin[1] != blank -%}margin: {{ margin[1] }};{%- endif -%}
+				{%- if padding[1] != blank -%}padding:{{ padding[1] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+	{%- if margin[2] != blank or padding[2] != blank -%}
+		@media (max-width:991px){
+			#shopify-section-{{ section.id }} .kretoss-section--banner-slide{
+				{%- if margin[2] != blank -%}margin: {{ margin[2] }};{%- endif -%}
+				{%- if padding[2] != blank -%}padding:{{ padding[2] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+	{%- if margin[3] != blank or padding[3] != blank -%}
+		@media (max-width:767px){
+			#shopify-section-{{ section.id }} .kretoss-section--banner-slide{
+				{%- if margin[3] != blank -%}margin: {{ margin[3] }};{%- endif -%}
+				{%- if padding[3] != blank -%}padding:{{ padding[3] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+{%- endstyle -%}
+
+<section class="kretoss-section kretoss-section--banner-slide overflow-hidden">
+	<div class="{{ container }}" {{ max_width }}>
+		<div class="kretoss-section__inner">
+            <div class="heading-slide-banner">
+                {%- if title != blank -%}
+                    <h3 class="title-banner" style="color:{{ section.settings.color_title }}">{{ title }}</h3>
+                {%- endif -%}
+                {%- if description != blank -%}
+                    <div class="bwp-image-description" style="color:{{ section.settings.color_description }}">{{ description }}</div>
+                {%- endif -%}
+                {%- if button-banner != blank -%}
+                    <a class="bwp-button {{ section.settings.style_button-1 }}" href="{{ image_url-2 }}"><span>{{ button-banner }}</span></a>
+                {%- endif -%}
+            </div>
+			<div class="kretoss-section__content bwp_slider-carousel bwp_slick-margin-mobile">
+				{%- if section.blocks.size > 0 -%}
+					<div class="js-carousel slick-carousel"  data-nav="{{ nav }}" data-infinite="{{ infinite }}" data-autoplay="{{ autoplay }}"
+						data-autoplayspeed="{{ autoplay_speed }}"
+						data-columns="{{ columns }}"
+						data-column1440="{{ column1440 }}"
+						data-column1="{{ column1 }}"
+						data-column2="{{ column2 }}"
+						data-column3="{{ column3 }}"
+						data-column4="{{ column4 }}">
+						{%- for block in section.blocks -%}
+							{%- assign image 		= block.settings.image -%}
+							{%- assign image_url 	= block.settings.url -%}
+							{%- assign button 		= block.settings.button -%}
+							{%- assign color_bg 	= block.settings.color_bg -%}
+							<div class="col-banner banner-{{ forloop.index }}">
+								<div class="featured-banner {{ effect }}" style="background-color: {{ color_bg }};">
+									<div class="bwp-image" >
+										<a href="{{ image_url }}">
+											{%- if image != blank -%}
+												{% include 'img-global' with image: image, class: "featured-banner__img", effect: "fade-in" %}
+                                            {%- else -%}
+							                    <img class="lazyload fade-in" src="https://placehold.jp/416x488.png" />
+											{%- endif -%}
+										</a>
+									</div>
+									<div class="banner-wrapper-infor" style="{{ content_custome }}">
+										<div class="info">
+											<div class="content">
+												{%- if button != blank -%}
+													<a class="bwp-button {{ block.settings.style_button }}" href="{{ image_url }}"><span>{{ button }}</span></a>
+												{%- endif -%}
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						{%- endfor -%}
+					</div>
+				{%- endif -%}
+			</div>
+		</div>
+	</div>
+</section>
+{% schema %}
+{
+  "name": "Kretoss Slide Banner",
+  "class": "kretoss-framework",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout settings"
+    },
+    {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+    },
+    {
+        "type": "color",
+        "id": "color_title",
+        "label": "Color Title",
+        "default": "#000000"
+    },
+    {
+        "type": "textarea",
+        "id": "description",
+        "label": "Description"
+    },
+    {
+        "type": "color",
+        "id": "color_description",
+        "label": "Color Description",
+        "default": "#000000"
+    },
+    {
+        "type": "url",
+        "id": "url-2",
+        "label": "Button URL",
+        "default": "/"
+    },
+    {
+        "type": "text",
+        "id": "button-banner",
+        "label": "button"
+    },
+    {
+        "type": "select",
+        "id": "style_button-1",
+        "label": "Style Button",
+        "options": [
+            {
+                "value": "style_1",
+                "label": "Style 1"
+            },
+            {
+                "value": "style_2",
+                "label": "Style 2"
+            },
+            {
+                "value": "style_3",
+                "label": "Style 3"
+            }
+        ],
+        "default": "style_1"
+    },
+    {
+		"type": "text",
+		"id": "max_width",
+		"label": "Width container",
+		"info": "Default: 1440px"
+	},
+	{
+		"type": "checkbox",
+		"id": "fullwidth",
+		"label": "Fullwidth"
+	},
+	{
+		"type": "text",
+		"id": "padding",
+		"label": "Padding",
+		"placeholder": "0px 0px 0px 0px",
+		"info":"Screen: desktop | 1200px | 991px | 767px"
+	},
+	{
+		"type": "text",
+		"id": "margin",
+		"label": "Margin",
+		"placeholder": "0px 0px 0px 0px",
+		"info":"Screen: desktop | 1200px | 991px | 767px"
+	},
+    {
+      "type": "header",
+      "content": "General Settings"
+    },
+    {
+      "type": "header",
+      "content": "Carousel Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "navigation",
+      "label": "Show navigation",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "infinite",
+      "label": "Infinite loop sliding",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Enable autoplay",
+      "default": false
+    },
+    {
+        "type": "select",
+        "id": "effect",
+        "options": [
+            {
+                "value": "none",
+                "label": "None"
+            },
+            {
+                "value": "effect-one",
+                "label": "Zoom in"
+            },
+            {
+                "value": "effect-two",
+                "label": "Zoom out"
+            },
+            {
+                "value": "effect-three",
+                "label": "Shine"
+            },
+            {
+                "value": "effect-four",
+                "label": "White outline"
+            }
+        ],
+        "label": "Effect",
+        "default": "none"
+    },
+    {
+      "type": "text",
+      "id": "autoplay_speed",
+      "label": "Autoplay speed",
+      "info": "Autoplay speed in milliseconds. Type: int(ms)",
+      "default": "10000"
+    },
+    {
+		"type": "range",
+		"id": "columns",
+		"min": 1,
+		"max": 5,
+		"step": 1,
+		"label": "Number of Columns >1440px",
+		"default": 4,
+		"info": "Desktops"
+	},
+	{
+		"type": "range",
+		"id": "column1440",
+		"min": 1,
+		"max": 5,
+		"step": 1,
+		"label": "Number of Columns 1200px to 1440px",
+		"default": 4,
+		"info": "Desktops"
+	},
+	{
+		"type": "range",
+		"id": "column1",
+		"min": 1,
+		"max": 5,
+		"step": 1,
+		"label": "Number of Columns on 992px to 1199px",
+		"default": 4,
+		"info": "Desktops"
+	},
+	{
+		"type": "range",
+		"id": "column2",
+		"min": 1,
+		"max": 5,
+		"step": 1,
+		"label": "Number of Columns on 768px to 991px",
+		"default": 3,
+		"info": "Laptop"
+	},
+	{
+		"type": "range",
+		"id": "column3",
+		"min": 1,
+		"max": 5,
+		"step": 1,
+		"label": "Number of Columns on 480px to 767px",
+		"default": 1,
+		"info": "Tablets"
+	},
+	{
+		"type": "range",
+		"id": "column4",
+		"min": 1,
+		"max": 5,
+		"step": 1,
+		"label": "Number of Columns in 480px or less than",
+		"default": 1,
+		"info": "Mobile phone"
+	}
+  ],
+  "blocks": [
+   {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+            {
+                "type": "url",
+                "id": "url",
+                "label": "Image URL",
+                "default": "/"
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "color",
+                "id": "color_bg",
+                "label": "Background color",
+                "default": "#f5f5f5"
+            },
+            {
+                "type": "text",
+                "id": "button",
+                "label": "button"
+            },
+            {
+                "type": "select",
+                "id": "style_button",
+                "label": "Style Button",
+                "options": [
+                    {
+                        "value": "style_1",
+                        "label": "Style 1"
+                    },
+                    {
+                        "value": "style_2",
+                        "label": "Style 2"
+                    },
+                    {
+                        "value": "style_3",
+                        "label": "Style 3"
+                    }
+                ],
+                "default": "style_1"
+            },
+            {
+                "type": "header",
+                "content": "Box settings"
+            },
+            {
+                "type": "text",
+                "id": "padding_image",
+                "label": "Padding item",
+                "default": "0 15px",
+                "info":"Screen: desktop | 1200px | 991px | 767px"
+            },
+            {
+                "type": "text",
+                "id": "width_image",
+                "label": "Width item",
+                "default": "100%",
+                "info":"Screen: desktop | 1200px | 991px | 767px"
+            }
+        ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Kretoss Slide Banner",
+      "category": "2. Image",
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

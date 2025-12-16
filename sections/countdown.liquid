@@ -1,0 +1,335 @@
+{%- if section.settings.fullwidth -%}
+	{%- assign container = 'container-full' -%}
+{%- elsif section.settings.max_width != blank -%}
+	{%- assign container = 'bwp-container' -%}
+{%- else -%}
+	{%- assign container = 'container' -%}
+{%- endif -%}
+
+{%- assign max_width = '' -%}
+{%- if section.settings.fullwidth == blank and section.settings.max_width != blank -%}
+	{%- capture max_width -%}style="max-width: {{ section.settings.max_width }};"{%- endcapture -%}
+{%- endif -%}
+
+{%- assign bg_setting = '' -%}
+{%- if section.settings.bg_image != blank -%}
+	{%- capture bg_setting -%}
+		background-position:{{ section.settings.bg_position }};background-size:{{ section.settings.bg_size }};
+		{%- if section.settings.bg_fixed != blank -%}
+			background-attachment: fixed;
+		{%- endif -%}
+	{%- endcapture -%}
+{%- endif -%}
+
+{%- assign bg_full = '' -%}
+{%- if section.settings.bg_image != blank and section.settings.bg_width == 'full' -%}
+	{%- capture bg_full -%}
+		style="background-image: url('{{ section.settings.bg_image | img_url: ''}}');{{ bg_setting }}"
+	{%- endcapture -%}
+{%- endif -%}
+
+{%- assign bg_content = '' -%}
+{%- if section.settings.bg_image != blank and section.settings.bg_width == 'content' -%}
+	{%- capture bg_content -%}
+		style="background-image: url('{{ section.settings.bg_image | img_url: ''}}');{{ bg_setting }}"
+	{%- endcapture -%}
+{%- endif -%}
+
+{%- assign color_bg = section.settings.color_bg -%}
+{%- assign title 		= section.settings.title -%}
+{%- assign button 		= section.settings.button -%}
+{%- assign product 		= all_products[section.settings.product] -%}
+{%- assign variant 				= product.selected_or_first_available_variant -%}
+{%- assign variant_count 		= product.variants | size -%} 
+{%- assign button 		= section.settings.button -%}
+{%- assign image_url 	= section.settings.url -%}
+
+{%- assign effect = section.settings.effect -%}
+{%- assign image 		= section.settings.image -%}
+{% assign margin 	= section.settings.margin | split: "|" %}
+{% assign padding 	= section.settings.padding | split: "|" %}
+{%- assign heading = section.settings.heading -%}
+{%- assign final_date = section.settings.final_date | escape -%}
+{%- style -%}
+	{%- if margin[0] != blank or padding[0] != blank or section.settings.align_text != blank -%}
+		#shopify-section-{{ section.id }} .bwp-widget-heading{
+			{%- if margin[0] != blank -%}margin: {{ margin[0] }};{%- endif -%}
+			{%- if padding[0] != blank -%}padding:{{ padding[0] }};{%- endif -%}
+			{%- if section.settings.align_text != blank -%}text-align:{{ section.settings.align_text }};{%- endif -%}
+		}
+	{%- endif -%}
+	{%- if margin[1] != blank or padding[1] != blank -%}
+		@media (max-width:1200px){
+			#shopify-section-{{ section.id }} .bwp-widget-heading{
+				{%- if margin[1] != blank -%}margin: {{ margin[1] }};{%- endif -%}
+				{%- if padding[1] != blank -%}padding:{{ padding[1] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+	{%- if margin[2] != blank or padding[2] != blank -%}
+		@media (max-width:991px){
+			#shopify-section-{{ section.id }} .bwp-widget-heading{
+				{%- if margin[2] != blank -%}margin: {{ margin[2] }};{%- endif -%}
+				{%- if padding[2] != blank -%}padding:{{ padding[2] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+	{%- if margin[3] != blank or padding[3] != blank -%}
+		@media (max-width:767px){
+			#shopify-section-{{ section.id }} .bwp-widget-heading{
+				{%- if margin[3] != blank -%}margin: {{ margin[3] }};{%- endif -%}
+				{%- if padding[3] != blank -%}padding:{{ padding[3] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+{%- endstyle -%}
+
+{%- if section.settings.show -%}
+<section class="kretoss-section bwp-widget-heading bwp-countdown kretoss-section--{{ section.id }}" {{ bg_full }} style="background-color: {{ color_bg }};">
+	<div class="{{ container }}" {{ max_width }}>
+		<div class="kretoss-section__content" {{ bg_content }}>
+			<div class="bwp-image {{ effect }}" >
+				<a href="{{ image_url }}">
+					{%- if image -%}
+						<img class="featured-banner__img lazyload fade-in" src="{{ image | img_url: 'master' }}" alt="{{ image.alt | escape }}"/>
+					{%- else -%}
+						{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+					{%- endif -%}
+				</a>
+			</div>
+			<div class="kretoss-section-countdown__content">
+				<div class="countdown-content">
+					{%- if heading != blank -%}
+						  <h3 class="kretoss-title__heading">{{ heading }}</h3>
+					{%- endif -%}
+					<h3 class="product-title"><a href="{{ product.url }}">{{ product.title }}</a></h3>
+					<div class="product-card__price">
+						<div class="product-group-price">
+							{% if group_product == blank %}
+								{%- if variant_count > 1 -%}
+									<div class="product-price product-price--regular">{{ product.compare_at_price | money }}</div>
+								{%- endif -%}
+								{%- if variant_count > 1 -%}
+									<div class="product-price variant-price">{{ variant.price | money }}</div>
+								{%- else -%}
+									<div class="product-price">{{ product.price | money_without_trailing_zeros }}</div>
+								{%- endif -%}
+								{%- if product.price_varies == false and variant.unit_price_measurement -%}
+									{%- capture unit_price_separator -%}
+										<span>/</span><span class="d-none">&nbsp;{{ 'general.accessibility.unit_price_separator' | t }}&nbsp;</span>
+									{%- endcapture -%}
+									{%- capture unit_price_base_unit -%}
+										<span>
+											{%- if variant.unit_price_measurement.reference_value != 1 -%}
+												{{- variant.unit_price_measurement.reference_value -}}
+											{%- endif -%}
+											{{ variant.unit_price_measurement.reference_unit }}
+										</span>
+									{%- endcapture -%}
+									<span class="product-unit-price">
+										<span class="d-none">{{ 'products.general.unit_price' | t }}</span>
+										<span>{{ variant.unit_price | money }}</span>{{- unit_price_separator -}}{{- unit_price_base_unit -}}
+									</span>
+								{%- endif -%}
+							{%- else -%}
+								<div class="product-price">
+									{% assign group_product_array	= group_product | split: "," %}
+									{% for group_ids in group_product_array %}
+										{% assign product_id = group_ids | plus: 0 %}
+										{% for product in collections.all.products %}
+											{%- if product.id == product_id -%}
+												{%- for variant in product.variants -%}
+													{% assign prices =  prices | append: variant.price | append: ',' %}
+												{% endfor %}
+											{%- endif -%}
+										{% endfor %}
+									{% endfor %}
+									{% assign operator_prices	= prices | split: "," %}
+									{% assign min_price = operator_prices[0] | plus: 0 %}
+									{% assign max_price = operator_prices[0] | plus: 0 %}
+									{% for operator_price in operator_prices %}
+										{% assign operator = operator_price | plus: 0 %}
+										{% assign min_price		 = min_price | plus: 0 %}
+										{% assign max_price		 = max_price | plus: 0 %}
+										{% if operator < min_price %}
+											{% assign min_price = operator %}
+										{% endif %}
+										{% if operator > max_price %}
+											{% assign max_price = operator %}
+										{% endif %}		
+									{% endfor %}
+									{{  min_price | money_without_trailing_zeros }} - {{  max_price | money_without_trailing_zeros }}
+								</div>
+							{%- endif -%}
+						</div>
+					</div>
+					<div class="countdown" data-countdown="{{ final_date }}"></div>
+					{%- if button != blank -%}
+						<a class="bwp-button {{ block.settings.style_button }}" href="{{ image_url }}">{{ button }}</a>
+					{%- endif -%}
+				</div>	
+			</div>
+		</div>
+	</div>
+</section>
+{%- endif -%}
+
+{% schema %}
+{
+	"name": "Countdown",
+	"class": "kretoss-framework",
+	"settings": [
+		{
+			"type": "header",
+			"content": "Layout settings"
+		},
+		{
+			"type": "checkbox",
+			"id": "show",
+			"label": "Show Heading",
+			"default": true
+		},
+		{
+			"type": "image_picker",
+			"id": "bg_image",
+			"label": "Background Image"
+		},
+    {
+      "type": "color",
+      "id": "color_bg",
+      "label": "Background color",
+      "default": "#f5f5f5"
+    },
+		{
+			"type": "checkbox",
+			"id": "bg_fixed",
+			"label": "Background Fixed"
+		},
+		{
+			"type": "text",
+			"id": "bg_position",
+			"label": "Background position",
+			"default": "center"
+		},
+		{
+			"type": "text",
+			"id": "bg_size",
+			"label": "Background size",
+			"default": "cover"
+		},
+    {
+			"type": "select",
+			"id": "effect",
+			"options": [
+				{
+					"value": "none",
+					"label": "None"
+				},
+				{
+					"value": "effect-one",
+					"label": "Zoom in"
+				},
+				{
+					"value": "effect-two",
+					"label": "Zoom out"
+				},
+				{
+					"value": "effect-three",
+					"label": "Shine"
+				},
+				{
+					"value": "effect-four",
+					"label": "White outline"
+				}
+			],
+			"label": "Effect",
+			"default": "none"
+		},
+		{
+			"type": "select",
+			"id": "bg_width",
+			"label": "Background Width",
+			"options": [
+				{
+					"value": "full",
+					"label": "full"
+				},
+				{
+					"value": "content",
+					"label": "Content"
+				}
+			],
+			"default": "full"
+		},
+		{
+			"type": "text",
+			"id": "max_width",
+			"label": "Width container",
+			"info": "Default: 1440px"
+		},
+		{
+			"type": "checkbox",
+			"id": "fullwidth",
+			"label": "Fullwidth"
+		},
+		{
+			"type": "product",
+			"id": "product",
+			"label": "Product"
+		},
+		{
+			"type": "image_picker",
+			"id": "image",
+			"label": "Image"
+		},
+		{
+			"type": "text",
+			"id": "padding",
+			"label": "Padding",
+			"placeholder": "0px 0px 0px 0px",
+			"info":"Screen: desktop | 1200px | 991px | 767px"
+		},
+		{
+			"type": "text",
+			"id": "margin",
+			"label": "Margin",
+			"placeholder": "0px 0px 0px 0px",
+			"info":"Screen: desktop | 1200px | 991px | 767px"
+		},
+		{
+			"type": "header",
+			"content": "General Settings"
+		},
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Countdown"
+    },
+    {
+      "type": "text",
+      "id": "final_date",
+      "label": "Final date",
+      "info": "Format: yyyy/MM/dd hh:mm:ss",
+      "default": "2021/01/01 00:00:00"
+    },
+	{
+		"type": "text",
+		"id": "button",
+		"label": "button"
+	},
+	{
+		"type": "url",
+		"id": "url",
+		"label": "button URL",
+		"default": "/"
+	}
+	],
+  "presets": [
+		{
+			"name": "Kretoss Countdown",
+			"category": "4. Countdown"
+		}
+	]
+}
+{% endschema %}

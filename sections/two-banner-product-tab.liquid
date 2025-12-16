@@ -1,0 +1,577 @@
+{%- if section.settings.fullwidth -%}
+	{%- assign container = 'container-full' -%}
+{%- elsif section.settings.max_width != blank -%}
+	{%- assign container = 'bwp-container' -%}
+{%- else -%}
+	{%- assign container = 'container' -%}
+{%- endif -%}
+
+{%- assign max_width = '' -%}
+{%- if section.settings.fullwidth == blank and section.settings.max_width != blank -%}
+	{%- capture max_width -%}style="max-width: {{ section.settings.max_width }};"{%- endcapture -%}
+{%- endif -%}
+
+{% assign margin 	= section.settings.margin | split: "|" %}
+{% assign padding 	= section.settings.padding | split: "|" %}
+{%- style -%}
+	{%- if margin[0] != blank or padding[0] != blank -%}
+		#shopify-section-{{ section.id }} .kretoss-section--two-banner-product-tab{
+			{%- if margin[0] != blank -%}margin: {{ margin[0] }};{%- endif -%}
+			{%- if padding[0] != blank -%}padding:{{ padding[0] }};{%- endif -%}
+		}
+	{%- endif -%}
+	{%- if margin[1] != blank or padding[1] != blank -%}
+		@media (max-width:1200px){
+			#shopify-section-{{ section.id }} .kretoss-section--two-banner-product-tab{
+				{%- if margin[1] != blank -%}margin: {{ margin[1] }};{%- endif -%}
+				{%- if padding[1] != blank -%}padding:{{ padding[1] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+	{%- if margin[2] != blank or padding[2] != blank -%}
+		@media (max-width:991px){
+			#shopify-section-{{ section.id }} .kretoss-section--two-banner-product-tab{
+				{%- if margin[2] != blank -%}margin: {{ margin[2] }};{%- endif -%}
+				{%- if padding[2] != blank -%}padding:{{ padding[2] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+	{%- if margin[3] != blank or padding[3] != blank -%}
+		@media (max-width:767px){
+			#shopify-section-{{ section.id }} .kretoss-section--two-banner-product-tab{
+				{%- if margin[3] != blank -%}margin: {{ margin[3] }};{%- endif -%}
+				{%- if padding[3] != blank -%}padding:{{ padding[3] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+{%- endstyle -%}
+
+{%- assign heading = section.settings.heading -%}
+{%- assign image 		= section.settings.image -%}
+{%- assign title 		= section.settings.title -%}
+{%- assign subtitle		= section.settings.sub_title -%}
+{%- assign description 	= section.settings.description -%}
+{%- assign button 		= section.settings.button -%}
+{%- assign image_url 	= section.settings.url -%}
+{%- assign image-bottom 		= section.settings.image-bottom -%}
+{%- assign title-bottom 		= section.settings.title-bottom -%}
+{%- assign subtitle-bottom		= section.settings.sub_title-bottom -%}
+{%- assign description-bottom 	= section.settings.description-bottom -%}
+{%- assign button-bottom 		= section.settings.button-bottom -%}
+{%- assign row = section.settings.row -%}
+{%- assign effect = section.settings.effect -%}
+{%- assign carousel = section.settings.carousel | escape -%}
+{%- assign grid_style = section.settings.grid_style | escape -%}
+{%- assign collection_handle = section.settings.featured_products -%}
+{%- assign nav = section.settings.navigation -%}
+{%- assign infinite = section.settings.infinite -%}
+{%- assign autoplay = section.settings.autoplay -%}
+{%- assign autoplay_speed = section.settings.autoplay_speed | escape -%}
+{%- assign columns = section.settings.columns -%}
+{%- assign column1440 = section.settings.column1440 -%}
+{%- assign column1 = section.settings.column1 -%}
+{%- assign column2 = section.settings.column2 -%}
+{%- assign column3 = section.settings.column3 -%}
+{%- assign column4 = section.settings.column4 -%}
+
+<section class="kretoss-section--two-banner-product-tab product-tabs two-banner-product-tab overflow-hidden" style="{{ margin }}">
+  <div class="{{ container }}" {{ max_width }}>
+    <div class="kretoss-section__inner">
+      {%- if section.blocks.size > 0 -%}
+			<div class="content-banner">
+				<div class="featured-banner-top {{ effect }}">
+					<div class="bwp-image" >
+						<a href="{{ image_url }}">
+							{%- if image -%}
+								{% include 'img-global' with image: image, class: "featured-banner__img", effect: "fade-in" %}
+							{%- else -%}
+								{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+							{%- endif -%}
+						</a>
+					</div>
+					<div class="banner-wrapper-infor" style="{{ content_custome }}">
+						<div class="info">
+							<div class="content">
+								{%- if subtitle != blank -%}
+									<div class="bwp-image-subtitle" style="color:{{ section.settings.color_sub_title }}">{{ subtitle }}</div>
+								{%- endif -%}
+								{%- if title != blank -%}
+									<h3 class="title-banner" style="color:{{ section.settings.color_title }}">{{ title }}</h3>
+								{%- endif -%}
+								{%- if description != blank -%}
+									<div class="bwp-image-description" style="color:{{ section.settings.color_description }}">{{ description }}</div>
+								{%- endif -%}
+								{%- if button != blank -%}
+									<a class="bwp-button {{ section.settings.style_button }}" href="{{ image_url }}"><span>{{ button }}</span></a>
+								{%- endif -%}
+							</div>
+						</div>
+					</div>
+				</div>
+                <div class="featured-banner-bottom {{ effect }}">
+					<div class="bwp-image" >
+						<a href="{{ image_url }}">
+							{%- if image-bottom -%}
+								<img class="featured-banner__img lazyload fade-in" src="{{ image-bottom | img_url: 'master' }}" alt="{{ image-bottom.alt | escape }}"/>
+							{%- endif -%}
+						</a>
+					</div>
+					<div class="banner-wrapper-infor" style="{{ content_custome }}">
+						<div class="info">
+							<div class="content">
+								{%- if subtitle-bottom != blank -%}
+									<div class="bwp-image-subtitle" style="color:{{ section.settings.color_sub_title-bottom }}">{{ subtitle-bottom }}</div>
+								{%- endif -%}
+								{%- if title-bottom != blank -%}
+									<h3 class="title-banner" style="color:{{ section.settings.color_title-bottom }}">{{ title-bottom }}</h3>
+								{%- endif -%}
+								{%- if description-bottom != blank -%}
+									<div class="bwp-image-description" style="color:{{ section.settings.color_description-bottom }}">{{ description-bottom }}</div>
+								{%- endif -%}
+								{%- if button-bottom != blank -%}
+									<a class="bwp-button {{ section.settings.style_button }}" href="{{ image_url }}"><span>{{ button-bottom }}</span></a>
+								{%- endif -%}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	  {%- endif -%}
+      <div class="kretoss-section__content">
+        {%- if section.blocks.size > 0 -%}
+			<div class="tab-heading">
+                {%- if heading != blank -%}
+                    <div class="kretoss-title{% if settings.show_title_bg %} kretoss-title--bg-img{% endif %}">
+                        <h3 class="kretoss-title__heading">{{ heading }}</h3>
+                    </div>
+                {%- endif -%}
+				<ul class="nav two-banner-product-tab__nav">
+					{%- for block in section.blocks -%}
+					{%- assign tab_heading =  block.settings.title | escape -%}
+					<li class="nav-item two-banner-product-tab__nav-item">
+						<a class="two-banner-product-tab__nav-link product-tabs__nav-link{% if forloop.first %} active{% endif %}"
+						data-toggle="tab"
+						href="#two-banner-product-tab-{{ section.id }}{{ forloop.index }}">
+						{{ tab_heading }}
+						</a>
+					</li>
+					{%- endfor -%}
+				</ul>
+			</div>
+          <div class="tab-content two-banner-product-tab__content">
+            {%- for block in section.blocks -%}
+              {%- assign collection_handle = block.settings.collection -%}
+              {%- assign limit = block.settings.limit | plus: 0 -%}
+              <div class="tab-pane fade{% if forloop.first %} show active{% endif %}"
+                id="two-banner-product-tab-{{ section.id }}{{ forloop.index }}">
+                {%- if grid_style == 'carousel' -%}
+                 <div class="js-carousel slick-carousel bwp_slider-carousel bwp_slick-margin-mobile" data-nav="{{ nav }}" data-infinite="{{ infinite }}" data-autoplay="{{ autoplay }}"
+                  data-autoplayspeed="{{ autoplay_speed }}"
+                  data-columns="{{ columns }}"
+                  data-column1440="{{ column1440 }}"
+                  data-column1="{{ column1 }}"
+                  data-column2="{{ column2 }}"
+                  data-column3="{{ column3 }}"
+                  data-column4="{{ column4 }}">
+                    {%- assign j = 1 -%}
+						{%- if collection_handle == blank or collections[collection_handle] == empty or collections[collection_handle].products_count == 0 -%}
+							{% include 'onboarding-featured-products' %}
+						{%- else -%}
+							{%- for product in collections[collection_handle].products limit: limit -%}
+								{%- assign modulo = j | modulo:row -%}
+									{%- if modulo == 1 or row == 1 -%}
+										<div class="slick-carousel__item">
+									{%- endif -%}
+										{% include 'product-grid-item' %}
+									{%- if modulo == 0 or forloop.last == true or row == 1 -%}
+										</div>
+									{%- endif -%}
+								{%- assign j = j | plus: 1 -%}
+							{%- endfor -%}
+						{%- endif -%}
+				</div>
+                {%- endif -%}
+              </div>
+            {%- endfor -%}
+          </div>
+        {%- else -%}
+          <div class="kretoss-section__empty">
+            <div class="rte text-center">
+              {{ 'home_page.onboarding.no_content' | t }}
+            </div>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Two Banner Product Tabs",
+  "class": "kretoss-framework",
+  "settings": [
+    {
+		"type": "header",
+		"content": "Layout settings"
+	},
+	{
+		"type": "text",
+		"id": "max_width",
+		"label": "Width container",
+		"info": "Default: 1440px"
+	},
+	{
+		"type": "checkbox",
+		"id": "fullwidth",
+		"label": "Fullwidth"
+	},
+	{
+		"type": "text",
+		"id": "padding",
+		"label": "Padding",
+		"placeholder": "0px 0px 0px 0px",
+		"info":"Screen: desktop | 1200px | 991px | 767px"
+	},
+	{
+		"type": "text",
+		"id": "margin",
+		"label": "Margin",
+		"placeholder": "0px 0px 0px 0px",
+		"info":"Screen: desktop | 1200px | 991px | 767px"
+	},
+    {
+      "type": "header",
+      "content": "General Settings"
+    },
+    {
+		"type": "text",
+		"id": "heading",
+		"label": "Heading"
+	},
+	{
+		"type": "url",
+		"id": "url",
+		"label": "Image URL",
+		"default": "/"
+	},
+	{
+		"type": "image_picker",
+		"id": "image",
+		"label": "Image"
+	},
+    {
+		"type": "text",
+		"id": "sub_title",
+		"label": "Sub Title"
+	},
+	{
+		"type": "color",
+		"id": "color_sub_title",
+		"label": "Color Sub Title",
+		"default": "#000000"
+	},
+	{
+		"type": "text",
+		"id": "title",
+		"label": "Title"
+	},
+	{
+		"type": "color",
+		"id": "color_title",
+		"label": "Color Title",
+		"default": "#000000"
+	},
+	{
+		"type": "textarea",
+		"id": "description",
+		"label": "Description"
+	},
+	{
+		"type": "color",
+		"id": "color_description",
+		"label": "Color Description",
+		"default": "#000000"
+	},
+	{
+		"type": "text",
+		"id": "button",
+		"label": "button"
+	},
+	{
+		"type": "select",
+		"id": "style_button",
+		"label": "Style Button",
+		"options": [
+			{
+				"value": "style_1",
+				"label": "Style 1"
+			},
+			{
+				"value": "style_2",
+				"label": "Style 2"
+			},
+			{
+				"value": "style_3",
+				"label": "Style 3"
+			}
+		],
+		"default": "style_1"
+	},
+	{
+		"type": "select",
+		"id": "effect",
+		"options": [
+			{
+				"value": "none",
+				"label": "None"
+			},
+			{
+				"value": "effect-one",
+				"label": "Zoom in"
+			},
+			{
+				"value": "effect-two",
+				"label": "Zoom out"
+			},
+			{
+				"value": "effect-three",
+				"label": "Shine"
+			},
+			{
+				"value": "effect-four",
+				"label": "White outline"
+			}
+		],
+		"label": "Effect",
+		"default": "none"
+	},
+    {
+		"type": "image_picker",
+		"id": "image-bottom",
+		"label": "Image Bottom"
+	},
+    {
+		"type": "text",
+		"id": "sub_title-bottom",
+		"label": "Sub Title Bottom"
+	},
+	{
+		"type": "color",
+		"id": "color_sub_title-bottom",
+		"label": "Color Sub Title Bottom",
+		"default": "#000000"
+	},
+	{
+		"type": "text",
+		"id": "title-bottom",
+		"label": "Title Bottom"
+	},
+	{
+		"type": "color",
+		"id": "color_title-bottom",
+		"label": "Color Title Bottom",
+		"default": "#000000"
+	},
+	{
+		"type": "textarea",
+		"id": "description-bottom",
+		"label": "Description Bottom"
+	},
+	{
+		"type": "color",
+		"id": "color_description-bottom",
+		"label": "Color Description bottom",
+		"default": "#000000"
+	},
+	{
+		"type": "text",
+		"id": "button-bottom",
+		"label": "button bottom"
+	},
+	{
+		"type": "select",
+		"id": "style_button-bottom",
+		"label": "Style Button bottom",
+		"options": [
+			{
+				"value": "style_1",
+				"label": "Style 1"
+			},
+			{
+				"value": "style_2",
+				"label": "Style 2"
+			},
+			{
+				"value": "style_3",
+				"label": "Style 3"
+			}
+		],
+		"default": "style_1"
+	},
+	{
+		"type": "header",
+		"content": "Content settings"
+	},
+    {
+      "type": "select",
+      "id": "grid_style",
+      "options": [
+        {
+          "value": "grid",
+          "label": "Grid"
+        },
+        {
+          "value": "carousel",
+          "label": "Carousel"
+        }
+      ],
+      "label": "Grid style",
+      "default": "carousel"
+    },
+    {
+      "type": "header",
+      "content": "Carousel Settings"
+    },
+    {
+		"type": "checkbox",
+		"id": "navigation",
+		"label": "Show navigation",
+		"default": true
+	},
+	{
+		"type": "checkbox",
+		"id": "infinite",
+		"label": "Infinite loop sliding",
+		"default": true
+	},
+	{
+		"type": "checkbox",
+		"id": "autoplay",
+		"label": "Enable autoplay",
+		"default": false
+	},
+	{
+		"type": "text",
+		"id": "autoplay_speed",
+		"label": "Autoplay speed",
+		"info": "Autoplay speed in milliseconds. Type: int(ms)",
+		"default": "10000"
+	},
+	{
+		"type": "range",
+		"id": "row",
+		"min": 1,
+		"max": 5,
+		"step": 1,
+		"label": "Row of section",
+		"default": 1
+	},
+	{
+		"type": "range",
+		"id": "columns",
+		"min": 1,
+		"max": 5,
+		"step": 1,
+		"label": "Number of Columns >1440px",
+		"default": 4,
+		"info": "Desktops"
+	},
+	{
+		"type": "range",
+		"id": "column1440",
+		"min": 1,
+		"max": 5,
+		"step": 1,
+		"label": "Number of Columns 1200px to 1440px",
+		"default": 4,
+		"info": "Desktops"
+	},
+	{
+		"type": "range",
+		"id": "column1",
+		"min": 1,
+		"max": 5,
+		"step": 1,
+		"label": "Number of Columns on 992px to 1199px",
+		"default": 4,
+		"info": "Desktops"
+	},
+	{
+		"type": "range",
+		"id": "column2",
+		"min": 1,
+		"max": 5,
+		"step": 1,
+		"label": "Number of Columns on 768px to 991px",
+		"default": 3,
+		"info": "Laptop"
+	},
+	{
+		"type": "range",
+		"id": "column3",
+		"min": 1,
+		"max": 5,
+		"step": 1,
+		"label": "Number of Columns on 480px to 767px",
+		"default": 1,
+		"info": "Tablets"
+	},
+	{
+		"type": "range",
+		"id": "column4",
+		"min": 1,
+		"max": 5,
+		"step": 1,
+		"label": "Number of Columns in 480px or less than",
+		"default": 1,
+		"info": "Mobile phone"
+	}
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Tab heading"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "range",
+          "id": "limit",
+          "min": 1,
+          "max": 20,
+          "step": 1,
+          "label": "Number of products",
+          "default": 8
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Two Banner Product Tabs",
+      "category": "3. Product",
+      "blocks": [
+        {
+          "type": "tab"
+        },
+        {
+          "type": "tab"
+        },
+        {
+          "type": "tab"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
