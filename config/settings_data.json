@@ -1070,23 +1070,23 @@
               "padding_mobi": "6% 0% 15% 0%"
             }
           },
-          "03cc337b-9cb5-4423-aa88-0bcd9642d25a": {
-            "type": "sub_title",
+          "title_6HVaVk": {
+            "type": "title",
             "settings": {
               "slide_name": "slider-1",
-              "title": "Skincare for<br> a glowy and healthy skin.",
-              "color": "#000000",
-              "font_size": 70,
-              "line_height": 84,
+              "title": "Your Beauty, Your Rules",
+              "color": "#ffffff",
+              "font_size": 60,
+              "line_height": 70,
               "letter_spacing": 0,
-              "font_weight": "500",
-              "margin": "0px 0px 40px 0px",
+              "font_weight": "300",
+              "margin": "0px 0px 0px 0px",
               "effect": "leftright",
-              "color_mobi": "#000000",
+              "color_mobi": "#ffffff",
               "font_size_mobi": 30,
-              "line_height_mobi": 40,
+              "line_height_mobi": 35,
               "letter_spacing_mobi": 0,
-              "margin_mobi": "0px 0px 20px 0px"
+              "margin_mobi": "0px 0px 0px 0px"
             }
           },
           "7fa8645b-1f9b-4b6f-b190-9a2d463d20d7": {
@@ -1130,7 +1130,7 @@
         },
         "block_order": [
           "c2401729-4a54-4ae2-8087-2a46cd13738c",
-          "03cc337b-9cb5-4423-aa88-0bcd9642d25a",
+          "title_6HVaVk",
           "7fa8645b-1f9b-4b6f-b190-9a2d463d20d7"
         ],
         "settings": {
