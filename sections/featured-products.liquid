@@ -63,7 +63,7 @@
 		}
 	{%- endif -%}
 {%- endstyle -%}
-<section class="kretoss-section kretoss-section--products kretoss-section--{{ section.id }}">
+<section class="kretoss-section kretoss-section--products kretoss-section--{{ section.id }} {{ section.settings.custom_class }}">
 	<div class="{{ container }}" {{ max_width }}>
 		<div class="kretoss-section__inner">
 			{%- if heading != blank -%}
