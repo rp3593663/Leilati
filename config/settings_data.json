@@ -1152,7 +1152,7 @@
             "settings": {
               "title": "slider-2",
               "image": "shopify://shop_images/slider2.png",
-              "image_mobi": "shopify://shop_images/mobile_mg.png",
+              "image_mobi": "shopify://shop_images/slider-mobile2.png",
               "product": "luxe-leave-in-conditioner",
               "size_img": "contain",
               "pos_img": "center_center",
