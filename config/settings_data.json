@@ -1238,8 +1238,8 @@
               "size_description": 16,
               "color_description": "#6b6765",
               "align": "center",
-              "padding_content": "0px",
-              "padding_image": "0 15px",
+              "padding_content": "0 15px",
+              "padding_image": "0px",
               "width_image": "25%"
             }
           },
@@ -1257,8 +1257,8 @@
               "size_description": 16,
               "color_description": "#6b6765",
               "align": "center",
-              "padding_content": "0px",
-              "padding_image": "0 15px",
+              "padding_content": "0 15px",
+              "padding_image": "0",
               "width_image": "25%"
             }
           },
@@ -1276,8 +1276,8 @@
               "size_description": 16,
               "color_description": "#6b6765",
               "align": "center",
-              "padding_content": "0px",
-              "padding_image": "0 15px",
+              "padding_content": "0 15px",
+              "padding_image": "0",
               "width_image": "25%"
             }
           },
@@ -1295,8 +1295,8 @@
               "size_description": 16,
               "color_description": "#6b6765",
               "align": "center",
-              "padding_content": "0px",
-              "padding_image": "0 15px",
+              "padding_content": "0 15px",
+              "padding_image": "0",
               "width_image": "25%"
             }
           }
