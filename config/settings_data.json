@@ -49,6 +49,8 @@
     "select_columns": "grid-3",
     "sortby_enable": true,
     "select_pagination": "loadmore",
+    "show_compare": false,
+    "sortby_variants": false,
     "product_vendor_enable": false,
     "product_card_review": true,
     "product_atc_mobile": true,
