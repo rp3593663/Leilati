@@ -6373,10 +6373,17 @@ $prefixes: ("-moz-", "");
 			display: flex;
 			gap: 20px;
 			align-items: center;
+      @media(max-width: 767px){
+        gap: 15px;
+      }
 			.slideshow-product-bar__img{
 				position: relative;
 				padding-top: 38%;
     		width: 80px;
+        @media(max-width: 767px){
+          padding-top: 32%;
+          width: 60px;
+        }
 				img{
 					position: absolute;
 					width: 100%;
