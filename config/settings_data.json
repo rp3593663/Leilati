@@ -1274,9 +1274,9 @@
           "color_arrow_hover": "#ffffff",
           "border_dots": "0px 0px 0px 0px",
           "border_radius_dots": "50%",
-          "bg_dots": "#999085",
+          "bg_dots": "#ffffff",
           "border_color_dots": "rgba(0,0,0,0)",
-          "bg_dots_hover": "#000000",
+          "bg_dots_hover": "#ffffff",
           "border_color_dots_hover": "rgba(0,0,0,0)"
         }
       },
