@@ -1316,11 +1316,40 @@
           "padding": "",
           "margin": "60px 0px | | | 30px 0px"
         }
+      },
+      "featured_products_qgDe7q": {
+        "type": "featured-products",
+        "name": "Kretoss products list",
+        "settings": {
+          "max_width": "",
+          "fullwidth": false,
+          "padding": "",
+          "margin": "",
+          "title": "",
+          "button": "",
+          "style_button": "style_1",
+          "url": "/",
+          "featured_products": "featured-products",
+          "limit": 8,
+          "navigation": true,
+          "pagination": true,
+          "infinite": true,
+          "autoplay": false,
+          "autoplay_speed": "10000",
+          "row": 1,
+          "columns": 4,
+          "column1440": 4,
+          "column1": 4,
+          "column2": 3,
+          "column3": 1,
+          "column4": 1
+        }
       }
     },
     "content_for_index": [
       "166452443683aa5d29",
-      "featured_policy_Nq6TKE"
+      "featured_policy_Nq6TKE",
+      "featured_products_qgDe7q"
     ]
   }
 }
