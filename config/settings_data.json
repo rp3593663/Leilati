@@ -1052,6 +1052,7 @@
             "settings": {
               "title": "slider-1",
               "image": "shopify://shop_images/slider1.png",
+              "product": "all-in-one-facial-oil",
               "size_img": "contain",
               "pos_img": "center_center",
               "caption_width": "",
