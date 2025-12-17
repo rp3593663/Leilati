@@ -6407,11 +6407,11 @@ $prefixes: ("-moz-", "");
     .slideshow-product-bar__right {
       max-width: 500px;
       text-align: right;
+      @media(max-width:991px){
+        display: none;
+      }
       .slideshow-product-bar__desc {
           color: #FFF;
-          @media(max-width:991px){
-            display: none;
-          }
       }
       a.slideshow-product-bar__btn {
           color: #FFF;
