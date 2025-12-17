@@ -234,6 +234,48 @@
 								</div>
 							</div>
 						</div>
+						{% if block.settings.product != blank %}
+							{% assign product = all_products[block.settings.product] %}
+							{% if product %}
+								<div class="slideshow-product-bar">
+								<div class="slideshow-product-bar__inner">
+
+									<div class="slideshow-product-bar__left">
+									<a href="{{ product.url }}">
+										<img
+										src="{{ product.featured_image | img_url: '200x' }}"
+										alt="{{ product.title | escape }}"
+										loading="lazy"
+										>
+									</a>
+									</div>
+
+									<div class="slideshow-product-bar__center">
+									<h3 class="slideshow-product-bar__title">
+										<a href="{{ product.url }}">{{ product.title }}</a>
+									</h3>
+
+									<div class="slideshow-product-bar__price">
+										{{ product.price | money }}
+									</div>
+
+									{% if product.description != blank %}
+										<div class="slideshow-product-bar__desc">
+										{{ product.description | strip_html | truncate: 120 }}
+										</div>
+									{% endif %}
+									</div>
+
+									<div class="slideshow-product-bar__right">
+									<a href="{{ product.url }}" class="slideshow-product-bar__btn">
+										SHOP NOW
+									</a>
+									</div>
+
+								</div>
+								</div>
+							{% endif %}
+						{% endif %}
 					</div>
 				{%- endif -%}
 			{%- endfor -%}
