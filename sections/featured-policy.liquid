@@ -119,7 +119,7 @@
 	}
 {%- endstyle -%}
 
-<section class="kretoss-section bwp-widget-policy kretoss-section--{{ section.id }} overflow-hidden" style="background-color: {{ color_bg }};">
+<section class="kretoss-section bwp-widget-policy kretoss-section--{{ section.id }} overflow-hidden {{ section.settings.custom_class }}" style="background-color: {{ color_bg }};">
 	<div class="{{ container }}" {{ max_width }}>
 		<div class="kretoss-section__inner">
 			<div class="kretoss-section__content">
@@ -178,6 +178,11 @@
 	"name": "Kretoss Policy",
 	"class": "kretoss-framework",
 	"settings": [
+		{
+			"type": "text",
+			"id": "custom_class",
+			"label": "Custom Class"
+		},
 		{
 			"type": "header",
 			"content": "Layout settings"
