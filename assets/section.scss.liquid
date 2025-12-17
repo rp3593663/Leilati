@@ -676,7 +676,11 @@ $prefixes: ("-moz-", "");
 			bottom: 15px;
 		}
 		li {
-			padding: 0 6px;
+			padding: 0 4px;
+      display: flex;
+      @media(max-width:767px){
+        padding: 0 3px;
+      }
 		}
 	}
 	&:not(.slick-initialized) .kretoss-slideshow__item  {
