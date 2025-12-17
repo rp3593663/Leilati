@@ -1327,9 +1327,13 @@ html{
 		display: flex;
 		&.slick-active {
 			button {
-				background-color: $secondary;
+				background-color: #000;
 				width: 12px;
 				height: 12px;
+				@media(max-width:767px){
+					width: 12px;
+					height: 12px;
+				}
 			}
 		}
 	}
