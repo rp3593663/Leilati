@@ -9,12 +9,12 @@
  */
 {
   "current": {
-    "theme-color": "#617559",
-    "color_secondary": "#a0a0a0",
+    "theme-color": "#9d7d62",
+    "color_secondary": "#f9f2e1",
     "text-color": "#868686",
     "color_border": "#e7e7e7",
     "color_footer_text": "#6d6d6d",
-    "color_footer_text_hover": "#617559",
+    "color_footer_text_hover": "#9d7d62",
     "select-font-second": "google",
     "font-family-second-google-link": "<link href=\"https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap\" rel=\"stylesheet\">",
     "font-family-second-google": "Quattrocento",
