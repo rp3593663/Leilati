@@ -855,7 +855,7 @@
           "23ef5a9e-a1eb-427c-a447-31f77dbb6477"
         ],
         "settings": {
-          "show_topbar": true,
+          "show_topbar": false,
           "header-topbar_absolute": false,
           "background-top-color": "rgba(0,0,0,0)",
           "max_width": "1740px",
@@ -1278,7 +1278,7 @@
         "settings": {
           "padding": "20px 0",
           "header_sticky": true,
-          "header_absolute": false,
+          "header_absolute": true,
           "color_homepage_text": "#ffffff",
           "logo": "shopify://shop_images/logo.png",
           "logo_homepage": "shopify://shop_images/logo.png",
