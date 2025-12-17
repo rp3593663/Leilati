@@ -1321,9 +1321,10 @@
         "type": "featured-products",
         "name": "Kretoss products list",
         "settings": {
+          "custom_class": "home_products",
           "max_width": "",
           "fullwidth": false,
-          "padding": "",
+          "padding": "60px 0px | | | 30px 0px",
           "margin": "",
           "title": "",
           "button": "",
