@@ -1084,7 +1084,7 @@
               "margin": "0px 0px 0px 0px",
               "effect": "leftright",
               "color_mobi": "#ffffff",
-              "font_size_mobi": 30,
+              "font_size_mobi": 28,
               "line_height_mobi": 35,
               "letter_spacing_mobi": 0,
               "margin_mobi": "0px 0px 0px 0px"
@@ -1103,10 +1103,10 @@
               "margin": "15px 0px 30px 0px",
               "effect": "leftright",
               "color_mobi": "#ffffff",
-              "font_size_mobi": 15,
-              "line_height_mobi": 18,
+              "font_size_mobi": 16,
+              "line_height_mobi": 24,
               "letter_spacing_mobi": 0,
-              "margin_mobi": "0px 0px 0px 0px"
+              "margin_mobi": "10px 0px 10px 0px"
             }
           },
           "7fa8645b-1f9b-4b6f-b190-9a2d463d20d7": {
@@ -1132,13 +1132,13 @@
               "padding": "0px 40px 0px 40px",
               "effect": "leftright",
               "font_size_mobi": 12,
-              "line_height_mobi": 40,
+              "line_height_mobi": 36,
               "letter_spacing_mobi": 0.5,
-              "border_mobi": false,
+              "border_mobi": true,
               "border_radius_mobi": "0px 0px 0px 0px",
-              "border_width_mobi": 0,
-              "color_mobi": "#ffffff",
-              "background_mobi": "#000000",
+              "border_width_mobi": 1,
+              "color_mobi": "#000000",
+              "background_mobi": "rgba(0,0,0,0)",
               "border_color_mobi": "#ffffff",
               "color_hover_mobi": "#ffffff",
               "background_hover_mobi": "#000000",
