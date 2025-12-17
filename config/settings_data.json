@@ -1240,7 +1240,7 @@
               "align": "center",
               "padding_content": "0 15px",
               "padding_image": "0px",
-              "width_image": "25%"
+              "width_image": "25% | 25% | 50% | 100%"
             }
           },
           "image_EdgaFJ": {
@@ -1259,7 +1259,7 @@
               "align": "center",
               "padding_content": "0 15px",
               "padding_image": "0",
-              "width_image": "25%"
+              "width_image": "25% | 25% | 50% | 100%"
             }
           },
           "image_UKwU6L": {
@@ -1278,7 +1278,7 @@
               "align": "center",
               "padding_content": "0 15px",
               "padding_image": "0",
-              "width_image": "25%"
+              "width_image": "25% | 25% | 50% | 100%"
             }
           },
           "image_jQxkpn": {
@@ -1297,7 +1297,7 @@
               "align": "center",
               "padding_content": "0 15px",
               "padding_image": "0",
-              "width_image": "25%"
+              "width_image": "25% | 25% | 50% | 100%"
             }
           }
         },
