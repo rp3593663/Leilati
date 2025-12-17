@@ -1331,7 +1331,7 @@
           "url": "/",
           "featured_products": "featured-products",
           "limit": 8,
-          "navigation": true,
+          "navigation": false,
           "pagination": true,
           "infinite": true,
           "autoplay": false,
