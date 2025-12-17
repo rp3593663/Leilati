@@ -24,7 +24,7 @@
     "font-family-base-google-link": "<link href=\"https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap\" rel=\"stylesheet\">",
     "font-family-base-google": "Jost",
     "font-family-base": "jost_n4",
-    "font-size-base": 15,
+    "font-size-base": 16,
     "layout_header": "1",
     "color_header_text": "#1f2021",
     "color_header_bg": "#ffffff",
