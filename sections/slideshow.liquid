@@ -22,6 +22,7 @@
 			border-color:{{ section.settings.border_color_dots }};
 			border-style:solid;
 			background:{{ section.settings.bg_dots }};
+			opacity: 0.6;
 		}
 		#shopify-section-{{ section.id }} .kretoss-slideshow .slick-dots button:hover{
 			border-color:{{ section.settings.border_color_dots_hover }};
@@ -30,6 +31,7 @@
 		#shopify-section-{{ section.id }} .kretoss-slideshow .slick-dots li.slick-active button{
 			border-color:{{ section.settings.border_color_dots_hover }};
 			background:{{ section.settings.bg_dots_hover }};
+			opacity: 1;
 		}
 	{%- endif -%}
 	{% assign min_height_slider 	= section.settings.min_height_slider | split: "|" %}
