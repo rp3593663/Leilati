@@ -53,7 +53,7 @@
     "product_card_review": true,
     "product_atc_mobile": true,
     "quickview_enable_mobile": true,
-    "hover_style": "hover_style_1",
+    "hover_style": "hover_style_4",
     "image_hover": "transform",
     "preload_product_image_logo": "moric",
     "quickview_enable": true,
