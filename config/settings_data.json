@@ -1089,6 +1089,25 @@
               "margin_mobi": "0px 0px 0px 0px"
             }
           },
+          "description_hMRRXk": {
+            "type": "description",
+            "settings": {
+              "slide_name": "slider-1",
+              "dest": "Explore Our Curated Collections – Skincare, Makeup &amp; More for Every Look.",
+              "color": "#ffffff",
+              "font_size": 20,
+              "line_height": 20,
+              "letter_spacing": 0,
+              "font_weight": "300",
+              "margin": "0px 0px 0px 0px",
+              "effect": "leftright",
+              "color_mobi": "#ffffff",
+              "font_size_mobi": 15,
+              "line_height_mobi": 18,
+              "letter_spacing_mobi": 0,
+              "margin_mobi": "0px 0px 0px 0px"
+            }
+          },
           "7fa8645b-1f9b-4b6f-b190-9a2d463d20d7": {
             "type": "button",
             "settings": {
@@ -1131,6 +1150,7 @@
         "block_order": [
           "c2401729-4a54-4ae2-8087-2a46cd13738c",
           "title_6HVaVk",
+          "description_hMRRXk",
           "7fa8645b-1f9b-4b6f-b190-9a2d463d20d7"
         ],
         "settings": {
