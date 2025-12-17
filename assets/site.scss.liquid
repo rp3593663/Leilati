@@ -1325,14 +1325,17 @@ html{
 	li {
 		padding: 0 4px;
 		display: flex;
+		@media(max-width:767px){
+			padding: 0 3px;
+		}
 		&.slick-active {
 			button {
 				background-color: $theme-color;
 				width: 12px;
 				height: 12px;
 				@media(max-width:767px){
-					width: 10px;
-					height: 10px;
+					width: 8px;
+					height: 8px;
 				}
 			}
 		}
@@ -1348,8 +1351,8 @@ html{
 		transition: all .2s ease;
 		position: relative;
 		@media(max-width:767px){
-			width: 8px;
-			height: 8px;
+			width: 6px;
+			height: 6px;
 		}
 		&:hover,
 		&:focus {
