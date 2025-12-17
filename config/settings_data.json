@@ -1051,7 +1051,8 @@
             "type": "image",
             "settings": {
               "title": "slider-1",
-              "size_img": "cover",
+              "image": "shopify://shop_images/slider1.png",
+              "size_img": "contain",
               "pos_img": "center_center",
               "caption_width": "",
               "vertical_align": "middle",
