@@ -11,7 +11,7 @@
 	{%- capture max_width -%}style="max-width: {{ section.settings.max_width }};"{%- endcapture -%}
 {%- endif -%}
 
-{%- assign heading = section.settings.title | escape -%}
+{%- assign heading = section.settings.title -%}
 {%- assign button 		= section.settings.button -%}
 {%- assign image_url 	= section.settings.url -%}
 {%- assign row = section.settings.row -%}
