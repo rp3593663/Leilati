@@ -7167,8 +7167,14 @@ body:not(.template-page,.template-index){
 }
 .product-card__name {
 	font-size: 18px;
-    margin: 0 0 8px;
+    margin: 0 0 6px;
     font-weight: 500;
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 	a {
 		transition: color .3s ease;
 		color: $gray-dark;
