@@ -66,7 +66,7 @@
 
           {% if section.settings.main_image %}
             <img class="lazyload fade-in about_img"
-              src="{{ section.settings.main_image | image_url: width: 800 }}"
+              src="{{ section.settings.main_image | image_url }}"
               alt=""
             >
           {% endif %}
@@ -76,7 +76,7 @@
         <div class="content_block">
           {% if section.settings.icon_image %}
             <img class="lazyload fade-in about_icon"
-              src="{{ section.settings.icon_image | image_url: width: 100 }}"
+              src="{{ section.settings.icon_image | image_url }}"
               alt=""
             >
           {% endif %}
@@ -97,7 +97,7 @@
 
         {% if section.settings.star_image %}
           <img class="lazyload fade-in about_star"
-            src="{{ section.settings.star_image | image_url: width: 150 }}"
+            src="{{ section.settings.star_image | image_url }}"
             alt=""
           >
         {% endif %}
