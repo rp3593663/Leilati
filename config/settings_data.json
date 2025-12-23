@@ -1392,7 +1392,7 @@
           "color_bg": "#ffffff",
           "max_width": "",
           "fullwidth": false,
-          "padding": "180px 0px 80px | 140px 0px 60px | | 100px 0px 40px",
+          "padding": "180px 0px 80px | 140px 0px 60px | 140px 0px 60px | 100px 0px 40px",
           "margin": "-20px 0px 0px"
         }
       }
