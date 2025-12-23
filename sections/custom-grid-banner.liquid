@@ -1,0 +1,125 @@
+{%- if section.settings.fullwidth -%}
+	{%- assign container = 'container-full' -%}
+{%- elsif section.settings.max_width != blank -%}
+	{%- assign container = 'bwp-container' -%}
+{%- else -%}
+	{%- assign container = 'container' -%}
+{%- endif -%}
+
+{%- assign max_width = '' -%}
+{%- if section.settings.fullwidth == blank and section.settings.max_width != blank -%}
+	{%- assign width_container = section.settings.max_width | plus: 0 -%}
+	{%- capture max_width -%}style="max-width: {{ section.settings.max_width }};"{%- endcapture -%}
+{%- endif -%}
+
+{%- assign color_bg = section.settings.color_bg -%}
+{% assign margin 	= section.settings.margin | split: "|" %}
+{% assign padding 	= section.settings.padding | split: "|" %}
+{%- style -%}
+	{%- if margin[0] != blank or padding[0] != blank -%}
+		#shopify-section-{{ section.id }} .kretoss-section--custom-grid-banner{
+			{%- if margin[0] != blank -%}margin: {{ margin[0] }};{%- endif -%}
+			{%- if padding[0] != blank -%}padding:{{ padding[0] }};{%- endif -%}
+		}
+	{%- endif -%}
+	{%- if margin[1] != blank or padding[1] != blank -%}
+		@media (max-width:1200px){
+			#shopify-section-{{ section.id }} .kretoss-section--custom-grid-banner{
+				{%- if margin[1] != blank -%}margin: {{ margin[1] }};{%- endif -%}
+				{%- if padding[1] != blank -%}padding:{{ padding[1] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+	{%- if margin[2] != blank or padding[2] != blank -%}
+		@media (max-width:991px){
+			#shopify-section-{{ section.id }} .kretoss-section--custom-grid-banner{
+				{%- if margin[2] != blank -%}margin: {{ margin[2] }};{%- endif -%}
+				{%- if padding[2] != blank -%}padding:{{ padding[2] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+	{%- if margin[3] != blank or padding[3] != blank -%}
+		@media (max-width:767px){
+			#shopify-section-{{ section.id }} .kretoss-section--custom-grid-banner{
+				{%- if margin[3] != blank -%}margin: {{ margin[3] }};{%- endif -%}
+				{%- if padding[3] != blank -%}padding:{{ padding[3] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+
+{%- endstyle -%}
+
+<section class="kretoss-section kretoss-section--custom-grid-banner kretoss-section--{{ section.id }} overflow-hidden {{ section.settings.custom_class }}" style="background-color: {{ color_bg }};">
+    <img class="lazyload fade-in about_shadow" src="https://cdn.shopify.com/s/files/1/0656/8352/1634/files/about_shadow.png?v=1766478389">
+	<div class="{{ container }}" {{ max_width }}>
+		<div class="kretoss-section__inner">
+			<div class="unique_about_inner">
+                <div class="img_block">
+                    <img class="lazyload fade-in about_svg" src="https://cdn.shopify.com/s/files/1/0656/8352/1634/files/about_svg1.svg?v=1766478387">
+                    <img class="lazyload fade-in about_img" src="https://cdn.shopify.com/s/files/1/0656/8352/1634/files/about_image.png?v=1766478388">
+                </div>
+                <div class="content_block">
+                    <img class="lazyload fade-in about_icon" src="https://cdn.shopify.com/s/files/1/0656/8352/1634/files/about_beautyicon.svg?v=1766479070" alt="Beauty Icon">
+                    <h2>You can find your own <span>Beauty</span></h2>
+                    <p>At Leilati, beauty is more than skin deep - it's a daily ritual of care, confidence, and self-expression. We bring you a curated range of Face Care, Body Care, Men's Care, Hair Care, Lip Gloss, and Makeup products, designed to nourish your skin and enhance your natural glow.</p>
+                    <a href="#" class="explore_btn">Explore More</a>
+                </div> 
+                <img class="lazyload fade-in about_star" src="https://cdn.shopify.com/s/files/1/0656/8352/1634/files/about_star.svg?v=1766478387">
+            </div>
+		</div>
+	</div>
+</section>
+
+{% schema %}
+{
+	"name": "Custom Grid Banner",
+	"class": "kretoss-custom-grid-banner",
+	"settings": [
+		{
+			"type": "header",
+			"content": "Layout settings"
+		},
+		{
+			"type": "text",
+			"id": "custom_class",
+			"label": "Custom Class"
+		},
+        {
+            "type": "color",
+            "id": "color_bg",
+            "label": "Background color",
+            "default": "#f5f5f5"
+        },
+		{
+			"type": "text",
+			"id": "max_width",
+			"label": "Width container",
+			"info": "Default: 1440px"
+		},
+		{
+			"type": "checkbox",
+			"id": "fullwidth",
+			"label": "Fullwidth"
+		},
+		{
+			"type": "text",
+			"id": "padding",
+			"label": "Padding",
+			"placeholder": "0px 0px 0px 0px",
+			"info":"Screen: desktop | 1200px | 991px | 767px"
+		},
+		{
+			"type": "text",
+			"id": "margin",
+			"label": "Margin",
+			"placeholder": "0px 0px 0px 0px",
+			"info":"Screen: desktop | 1200px | 991px | 767px"
+		}
+	],
+	"presets": [
+		{
+			"name": "Unique About",
+		}
+	]
+}
+{% endschema %}
