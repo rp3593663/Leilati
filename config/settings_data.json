@@ -1414,7 +1414,7 @@
           "color_bg": "rgba(0,0,0,0)",
           "max_width": "",
           "fullwidth": false,
-          "padding": "",
+          "padding": "60px 0px | | | 30px 0px",
           "margin": ""
         }
       }
