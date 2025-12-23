@@ -1383,13 +1383,26 @@
           "marquee_loop": 20,
           "marquee_time": 4
         }
+      },
+      "unique_about_mamAn4": {
+        "type": "unique-about",
+        "name": "Unique About",
+        "settings": {
+          "custom_class": "",
+          "color_bg": "#f5f5f5",
+          "max_width": "",
+          "fullwidth": false,
+          "padding": "",
+          "margin": ""
+        }
       }
     },
     "content_for_index": [
       "166452443683aa5d29",
       "featured_policy_Nq6TKE",
       "featured_products_qgDe7q",
-      "featured_marquee_rmgecg"
+      "featured_marquee_rmgecg",
+      "unique_about_mamAn4"
     ]
   }
 }
