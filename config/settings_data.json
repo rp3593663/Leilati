@@ -1392,8 +1392,8 @@
           "color_bg": "#ffffff",
           "max_width": "",
           "fullwidth": false,
-          "padding": "",
-          "margin": "80px 0px | | | 40px 0px"
+          "padding": "80px 0px | | | 40px 0px",
+          "margin": ""
         }
       }
     },
