@@ -1405,6 +1405,18 @@
           "padding": "180px 0px 80px | 140px 0px 60px | 140px 0px 60px | 100px 0px 40px",
           "margin": "-20px 0px 0px"
         }
+      },
+      "custom_grid_banner_Cp9TJG": {
+        "type": "custom-grid-banner",
+        "name": "Custom Grid Banner",
+        "settings": {
+          "custom_class": "",
+          "color_bg": "#f5f5f5",
+          "max_width": "",
+          "fullwidth": false,
+          "padding": "",
+          "margin": ""
+        }
       }
     },
     "content_for_index": [
@@ -1412,7 +1424,8 @@
       "featured_policy_Nq6TKE",
       "featured_products_qgDe7q",
       "featured_marquee_rmgecg",
-      "unique_about_mamAn4"
+      "unique_about_mamAn4",
+      "custom_grid_banner_Cp9TJG"
     ]
   }
 }
