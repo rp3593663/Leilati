@@ -1374,6 +1374,7 @@
         ],
         "name": "Kretoss marquee",
         "settings": {
+          "custom_class": "home_marquee",
           "color_bg": "#9d7d62",
           "max_width": "",
           "fullwidth": true,
