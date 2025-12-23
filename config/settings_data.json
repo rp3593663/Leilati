@@ -53,7 +53,7 @@
     "sortby_variants": false,
     "product_vendor_enable": false,
     "product_card_review": true,
-    "product_atc_mobile": true,
+    "product_atc_mobile": false,
     "quickview_enable_mobile": true,
     "hover_style": "hover_style_4",
     "image_hover": "transform",
