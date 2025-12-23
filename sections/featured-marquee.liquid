@@ -92,7 +92,7 @@
 	}
 {%- endstyle -%}
 
-<section class="kretoss-section kretoss-section--title-marquee kretoss-section--{{ section.id }} overflow-hidden" style="background-color: {{ color_bg }};">
+<section class="kretoss-section kretoss-section--title-marquee kretoss-section--{{ section.id }} overflow-hidden {{ section.settings.custom_class }}" style="background-color: {{ color_bg }};">
 	<div class="{{ container }}" {{ max_width }}>
 		<div class="kretoss-section__inner">
 			{%- for block in section.blocks -%}
@@ -129,6 +129,11 @@
 		{
 			"type": "header",
 			"content": "Layout settings"
+		},
+		{
+			"type": "text",
+			"id": "custom_class",
+			"label": "Custom Class"
 		},
         {
             "type": "color",
