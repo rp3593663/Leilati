@@ -4342,6 +4342,7 @@ $prefixes: ("-moz-", "");
 		white-space: nowrap;
 		margin: 0;
 		padding: 0;
+		gap: 50px;
 		li{
 			padding: 0 17px;
 			display: flex;
@@ -4350,6 +4351,11 @@ $prefixes: ("-moz-", "");
 			animation-timing-function: linear;
 			animation-iteration-count: infinite;
 			animation-duration: var(--time);
+			.home_marquee_info {
+				display: flex;
+				align-items: center;
+				gap: 50px;
+			}
 		}
 		&:hover{
 			li{
@@ -6477,3 +6483,5 @@ $prefixes: ("-moz-", "");
     }
 	}
 }
+
+
