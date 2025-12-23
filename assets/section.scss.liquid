@@ -6528,6 +6528,10 @@ $prefixes: ("-moz-", "");
 		gap: 30px;
 		align-items: center;
 		position: relative;
+		@media only screen and (max-width: 1199px) and (min-width: 992px)  {
+			gap: 0px;
+			width: calc(100% - 30px);
+		}
 		.img_block{
 			position: relative;
 			.about_svg {
