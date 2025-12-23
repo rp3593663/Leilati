@@ -1347,12 +1347,48 @@
           "column3": 1,
           "column4": 1
         }
+      },
+      "featured_marquee_rmgecg": {
+        "type": "featured-marquee",
+        "blocks": {
+          "title_cQqEwf": {
+            "type": "title",
+            "settings": {
+              "title": "<div class=\"home_marquee_info\">\n  <img src=\"https://cdn.shopify.com/s/files/1/0656/8352/1634/files/marquee_star.svg?v=1766476846\" class=\"marquee_star\">\n  <div class=\"marquee-content\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0656/8352/1634/files/icon_marquee.svg?v=1766476766\" alt=\"Marquee Icon\" class=\"marquee_icon\">\n    <p>Elevate Your Natural Beauty</p>\n  </div>\n</div>",
+              "color": "#ffffff",
+              "font_size": 16,
+              "line_height": 24,
+              "letter_spacing": 0,
+              "font_weight": "500",
+              "margin": "0px 0px 0px 0px",
+              "color_mobi": "#ffffff",
+              "font_size_mobi": 15,
+              "line_height_mobi": 22,
+              "letter_spacing_mobi": 0,
+              "margin_mobi": "0px 0px 0px 0px"
+            }
+          }
+        },
+        "block_order": [
+          "title_cQqEwf"
+        ],
+        "name": "Kretoss marquee",
+        "settings": {
+          "color_bg": "#9d7d62",
+          "max_width": "",
+          "fullwidth": true,
+          "padding": "10px 0px 0px",
+          "margin": "",
+          "marquee_loop": 20,
+          "marquee_time": 4
+        }
       }
     },
     "content_for_index": [
       "166452443683aa5d29",
       "featured_policy_Nq6TKE",
-      "featured_products_qgDe7q"
+      "featured_products_qgDe7q",
+      "featured_marquee_rmgecg"
     ]
   }
 }
