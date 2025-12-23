@@ -6654,5 +6654,11 @@ $prefixes: ("-moz-", "");
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr; 
 		gap: 20px;
+		.inner_banner_box{
+			&:first-child{
+			    grid-column: span 2;
+    			grid-row: span 2;
+			}
+		}
 	}
 }
