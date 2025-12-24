@@ -1408,14 +1408,58 @@
       },
       "custom_grid_banner_Cp9TJG": {
         "type": "custom-grid-banner",
+        "blocks": {
+          "banner_wmKJRN": {
+            "type": "banner",
+            "settings": {
+              "image": "shopify://shop_images/custom_banner1.png",
+              "title": "Body Care",
+              "link": "#"
+            }
+          },
+          "banner_6hq838": {
+            "type": "banner",
+            "settings": {
+              "image": "shopify://shop_images/custom_banner2.png",
+              "title": "Hair Care",
+              "link": "#"
+            }
+          },
+          "banner_e7zTic": {
+            "type": "banner",
+            "settings": {
+              "image": "shopify://shop_images/custom_banner3.png",
+              "title": "Makeup",
+              "link": "#"
+            }
+          },
+          "banner_QMhbR7": {
+            "type": "banner",
+            "settings": {
+              "image": "shopify://shop_images/custom_banner4.png",
+              "title": "Men Care",
+              "link": "#"
+            }
+          }
+        },
+        "block_order": [
+          "banner_wmKJRN",
+          "banner_6hq838",
+          "banner_e7zTic",
+          "banner_QMhbR7"
+        ],
         "name": "Custom Grid Banner",
         "settings": {
+          "heading": "Shop by",
+          "heading_highlight": "Category",
           "custom_class": "",
           "color_bg": "rgba(0,0,0,0)",
           "max_width": "",
           "fullwidth": false,
           "padding": "60px 0px | | | 30px 0px",
-          "margin": ""
+          "margin": "",
+          "view_all_text": "View All",
+          "view_all_link": "shopify://collections"
         }
       }
     },
