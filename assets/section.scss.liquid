@@ -6607,7 +6607,7 @@ $prefixes: ("-moz-", "");
 			}
 			a.explore_btn {
 				display: inline-block;
-				font-family: 'DashielFine';
+				font-family: $font-family-second;
 				font-weight: 600;
 				font-size: 17px;
 				line-height: 100%;
@@ -6685,6 +6685,10 @@ $prefixes: ("-moz-", "");
 					justify-content: space-between;
 					width: calc(100% - 80px);
 					z-index: 1;
+					a.content_title {
+						font-family: $font-family-second;
+						color: $white;
+					}
 				}
 			}
 			&:first-child{
