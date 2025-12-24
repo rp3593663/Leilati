@@ -6804,6 +6804,23 @@ $prefixes: ("-moz-", "");
 			overflow: hidden;
 		}
 	}
+	.after_before_content {
+		padding: 60px 0px 60px 60px;
+		display: grid;
+		gap: 60px;
+		h2 {
+			font-size: 40px;
+			font-weight: 400;
+			margin: 0px;
+			@media(max-width: 767px){
+				font-size: 28px;
+			}
+			span{
+				color: $theme-color;
+				font-weight: 700;
+			}
+		}
+	}
 	.after_before_card {
 		position: relative;
 		overflow: hidden;
