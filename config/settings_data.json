@@ -1326,8 +1326,8 @@
           "custom_class": "home_best_sellers",
           "max_width": "",
           "fullwidth": false,
-          "padding": "60px 0px | | | 30px 0px",
-          "margin": "",
+          "padding": "",
+          "margin": "60px 0px | | | 30px 0px",
           "title": "Best <span>Sellers</span>",
           "button": "",
           "style_button": "style_1",
@@ -1503,7 +1503,7 @@
           "highlight_text": "Beauty",
           "description": "",
           "padding": "",
-          "margin": ""
+          "margin": "60px 0px | | | 30px 0px"
         }
       }
     },
