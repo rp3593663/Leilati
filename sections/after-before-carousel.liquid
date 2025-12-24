@@ -44,8 +44,11 @@
     <div class="kretoss-section__inner">
       <div class="after_before_inner" style="background-color: {{ section.settings.color_bg }};">
        <div class="after_before_content">
-            <h2>Visible Skin Transformations</h2>
-            <p class="subtitle">See the real results achieved with our skincare solutions. Compare the before-and-after images to witness clearer, healthier, more radiant skin.</p>
+             <h2>
+                {{ section.settings.heading }}
+                <span>{{ section.settings.highlight_text }}</span>
+            </h2>
+            <p>{{ section.settings.description }}</p>
         </div>
         <div class="after_before_carousel">
             <div class="bwp_slider-carousel">
