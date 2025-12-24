@@ -1,0 +1,214 @@
+{%- if section.settings.fullwidth -%}
+  {%- assign container = 'container-full' -%}
+{%- elsif section.settings.max_width != blank -%}
+  {%- assign container = 'bwp-container' -%}
+{%- else -%}
+  {%- assign container = 'container' -%}
+{%- endif -%}
+
+{%- assign max_width = '' -%}
+{%- if section.settings.fullwidth == blank and section.settings.max_width != blank -%}
+  {%- capture max_width -%}style="max-width: {{ section.settings.max_width }};"{%- endcapture -%}
+{%- endif -%}
+
+{% assign margin  = section.settings.margin | split: "|" %}
+{% assign padding = section.settings.padding | split: "|" %}
+
+{%- style -%}
+#shopify-section-{{ section.id }} .kretoss-section--unique-about{
+  {% if margin[0] != blank %}margin: {{ margin[0] }};{% endif %}
+  {% if padding[0] != blank %}padding: {{ padding[0] }};{% endif %}
+}
+@media(max-width:1200px){
+  #shopify-section-{{ section.id }} .kretoss-section--unique-about{
+    {% if margin[1] != blank %}margin: {{ margin[1] }};{% endif %}
+    {% if padding[1] != blank %}padding: {{ padding[1] }};{% endif %}
+  }
+}
+@media(max-width:991px){
+  #shopify-section-{{ section.id }} .kretoss-section--unique-about{
+    {% if margin[2] != blank %}margin: {{ margin[2] }};{% endif %}
+    {% if padding[2] != blank %}padding: {{ padding[2] }};{% endif %}
+  }
+}
+@media(max-width:767px){
+  #shopify-section-{{ section.id }} .kretoss-section--unique-about{
+    {% if margin[3] != blank %}margin: {{ margin[3] }};{% endif %}
+    {% if padding[3] != blank %}padding: {{ padding[3] }};{% endif %}
+  }
+}
+{%- endstyle -%}
+
+<section
+  class="kretoss-section kretoss-section--unique-about {{ section.settings.custom_class }}"
+  style="background-color: {{ section.settings.color_bg }};"
+>
+
+  {% if section.settings.shadow_image %}
+    <img class="lazyload fade-in about_shadow"
+      src="{{ section.settings.shadow_image | image_url: width: 800 }}"
+      alt=""
+    >
+  {% endif %}
+
+  <div class="{{ container }}" {{ max_width }}>
+    <div class="kretoss-section__inner">
+      <div class="unique_about_inner">
+
+        <!-- IMAGE BLOCK -->
+        <div class="img_block">
+          {% if section.settings.svg_image %}
+            <img class="lazyload fade-in about_svg"
+              src="{{ section.settings.svg_image | image_url }}"
+              alt=""
+            >
+          {% endif %}
+
+          {% if section.settings.main_image %}
+            <img class="lazyload fade-in about_img"
+              src="{{ section.settings.main_image | image_url }}"
+              alt=""
+            >
+          {% endif %}
+        </div>
+
+        <!-- CONTENT BLOCK -->
+        <div class="content_block">
+          {% if section.settings.icon_image %}
+            <img class="lazyload fade-in about_icon"
+              src="{{ section.settings.icon_image | image_url }}"
+              alt=""
+            >
+          {% endif %}
+
+          <h2>
+            {{ section.settings.heading }}
+            <span>{{ section.settings.highlight_text }}</span>
+          </h2>
+
+          <p>{{ section.settings.description }}</p>
+
+          {% if section.settings.button_text != blank %}
+            <a href="{{ section.settings.button_link }}" class="explore_btn theme_btn">
+              {{ section.settings.button_text }}
+            </a>
+          {% endif %}
+        </div>
+
+        {% if section.settings.star_image %}
+          <img class="lazyload fade-in about_star"
+            src="{{ section.settings.star_image | image_url }}"
+            alt=""
+          >
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "After Before Carousel",
+  "class": "kretoss-unique-about",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout Settings"
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom Class"
+    },
+    {
+      "type": "color",
+      "id": "color_bg",
+      "label": "Background Color",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "text",
+      "id": "max_width",
+      "label": "Max Width",
+      "info": "Example: 1440px"
+    },
+    {
+      "type": "checkbox",
+      "id": "fullwidth",
+      "label": "Full Width"
+    },
+
+    {
+      "type": "header",
+      "content": "Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "shadow_image",
+      "label": "Shadow Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "svg_image",
+      "label": "SVG Decoration Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Main Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_image",
+      "label": "Icon Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "star_image",
+      "label": "Star Image"
+    },
+
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "You can find your own"
+    },
+    {
+      "type": "text",
+      "id": "highlight_text",
+      "label": "Highlighted Text",
+      "default": "Beauty"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "padding",
+      "label": "Padding",
+      "info": "Desktop | 1200px | 991px | 767px"
+    },
+    {
+      "type": "text",
+      "id": "margin",
+      "label": "Margin",
+      "info": "Desktop | 1200px | 991px | 767px"
+    }
+  ],
+  "presets": [
+    {
+      "name": "After Before Carousel"
+    }
+  ]
+}
+
+{% endschema %}
