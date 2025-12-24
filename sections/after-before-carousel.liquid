@@ -39,68 +39,10 @@
 }
 {%- endstyle -%}
 
-<section
-  class="kretoss-section kretoss-section--unique-about {{ section.settings.custom_class }}"
-  style="background-color: {{ section.settings.color_bg }};"
->
-
-  {% if section.settings.shadow_image %}
-    <img class="lazyload fade-in about_shadow"
-      src="{{ section.settings.shadow_image | image_url: width: 800 }}"
-      alt=""
-    >
-  {% endif %}
-
-  <div class="{{ container }}" {{ max_width }}>
+<section class="kretoss-section kretoss-section--unique-about {{ section.settings.custom_class }}">
+  <div class="{{ container }}" {{ max_width }}  style="background-color: {{ section.settings.color_bg }};">
     <div class="kretoss-section__inner">
       <div class="unique_about_inner">
-
-        <!-- IMAGE BLOCK -->
-        <div class="img_block">
-          {% if section.settings.svg_image %}
-            <img class="lazyload fade-in about_svg"
-              src="{{ section.settings.svg_image | image_url }}"
-              alt=""
-            >
-          {% endif %}
-
-          {% if section.settings.main_image %}
-            <img class="lazyload fade-in about_img"
-              src="{{ section.settings.main_image | image_url }}"
-              alt=""
-            >
-          {% endif %}
-        </div>
-
-        <!-- CONTENT BLOCK -->
-        <div class="content_block">
-          {% if section.settings.icon_image %}
-            <img class="lazyload fade-in about_icon"
-              src="{{ section.settings.icon_image | image_url }}"
-              alt=""
-            >
-          {% endif %}
-
-          <h2>
-            {{ section.settings.heading }}
-            <span>{{ section.settings.highlight_text }}</span>
-          </h2>
-
-          <p>{{ section.settings.description }}</p>
-
-          {% if section.settings.button_text != blank %}
-            <a href="{{ section.settings.button_link }}" class="explore_btn theme_btn">
-              {{ section.settings.button_text }}
-            </a>
-          {% endif %}
-        </div>
-
-        {% if section.settings.star_image %}
-          <img class="lazyload fade-in about_star"
-            src="{{ section.settings.star_image | image_url }}"
-            alt=""
-          >
-        {% endif %}
 
       </div>
     </div>
