@@ -1,175 +1,202 @@
 {%- if section.settings.fullwidth -%}
-	{%- assign container = 'container-full' -%}
+  {%- assign container = 'container-full' -%}
 {%- elsif section.settings.max_width != blank -%}
-	{%- assign container = 'bwp-container' -%}
+  {%- assign container = 'bwp-container' -%}
 {%- else -%}
-	{%- assign container = 'container' -%}
+  {%- assign container = 'container' -%}
 {%- endif -%}
 
 {%- assign max_width = '' -%}
 {%- if section.settings.fullwidth == blank and section.settings.max_width != blank -%}
-	{%- assign width_container = section.settings.max_width | plus: 0 -%}
-	{%- capture max_width -%}style="max-width: {{ section.settings.max_width }};"{%- endcapture -%}
+  {%- capture max_width -%}style="max-width: {{ section.settings.max_width }};"{%- endcapture -%}
 {%- endif -%}
 
-{%- assign color_bg = section.settings.color_bg -%}
-{% assign margin 	= section.settings.margin | split: "|" %}
-{% assign padding 	= section.settings.padding | split: "|" %}
-{%- style -%}
-	{%- if margin[0] != blank or padding[0] != blank -%}
-		#shopify-section-{{ section.id }} .kretoss-section--custom-grid-banner{
-			{%- if margin[0] != blank -%}margin: {{ margin[0] }};{%- endif -%}
-			{%- if padding[0] != blank -%}padding:{{ padding[0] }};{%- endif -%}
-		}
-	{%- endif -%}
-	{%- if margin[1] != blank or padding[1] != blank -%}
-		@media (max-width:1200px){
-			#shopify-section-{{ section.id }} .kretoss-section--custom-grid-banner{
-				{%- if margin[1] != blank -%}margin: {{ margin[1] }};{%- endif -%}
-				{%- if padding[1] != blank -%}padding:{{ padding[1] }};{%- endif -%}
-			}
-		}
-	{%- endif -%}
-	{%- if margin[2] != blank or padding[2] != blank -%}
-		@media (max-width:991px){
-			#shopify-section-{{ section.id }} .kretoss-section--custom-grid-banner{
-				{%- if margin[2] != blank -%}margin: {{ margin[2] }};{%- endif -%}
-				{%- if padding[2] != blank -%}padding:{{ padding[2] }};{%- endif -%}
-			}
-		}
-	{%- endif -%}
-	{%- if margin[3] != blank or padding[3] != blank -%}
-		@media (max-width:767px){
-			#shopify-section-{{ section.id }} .kretoss-section--custom-grid-banner{
-				{%- if margin[3] != blank -%}margin: {{ margin[3] }};{%- endif -%}
-				{%- if padding[3] != blank -%}padding:{{ padding[3] }};{%- endif -%}
-			}
-		}
-	{%- endif -%}
+{% assign margin  = section.settings.margin | split: "|" %}
+{% assign padding = section.settings.padding | split: "|" %}
 
-{%- endstyle -%}
+<style>
+#shopify-section-{{ section.id }} .kretoss-section--custom-grid-banner{
+  background-color: {{ section.settings.color_bg }};
+  {% if margin[0] != blank %}margin: {{ margin[0] }};{% endif %}
+  {% if padding[0] != blank %}padding: {{ padding[0] }};{% endif %}
+}
+@media (max-width:1200px){
+  #shopify-section-{{ section.id }} .kretoss-section--custom-grid-banner{
+    {% if margin[1] != blank %}margin: {{ margin[1] }};{% endif %}
+    {% if padding[1] != blank %}padding: {{ padding[1] }};{% endif %}
+  }
+}
+@media (max-width:991px){
+  #shopify-section-{{ section.id }} .kretoss-section--custom-grid-banner{
+    {% if margin[2] != blank %}margin: {{ margin[2] }};{% endif %}
+    {% if padding[2] != blank %}padding: {{ padding[2] }};{% endif %}
+  }
+}
+@media (max-width:767px){
+  #shopify-section-{{ section.id }} .kretoss-section--custom-grid-banner{
+    {% if margin[3] != blank %}margin: {{ margin[3] }};{% endif %}
+    {% if padding[3] != blank %}padding: {{ padding[3] }};{% endif %}
+  }
+}
+</style>
 
-<section class="kretoss-section kretoss-section--custom-grid-banner kretoss-section--{{ section.id }} overflow-hidden {{ section.settings.custom_class }}" style="background-color: {{ color_bg }};">
-	<div class="{{ container }}" {{ max_width }}>
-		<div class="kretoss-section__inner">
-            <div class="kretoss_heading">
-                <h2>Shop by <span>Category</span></h2>
+<section class="kretoss-section kretoss-section--custom-grid-banner {{ section.settings.custom_class }}">
+  <div class="{{ container }}" {{ max_width }}>
+    <div class="kretoss-section__inner">
+
+      {% if section.settings.heading != blank %}
+      <div class="kretoss_heading">
+        <h2>
+          {{ section.settings.heading }}
+          {% if section.settings.heading_highlight != blank %}
+            <span>{{ section.settings.heading_highlight }}</span>
+          {% endif %}
+        </h2>
+      </div>
+      {% endif %}
+
+      <div class="custom_grid_banner_inner">
+        {% for block in section.blocks %}
+        <div class="inner_banner_box" {{ block.shopify_attributes }}>
+          <div class="custom_banner_img">
+
+            {% if block.settings.image != blank %}
+              <img
+                src="{{ block.settings.image | image_url: width: 900 }}"
+                alt="{{ block.settings.title | escape }}"
+                loading="lazy">
+            {% endif %}
+
+            <div class="custom_banner_content">
+              {% if block.settings.link != blank %}
+                <a href="{{ block.settings.link }}" class="content_title">
+                  {{ block.settings.title }}
+                </a>
+                <a href="{{ block.settings.link }}" class="content_btn">
+                  <svg width="32" height="18" viewBox="0 0 32 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25 10H7C6.44 10 6 9.56 6 9C6 8.44 6.44 8 7 8H25C25.56 8 26 8.44 26 9C26 9.56 25.56 10 25 10Z" fill="black"/>
+                    <path d="M20 17C19.9 17 19.7 16.9 19.3 16.7C18.9 16.3 18.9 15.7 19.3 15.3L25.6 9L19.3 2.7C18.9 2.3 18.9 1.7 19.3 1.3C19.7 0.9 20.3 0.9 20.7 1.3L27.7 8.3C28.1 8.7 28.1 9.3 27.7 9.7L20.7 16.7C20.5 16.9 20.2 17 20 17Z" fill="black"/>
+                  </svg>
+                </a>
+              {% else %}
+                <span class="content_title">{{ block.settings.title }}</span>
+              {% endif %}
             </div>
-            <div class="custom_grid_banner_inner">
-                <div class="inner_banner_box">
-                    <div class="custom_banner_img">
-                        <img src="https://cdn.shopify.com/s/files/1/0656/8352/1634/files/custom_banner1.png?v=1766489649">
-                        <div class="custom_banner_content">
-                            <a href="" class="content_title">Body Care</a>
-                            <a href="" class="content_btn">
-                                <svg width="32" height="18" viewBox="0 0 32 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M25 10H7C6.44 10 6 9.56 6 9C6 8.44 6.44 8 7 8H25C25.56 8 26 8.44 26 9C26 9.56 25.56 10 25 10Z" fill="black"/>
-                                    <path d="M20 17C19.8688 17.0016 19.7388 16.9757 19.6183 16.924C19.4977 16.8724 19.3893 16.796 19.3 16.7C18.9 16.3 18.9 15.68 19.3 15.28L25.6 8.97996L19.3 2.67996C18.9 2.27996 18.9 1.65996 19.3 1.25996C19.7 0.859961 20.32 0.859961 20.72 1.25996L27.72 8.25996C28.12 8.65996 28.12 9.27996 27.72 9.67996L20.72 16.68C20.52 16.88 20.26 16.98 20.02 16.98L20 17Z" fill="black"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="inner_banner_box">
-                    <div class="custom_banner_img">
-                        <img src="https://cdn.shopify.com/s/files/1/0656/8352/1634/files/custom_banner2.png?v=17664896499">
-                        <div class="custom_banner_content">
-                            <a href="" class="content_title">Hair Care</a>
-                            <a href="" class="content_btn">
-                                <svg width="32" height="18" viewBox="0 0 32 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M25 10H7C6.44 10 6 9.56 6 9C6 8.44 6.44 8 7 8H25C25.56 8 26 8.44 26 9C26 9.56 25.56 10 25 10Z" fill="black"/>
-                                    <path d="M20 17C19.8688 17.0016 19.7388 16.9757 19.6183 16.924C19.4977 16.8724 19.3893 16.796 19.3 16.7C18.9 16.3 18.9 15.68 19.3 15.28L25.6 8.97996L19.3 2.67996C18.9 2.27996 18.9 1.65996 19.3 1.25996C19.7 0.859961 20.32 0.859961 20.72 1.25996L27.72 8.25996C28.12 8.65996 28.12 9.27996 27.72 9.67996L20.72 16.68C20.52 16.88 20.26 16.98 20.02 16.98L20 17Z" fill="black"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="inner_banner_box">
-                    <div class="custom_banner_img">
-                        <img src="https://cdn.shopify.com/s/files/1/0656/8352/1634/files/custom_banner3.png?v=1766489649">
-                        <div class="custom_banner_content">
-                            <a href="" class="content_title">Makeup</a>
-                            <a href="" class="content_btn">
-                                <svg width="32" height="18" viewBox="0 0 32 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M25 10H7C6.44 10 6 9.56 6 9C6 8.44 6.44 8 7 8H25C25.56 8 26 8.44 26 9C26 9.56 25.56 10 25 10Z" fill="black"/>
-                                    <path d="M20 17C19.8688 17.0016 19.7388 16.9757 19.6183 16.924C19.4977 16.8724 19.3893 16.796 19.3 16.7C18.9 16.3 18.9 15.68 19.3 15.28L25.6 8.97996L19.3 2.67996C18.9 2.27996 18.9 1.65996 19.3 1.25996C19.7 0.859961 20.32 0.859961 20.72 1.25996L27.72 8.25996C28.12 8.65996 28.12 9.27996 27.72 9.67996L20.72 16.68C20.52 16.88 20.26 16.98 20.02 16.98L20 17Z" fill="black"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="inner_banner_box">
-                    <div class="custom_banner_img">
-                        <img src="https://cdn.shopify.com/s/files/1/0656/8352/1634/files/custom_banner4.png?v=1766489649">
-                        <div class="custom_banner_content">
-                            <a href="" class="content_title">Men Care</a>
-                            <a href="" class="content_btn">
-                                <svg width="32" height="18" viewBox="0 0 32 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M25 10H7C6.44 10 6 9.56 6 9C6 8.44 6.44 8 7 8H25C25.56 8 26 8.44 26 9C26 9.56 25.56 10 25 10Z" fill="black"/>
-                                    <path d="M20 17C19.8688 17.0016 19.7388 16.9757 19.6183 16.924C19.4977 16.8724 19.3893 16.796 19.3 16.7C18.9 16.3 18.9 15.68 19.3 15.28L25.6 8.97996L19.3 2.67996C18.9 2.27996 18.9 1.65996 19.3 1.25996C19.7 0.859961 20.32 0.859961 20.72 1.25996L27.72 8.25996C28.12 8.65996 28.12 9.27996 27.72 9.67996L20.72 16.68C20.52 16.88 20.26 16.98 20.02 16.98L20 17Z" fill="black"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-			<div class="view_all_btn">
-            	<a href="#" class="theme_btn">View All</a>
-			</div>
-		</div>
-	</div>
+
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      {% if section.settings.view_all_text != blank and section.settings.view_all_link != blank %}
+      <div class="view_all_btn">
+        <a href="{{ section.settings.view_all_link }}" class="theme_btn">
+          {{ section.settings.view_all_text }}
+        </a>
+      </div>
+      {% endif %}
+
+    </div>
+  </div>
 </section>
 
 {% schema %}
 {
-	"name": "Custom Grid Banner",
-	"class": "kretoss-custom-grid-banner",
-	"settings": [
-		{
-			"type": "header",
-			"content": "Layout settings"
-		},
-		{
-			"type": "text",
-			"id": "custom_class",
-			"label": "Custom Class"
-		},
+  "name": "Custom Grid Banner",
+  "class": "kretoss-custom-grid-banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Shop by"
+    },
+    {
+      "type": "text",
+      "id": "heading_highlight",
+      "label": "Highlighted Text",
+      "default": "Category"
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom CSS Class"
+    },
+    {
+      "type": "color",
+      "id": "color_bg",
+      "label": "Background Color",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "text",
+      "id": "max_width",
+      "label": "Max Width",
+      "info": "Example: 1440px"
+    },
+    {
+      "type": "checkbox",
+      "id": "fullwidth",
+      "label": "Enable Full Width"
+    },
+    {
+      "type": "text",
+      "id": "padding",
+      "label": "Padding",
+      "info": "Desktop | 1200px | 991px | 767px"
+    },
+    {
+      "type": "text",
+      "id": "margin",
+      "label": "Margin",
+      "info": "Desktop | 1200px | 991px | 767px"
+    },
+    {
+      "type": "text",
+      "id": "view_all_text",
+      "label": "View All Button Text",
+      "default": "View All"
+    },
+    {
+      "type": "url",
+      "id": "view_all_link",
+      "label": "View All Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "banner",
+      "name": "Banner Item",
+      "settings": [
         {
-            "type": "color",
-            "id": "color_bg",
-            "label": "Background color",
-            "default": "#f5f5f5"
+          "type": "image_picker",
+          "id": "image",
+          "label": "Banner Image"
         },
-		{
-			"type": "text",
-			"id": "max_width",
-			"label": "Width container",
-			"info": "Default: 1440px"
-		},
-		{
-			"type": "checkbox",
-			"id": "fullwidth",
-			"label": "Fullwidth"
-		},
-		{
-			"type": "text",
-			"id": "padding",
-			"label": "Padding",
-			"placeholder": "0px 0px 0px 0px",
-			"info":"Screen: desktop | 1200px | 991px | 767px"
-		},
-		{
-			"type": "text",
-			"id": "margin",
-			"label": "Margin",
-			"placeholder": "0px 0px 0px 0px",
-			"info":"Screen: desktop | 1200px | 991px | 767px"
-		}
-	],
-	"presets": [
-		{
-			"name": "Custom Grid Banner",
-		}
-	]
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Category Name"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link (Optional)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Grid Banner",
+      "blocks": [
+        { "type": "banner" },
+        { "type": "banner" },
+        { "type": "banner" },
+        { "type": "banner" }
+      ]
+    }
+  ]
 }
 {% endschema %}
