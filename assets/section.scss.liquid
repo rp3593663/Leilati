@@ -6677,11 +6677,13 @@ $prefixes: ("-moz-", "");
 				}
 				.custom_banner_content {
 					position: absolute;
-					bottom: 0;
+					bottom: 40px;
+					left: 50%;
+					transform: translateX(-50%);
 					display: flex;
 					align-items: center;
 					justify-content: space-between;
-					width: 100%;
+					width: calc(100% - 80px);
 					z-index: 1;
 				}
 			}
