@@ -1323,12 +1323,12 @@
         "type": "featured-products",
         "name": "Kretoss products list",
         "settings": {
-          "custom_class": "home_products",
+          "custom_class": "home_best_sellers",
           "max_width": "",
           "fullwidth": false,
           "padding": "60px 0px | | | 30px 0px",
           "margin": "",
-          "title": "Gentle <span>Skincare</span> For Every Day",
+          "title": "Best <span>Sellers</span>",
           "button": "",
           "style_button": "style_1",
           "url": "/",
@@ -1461,15 +1461,45 @@
           "view_all_text": "View All",
           "view_all_link": "shopify://collections"
         }
+      },
+      "featured_products_qPhkbJ": {
+        "type": "featured-products",
+        "name": "Kretoss products list",
+        "settings": {
+          "custom_class": "home_products",
+          "max_width": "",
+          "fullwidth": false,
+          "padding": "60px 0px | | | 30px 0px",
+          "margin": "",
+          "title": "Gentle <span>Skincare</span> For Every Day",
+          "button": "",
+          "style_button": "style_1",
+          "url": "/",
+          "featured_products": "featured-products",
+          "limit": 8,
+          "navigation": false,
+          "pagination": true,
+          "infinite": true,
+          "autoplay": false,
+          "autoplay_speed": "10000",
+          "row": 1,
+          "columns": 4,
+          "column1440": 4,
+          "column1": 4,
+          "column2": 3,
+          "column3": 1,
+          "column4": 1
+        }
       }
     },
     "content_for_index": [
       "166452443683aa5d29",
       "featured_policy_Nq6TKE",
-      "featured_products_qgDe7q",
+      "featured_products_qPhkbJ",
       "featured_marquee_rmgecg",
       "unique_about_mamAn4",
-      "custom_grid_banner_Cp9TJG"
+      "custom_grid_banner_Cp9TJG",
+      "featured_products_qgDe7q"
     ]
   }
 }
