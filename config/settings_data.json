@@ -1503,7 +1503,7 @@
           "highlight_text": "Transformations",
           "description": "See the real results achieved with our skincare solutions. Compare the before-and-after images to witness clearer, healthier, more radiant skin.",
           "padding": "",
-          "margin": "60px 0px | | | 30px 0px"
+          "margin": "120px 0px 60px | | | 60px 0px 30px"
         }
       }
     },
