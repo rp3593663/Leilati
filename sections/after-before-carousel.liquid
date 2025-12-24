@@ -60,6 +60,33 @@
   </div>
 </section>
 
+<script>
+  document.querySelectorAll('[data-block]').forEach(block => {
+  const slider = block.querySelector('[data-slider]');
+  const afterImg = block.querySelector('.after-img');
+
+
+  let isDragging = false;
+
+
+  const moveSlider = (e) => {
+  if (!isDragging) return;
+  const rect = block.getBoundingClientRect();
+  let y = e.clientY - rect.top;
+  if (y < 0) y = 0;
+  if (y > rect.height) y = rect.height;
+
+
+  slider.style.top = y + 'px';
+  afterImg.style.clipPath = `inset(${y}px 0 0 0)`;
+  };
+
+
+  slider.addEventListener('mousedown', () => (isDragging = true));
+  window.addEventListener('mouseup', () => (isDragging = false));
+  window.addEventListener('mousemove', moveSlider);
+});
+</script>
 
 {% schema %}
 {
