@@ -6707,7 +6707,7 @@ $prefixes: ("-moz-", "");
 						color: $white;
 						font-size: 28px;
     					font-weight: 600;
-						@media(max-width: 992px){
+						@media only screen and (max-width: 991px) and (min-width: 768px)  {
 							font-size: 20px;
 						}
 					}
@@ -6719,15 +6719,22 @@ $prefixes: ("-moz-", "");
 						display: flex;
 						align-items: center;
 						justify-content: center;
-						@media(max-width: 992px){
+						@media only screen and (max-width: 991px) and (min-width: 768px)  {
 							min-width: 30px;
 							height: 30px;
+						}
+						@media(max-width: 767px){
+							min-width: 25px;
+							height: 25px;
 						}
 						svg {
 							width: 30px;
 							height: 17px;
-							@media(max-width: 992px){
+							@media only screen and (max-width: 991px) and (min-width: 768px)  {
 								width: 22px;
+							}
+							@media(max-width: 767px){
+								width: 16px;
 							}
 						}
 					}
