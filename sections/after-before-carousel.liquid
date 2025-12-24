@@ -74,11 +74,12 @@ document.querySelectorAll('[data-block]').forEach(block => {
     const rect = block.getBoundingClientRect();
     let x = e.clientX - rect.left;
 
-    if (x < 0) x = 0;
-    if (x > rect.width) x = rect.width;
+    x = Math.max(0, Math.min(x, rect.width));
 
     slider.style.left = x + 'px';
-    afterImg.style.clipPath = `inset(0 ${rect.width - x}px 0 0)`;
+
+    /* ✅ KEY FIX — clip from LEFT only */
+    afterImg.style.clipPath = `inset(0 0 0 ${x}px)`;
   };
 
   slider.addEventListener('mousedown', () => isDragging = true);
