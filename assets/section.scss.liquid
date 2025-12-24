@@ -6618,11 +6618,11 @@ $prefixes: ("-moz-", "");
     line-height: 100%;
     letter-spacing: 0;
     text-transform: uppercase;
-    color: #9d7d62;
+    color: $theme-color;
     box-shadow: 0 0 14px #8f80638c inset;
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
-    border: 1px solid #9D7D62;
+    border: 1px solid $theme-color;
     padding: 15px;
     min-width: 200px;
     width: fit-content;
@@ -6631,6 +6631,10 @@ $prefixes: ("-moz-", "");
 		padding: 10px;
 		min-width: 150px;
 		font-size: 14px;
+	}
+	&:hover{
+	    background: $theme-color;
+    	color: $white;
 	}
 }
 
