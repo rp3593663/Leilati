@@ -6695,6 +6695,9 @@ $prefixes: ("-moz-", "");
 					justify-content: space-between;
 					width: calc(100% - 60px);
 					z-index: 1;
+					@media only screen and (max-width: 991px) and (min-width: 768px)  {
+						width: calc(100% - 30px);
+					}
 					a.content_title {
 						font-family: $font-family-second;
 						color: $white;
