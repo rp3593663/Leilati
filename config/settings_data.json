@@ -1490,6 +1490,21 @@
           "column3": 1,
           "column4": 1
         }
+      },
+      "after_before_carousel_Dq8VEg": {
+        "type": "after-before-carousel",
+        "name": "After Before Carousel",
+        "settings": {
+          "custom_class": "",
+          "color_bg": "#a66060",
+          "max_width": "",
+          "fullwidth": false,
+          "heading": "You can find your own",
+          "highlight_text": "Beauty",
+          "description": "",
+          "padding": "",
+          "margin": ""
+        }
       }
     },
     "content_for_index": [
@@ -1499,7 +1514,8 @@
       "featured_marquee_rmgecg",
       "unique_about_mamAn4",
       "custom_grid_banner_Cp9TJG",
-      "featured_products_qgDe7q"
+      "featured_products_qgDe7q",
+      "after_before_carousel_Dq8VEg"
     ]
   }
 }
