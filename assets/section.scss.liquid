@@ -6672,6 +6672,7 @@ $prefixes: ("-moz-", "");
 		}
 		.inner_banner_box{
 			.custom_banner_img{
+				padding-top: 100%;
 				position: relative;
 				&:before {
 					background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
@@ -6753,9 +6754,6 @@ $prefixes: ("-moz-", "");
 			&:first-child{
 			    grid-column: span 2;
     			grid-row: span 2;
-				.custom_banner_img{
-					padding-top: 100%;
-				}
 				@media(max-width: 767px){
 					grid-column: span 1;
 					grid-row: span 1;
@@ -6773,11 +6771,6 @@ $prefixes: ("-moz-", "");
 					@media(max-width: 767px){
 						padding-top: 100%;
 					}
-				}
-			}
-			&:nth-child(3), &:nth-child(4){
-				.custom_banner_img{
-					padding-top: 100%;
 				}
 			}
 		}
