@@ -15,31 +15,31 @@
 {% assign padding = section.settings.padding | split: "|" %}
 
 {%- style -%}
-#shopify-section-{{ section.id }} .kretoss-section--unique-about{
+#shopify-section-{{ section.id }} .kretoss-section--after-before{
   {% if margin[0] != blank %}margin: {{ margin[0] }};{% endif %}
   {% if padding[0] != blank %}padding: {{ padding[0] }};{% endif %}
 }
 @media(max-width:1200px){
-  #shopify-section-{{ section.id }} .kretoss-section--unique-about{
+  #shopify-section-{{ section.id }} .kretoss-section--after-before{
     {% if margin[1] != blank %}margin: {{ margin[1] }};{% endif %}
     {% if padding[1] != blank %}padding: {{ padding[1] }};{% endif %}
   }
 }
 @media(max-width:991px){
-  #shopify-section-{{ section.id }} .kretoss-section--unique-about{
+  #shopify-section-{{ section.id }} .kretoss-section--after-before{
     {% if margin[2] != blank %}margin: {{ margin[2] }};{% endif %}
     {% if padding[2] != blank %}padding: {{ padding[2] }};{% endif %}
   }
 }
 @media(max-width:767px){
-  #shopify-section-{{ section.id }} .kretoss-section--unique-about{
+  #shopify-section-{{ section.id }} .kretoss-section--after-before{
     {% if margin[3] != blank %}margin: {{ margin[3] }};{% endif %}
     {% if padding[3] != blank %}padding: {{ padding[3] }};{% endif %}
   }
 }
 {%- endstyle -%}
 
-<section class="kretoss-section kretoss-section--unique-about {{ section.settings.custom_class }}">
+<section class="kretoss-section kretoss-section--after-before {{ section.settings.custom_class }}">
   <div class="{{ container }}" {{ max_width }}  style="background-color: {{ section.settings.color_bg }};">
     <div class="kretoss-section__inner">
       <div class="unique_about_inner">
