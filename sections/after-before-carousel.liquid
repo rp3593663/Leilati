@@ -62,32 +62,31 @@
 </section>
 
 <script>
-  document.querySelectorAll('[data-block]').forEach(block => {
+document.querySelectorAll('[data-block]').forEach(block => {
   const slider = block.querySelector('[data-slider]');
   const afterImg = block.querySelector('.after-img');
 
-
   let isDragging = false;
 
-
   const moveSlider = (e) => {
-  if (!isDragging) return;
-  const rect = block.getBoundingClientRect();
-  let y = e.clientY - rect.top;
-  if (y < 0) y = 0;
-  if (y > rect.height) y = rect.height;
+    if (!isDragging) return;
 
+    const rect = block.getBoundingClientRect();
+    let x = e.clientX - rect.left;
 
-  slider.style.top = y + 'px';
-  afterImg.style.clipPath = `inset(${y}px 0 0 0)`;
+    if (x < 0) x = 0;
+    if (x > rect.width) x = rect.width;
+
+    slider.style.left = x + 'px';
+    afterImg.style.clipPath = `inset(0 ${rect.width - x}px 0 0)`;
   };
 
-
-  slider.addEventListener('mousedown', () => (isDragging = true));
-  window.addEventListener('mouseup', () => (isDragging = false));
+  slider.addEventListener('mousedown', () => isDragging = true);
+  window.addEventListener('mouseup', () => isDragging = false);
   window.addEventListener('mousemove', moveSlider);
 });
 </script>
+
 
 {% schema %}
 {
