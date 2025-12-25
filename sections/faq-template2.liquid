@@ -15,38 +15,35 @@
 {% assign padding = section.settings.padding | split: "|" %}
 
 <style>
-#shopify-section-{{ section.id }} .kretoss-section--blog-carousel{
+#shopify-section-{{ section.id }} .kretoss-section--faqs{
   background-color: {{ section.settings.color_bg }};
   {% if margin[0] != blank %}margin: {{ margin[0] }};{% endif %}
   {% if padding[0] != blank %}padding: {{ padding[0] }};{% endif %}
 }
 @media (max-width:1200px){
-  #shopify-section-{{ section.id }} .kretoss-section--blog-carousel{
+  #shopify-section-{{ section.id }} .kretoss-section--faqs{
     {% if margin[1] != blank %}margin: {{ margin[1] }};{% endif %}
     {% if padding[1] != blank %}padding: {{ padding[1] }};{% endif %}
   }
 }
 @media (max-width:991px){
-  #shopify-section-{{ section.id }} .kretoss-section--blog-carousel{
+  #shopify-section-{{ section.id }} .kretoss-section--faqs{
     {% if margin[2] != blank %}margin: {{ margin[2] }};{% endif %}
     {% if padding[2] != blank %}padding: {{ padding[2] }};{% endif %}
   }
 }
 @media (max-width:767px){
-  #shopify-section-{{ section.id }} .kretoss-section--blog-carousel{
+  #shopify-section-{{ section.id }} .kretoss-section--faqs{
     {% if margin[3] != blank %}margin: {{ margin[3] }};{% endif %}
     {% if padding[3] != blank %}padding: {{ padding[3] }};{% endif %}
   }
 }
 </style>
 
-<section class="page-faqs">
-	<div class="container">
+<section class="kretoss-section kretoss-section--faqs {{ section.settings.custom_class }}"  style="background-color: {{ section.settings.color_bg }};">
+ 	<div class="{{ container }}" {{ max_width }}>
 		<div class="page__inner">
 			<div class="page__content">
-				<div class="rte">
-					{{ page.content }}
-				</div>
 				<div class="faq-page2">
 					<h2>{{ section.settings.title }}</h2>
 					<div id="accordion">
