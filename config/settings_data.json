@@ -486,7 +486,7 @@
         ],
         "settings": {
           "padding": "50px 0 20px",
-          "bg_color": "rgba(0,0,0,0)",
+          "bg_color": "#f9f2e1",
           "border": false,
           "border_width": "0px 0px 0px 0px",
           "border_color": "#e5e5e5",
@@ -897,9 +897,9 @@
             "type": "copyright",
             "settings": {
               "show_copyright": true,
-              "copyright": "© 2022 All Rights Reserved",
-              "color": "#000000",
-              "margin": "5px 0px 5px 0px",
+              "copyright": "© 2025 Leilati. All rights reserved.",
+              "color": "#ffffff",
+              "margin": "0px",
               "align": "left",
               "footer_width": 50,
               "footer_width_ipad": 50,
@@ -911,6 +911,7 @@
           "b9a701e3-4b98-41cb-9dd8-2fde2089fdf8": {
             "type": "paymet",
             "settings": {
+              "payment_image": "shopify://shop_images/payment_icons.png",
               "align": "right",
               "margin": "5px 0px 5px 0px",
               "footer_width": 50,
@@ -927,7 +928,7 @@
         ],
         "settings": {
           "padding": "15px 0 15px",
-          "bg_color": "rgba(0,0,0,0)"
+          "bg_color": "#9d7d62"
         }
       },
       "faq-template2": {
