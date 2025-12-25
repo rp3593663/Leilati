@@ -42,6 +42,16 @@
 
 <section class="kretoss-section kretoss-section--faqs {{ section.settings.custom_class }}"  style="background-color: {{ section.settings.color_bg }};">
  	<div class="{{ container }}" {{ max_width }}>
+		{% if section.settings.heading != blank %}
+		<div class="kretoss_heading">
+			<h2>
+			{{ section.settings.heading }}
+			{% if section.settings.heading_highlight != blank %}
+				<span>{{ section.settings.heading_highlight }}</span>
+			{% endif %}
+			</h2>
+		</div>
+		{% endif %}
 		<div class="faqs_page__inner">
 			<div class="faq-page2">
 				<div id="accordion">
