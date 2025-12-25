@@ -6793,11 +6793,18 @@ $prefixes: ("-moz-", "");
 		display: grid;
 		grid-template-columns: 1fr 2fr;
 		width: calc(100% - 60px);
+		@media only screen and (max-width: 1023px) and (min-width: 768px)  {
+			width: calc(100% - 30px);
+		}
 		.after_before_carousel{
 			width: 100%;
 			overflow: hidden;
 		    transform: translateX(60px);
     		margin-top: -80px;
+			@media only screen and (max-width: 1023px) and (min-width: 768px)  {
+				transform: translateX(30px);
+				margin-top: -50px;
+			}
 		}
 		.bwp_slider-carousel{
 			width: 100%;
