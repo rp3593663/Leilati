@@ -6831,9 +6831,15 @@ $prefixes: ("-moz-", "");
 			}
 			button.slick-prev {
 				left: 43%;
+				@media only screen and (max-width: 1023px) and (min-width: 768px) {
+					left: 38%;
+				}
 			}
 			button.slick-next {
 				right: 43%;
+				@media only screen and (max-width: 1023px) and (min-width: 768px) {
+					right: 38%;
+				}
 			}
 		}
 	}
