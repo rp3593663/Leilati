@@ -6,68 +6,123 @@
   {%- assign container = 'container' -%}
 {%- endif -%}
 
-<section class="kretoss-section kretoss-section--blog-carousel {{ section.settings.custom_class }}" style="background-color: {{ section.settings.color_bg }};">
-  <div class="{{ container }}" {% if section.settings.max_width != blank %}style="max-width:{{ section.settings.max_width }}"{% endif %}>
+{%- assign max_width = '' -%}
+{%- if section.settings.fullwidth == blank and section.settings.max_width != blank -%}
+  {%- capture max_width -%}style="max-width: {{ section.settings.max_width }};"{%- endcapture -%}
+{%- endif -%}
 
+{% assign margin  = section.settings.margin | split: "|" %}
+{% assign padding = section.settings.padding | split: "|" %}
+
+<style>
+#shopify-section-{{ section.id }} .kretoss-section--blog-carousel{
+  background-color: {{ section.settings.color_bg }};
+  {% if margin[0] != blank %}margin: {{ margin[0] }};{% endif %}
+  {% if padding[0] != blank %}padding: {{ padding[0] }};{% endif %}
+}
+@media (max-width:1200px){
+  #shopify-section-{{ section.id }} .kretoss-section--blog-carousel{
+    {% if margin[1] != blank %}margin: {{ margin[1] }};{% endif %}
+    {% if padding[1] != blank %}padding: {{ padding[1] }};{% endif %}
+  }
+}
+@media (max-width:991px){
+  #shopify-section-{{ section.id }} .kretoss-section--blog-carousel{
+    {% if margin[2] != blank %}margin: {{ margin[2] }};{% endif %}
+    {% if padding[2] != blank %}padding: {{ padding[2] }};{% endif %}
+  }
+}
+@media (max-width:767px){
+  #shopify-section-{{ section.id }} .kretoss-section--blog-carousel{
+    {% if margin[3] != blank %}margin: {{ margin[3] }};{% endif %}
+    {% if padding[3] != blank %}padding: {{ padding[3] }};{% endif %}
+  }
+}
+</style>
+
+<section
+  class="kretoss-section kretoss-section--blog-carousel {{ section.settings.custom_class }}"
+  style="background-color: {{ section.settings.color_bg }};"
+>
+  <div
+    class="{{ container }}"
+    {% if section.settings.max_width != blank %}
+      style="max-width:{{ section.settings.max_width }}"
+    {% endif %}
+  >
     {% assign blog = blogs[section.settings.blog] %}
     {% if blog != blank %}
-
-    <!-- MAIN FEATURE -->
-    <div class="blog-carousel-wrapper">
+      <!-- MAIN FEATURE -->
+      <div class="blog-carousel-wrapper">
         {% assign first_article = blog.articles.first %}
 
         <div class="blog_left_wrapper">
-            <div class="blog-main-image">
-                    <img id="mainBlogImage" src="{{ first_article.image | image_url: width: 900 }}" alt="{{ first_article.title }}">
-                <div id="mainBlogDate">{{ first_article.published_at | date: "%Y - %b - %d" }}</div>
-            </div>
+          <div class="blog-main-image">
+            <img
+              id="mainBlogImage"
+              src="{{ first_article.image | image_url: width: 900 }}"
+              alt="{{ first_article.title }}"
+            >
+            <div id="mainBlogDate">{{ first_article.published_at | date: '%Y - %b - %d' }}</div>
+          </div>
         </div>
         <div class="blog_right_wrapper">
-            <div class="main_blog_content">
-                <div class="selected_blog">{{ blog.title }}</div>
-                <h2 id="mainBlogTitle">{{ first_article.title }}</h2>
-                <p id="mainBlogExcerpt">{{ first_article.excerpt | strip_html | truncate: 250 }}</p>
-                <a id="mainBlogLink" href="{{ first_article.url }}" class="theme_btn">
-                    Read More
-                </a>
-            </div>
-            <div class=blog_thumbnails>
-                <div class="js-carousel slick-carousel" data-nav="false" data-dots="true" data-infinite="false"
-						data-autoplay="false"
-						data-autoplayspeed="2000"
-						data-columns="4"
-						data-column1440="4"
-						data-column1="4"
-						data-column2="3"
-						data-column3="3"
-						data-column4="3">
-                    {% for article in blog.articles %}
-                        <div class="slick-carousel__item">
-                            <div class="blog-thumb {% if forloop.first %}active{% endif %}" data-title="{{ article.title | escape }}"  data-date="{{ article.published_at | date: "%Y - %b - %d" }}" data-excerpt="{{ article.excerpt | strip_html | truncate: 250 | escape }}" data-image="{{ article.image | image_url: width: 900 }}" data-url="{{ article.url }}" data-author="{{ article.author }}">
-                                <img src="{{ article.image | image_url }}" alt="{{ article.title }}">
-                            </div>
-                        </div>
-                    {% endfor %}
+          <div class="main_blog_content">
+            <div class="selected_blog">{{ blog.title }}</div>
+            <h2 id="mainBlogTitle">{{ first_article.title }}</h2>
+            <p id="mainBlogExcerpt">{{ first_article.excerpt | strip_html | truncate: 250 }}</p>
+            <a id="mainBlogLink" href="{{ first_article.url }}" class="theme_btn"> Read More </a>
+          </div>
+          <div class="blog_thumbnails">
+            <div
+              class="js-carousel slick-carousel"
+              data-nav="false"
+              data-dots="true"
+              data-infinite="false"
+              data-autoplay="false"
+              data-autoplayspeed="2000"
+              data-columns="4"
+              data-column1440="4"
+              data-column1="4"
+              data-column2="3"
+              data-column3="3"
+              data-column4="3"
+            >
+              {% for article in blog.articles %}
+                <div class="slick-carousel__item">
+                  <div
+                    class="blog-thumb {% if forloop.first %}active{% endif %}"
+                    data-title="{{ article.title | escape }}"
+                    data-date="{{ article.published_at | date: "%Y - %b - %d" }}"
+                    data-excerpt="{{ article.excerpt | strip_html | truncate: 250 | escape }}"
+                    data-image="{{ article.image | image_url: width: 900 }}"
+                    data-url="{{ article.url }}"
+                    data-author="{{ article.author }}"
+                  >
+                    <img src="{{ article.image | image_url }}" alt="{{ article.title }}">
+                  </div>
                 </div>
-            </div>  
+              {% endfor %}
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
     {% endif %}
   </div>
 </section>
 
 <script>
-document.querySelectorAll('.blog-thumb').forEach(thumb => {
-  thumb.addEventListener('click', () => {
-    document.querySelectorAll('.blog-thumb').forEach(t => t.classList.remove('active'));
-    thumb.classList.add('active');
-    document.getElementById('mainBlogImage').src = thumb.dataset.image;
-    document.getElementById('mainBlogTitle').innerText = thumb.dataset.title;
-    document.getElementById('mainBlogDate').innerText = thumb.dataset.date;
-    document.getElementById('mainBlogExcerpt').innerText = thumb.dataset.excerpt;
-    document.getElementById('mainBlogLink').href = thumb.dataset.url;
+  document.querySelectorAll('.blog-thumb').forEach((thumb) => {
+    thumb.addEventListener('click', () => {
+      document.querySelectorAll('.blog-thumb').forEach((t) => t.classList.remove('active'));
+      thumb.classList.add('active');
+      document.getElementById('mainBlogImage').src = thumb.dataset.image;
+      document.getElementById('mainBlogTitle').innerText = thumb.dataset.title;
+      document.getElementById('mainBlogDate').innerText = thumb.dataset.date;
+      document.getElementById('mainBlogExcerpt').innerText = thumb.dataset.excerpt;
+      document.getElementById('mainBlogLink').href = thumb.dataset.url;
+    });
   });
-});
 </script>
 
 {% schema %}
