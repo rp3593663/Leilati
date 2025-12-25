@@ -184,9 +184,31 @@ document.querySelectorAll('[data-block]').forEach(block => {
       "info": "Desktop | 1200px | 991px | 767px"
     }
   ],
+  "blocks": [
+    {
+      "type": "before_after",
+      "name": "Before / After Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "before_image",
+          "label": "Before Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "after_image",
+          "label": "After Image"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
-      "name": "After Before Carousel"
+      "name": "After Before Carousel",
+      "blocks": [
+        { "type": "before_after" },
+        { "type": "before_after" }
+      ]
     }
   ]
 }
