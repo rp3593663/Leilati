@@ -23,7 +23,14 @@
             </div>
         </div>
         <div class="blog_right_wrapper">
-            {{ blog.title }}
+            <div class="main_blog_content">
+                <div class="selected_blog">{{ blog.title }}</div>
+                <h2 id="mainBlogTitle">{{ first_article.title }}</h2>
+                <p id="mainBlogExcerpt">{{ first_article.excerpt | strip_html | truncate: 160 }}</p>
+                <a id="mainBlogLink" href="{{ first_article.url }}" class="btn">
+                    Read More
+                </a>
+            </div>
         </div>
 
       <div class="blog-main">
