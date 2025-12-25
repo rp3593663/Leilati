@@ -47,7 +47,7 @@
 						data-column4="3">
             {% for article in blog.articles %}
                 <div class="slick-carousel__item">
-                    <div class="blog-thumb {% if forloop.first %}active{% endif %}" data-title="{{ article.title | escape }}"  data-excerpt="{{ article.excerpt | strip_html | truncate: 160 | escape }}" data-image="{{ article.image | image_url: width: 900 }}" data-url="{{ article.url }}" data-author="{{ article.author }}">
+                    <div class="blog-thumb {% if forloop.first %}active{% endif %}" data-title="{{ article.title | escape }}"  data-date="{{ article.published_at | date: "%Y - %b - %d" }}" data-excerpt="{{ article.excerpt | strip_html | truncate: 160 | escape }}" data-image="{{ article.image | image_url: width: 900 }}" data-url="{{ article.url }}" data-author="{{ article.author }}">
                         <img src="{{ article.image | image_url: width: 300 }}" alt="{{ article.title }}">
                     </div>
                 </div>
@@ -64,9 +64,9 @@ document.querySelectorAll('.blog-thumb').forEach(thumb => {
   thumb.addEventListener('click', () => {
     document.querySelectorAll('.blog-thumb').forEach(t => t.classList.remove('active'));
     thumb.classList.add('active');
-
     document.getElementById('mainBlogImage').src = thumb.dataset.image;
     document.getElementById('mainBlogTitle').innerText = thumb.dataset.title;
+    document.getElementById('mainBlogDate').innerText = thumb.dataset.date;
     document.getElementById('mainBlogExcerpt').innerText = thumb.dataset.excerpt;
     document.getElementById('mainBlogLink').href = thumb.dataset.url;
   });
