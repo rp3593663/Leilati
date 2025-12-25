@@ -1549,6 +1549,50 @@
       },
       "faq_template2_XyXBRN": {
         "type": "faq-template2",
+        "blocks": {
+          "faq_gxqLN8": {
+            "type": "faq",
+            "settings": {
+              "title": "What type of products does Leilati offer?",
+              "content": "<p>Leilati offers a wide range of beauty and self-care essentials, including skincare, hair care, makeup, and curated beauty sets designed to elevate your natural glow.</p>"
+            }
+          },
+          "faq_kPTeFC": {
+            "type": "faq",
+            "settings": {
+              "title": "Are your products suitable for all skin types?",
+              "content": "<p>Leilati offers a wide range of beauty and self-care essentials, including skincare, hair care, makeup, and curated beauty sets designed to elevate your natural glow.</p>"
+            }
+          },
+          "faq_CjWEUt": {
+            "type": "faq",
+            "settings": {
+              "title": "Do you use natural or clean ingredients?",
+              "content": "<p>Leilati offers a wide range of beauty and self-care essentials, including skincare, hair care, makeup, and curated beauty sets designed to elevate your natural glow.</p>"
+            }
+          },
+          "faq_pF4gFr": {
+            "type": "faq",
+            "settings": {
+              "title": "How long does shipping take?",
+              "content": "<p>Leilati offers a wide range of beauty and self-care essentials, including skincare, hair care, makeup, and curated beauty sets designed to elevate your natural glow.</p>"
+            }
+          },
+          "faq_r88RP7": {
+            "type": "faq",
+            "settings": {
+              "title": "Do you ship internationally?",
+              "content": "<p>Leilati offers a wide range of beauty and self-care essentials, including skincare, hair care, makeup, and curated beauty sets designed to elevate your natural glow.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "faq_gxqLN8",
+          "faq_kPTeFC",
+          "faq_CjWEUt",
+          "faq_pF4gFr",
+          "faq_r88RP7"
+        ],
         "name": "FAQs",
         "settings": {
           "heading": "Frequently Asked",
