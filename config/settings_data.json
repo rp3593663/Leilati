@@ -1493,6 +1493,34 @@
       },
       "after_before_carousel_Dq8VEg": {
         "type": "after-before-carousel",
+        "blocks": {
+          "before_after_7gpnDt": {
+            "type": "before_after",
+            "settings": {
+              "before_image": "shopify://shop_images/before_img_new.png",
+              "after_image": "shopify://shop_images/after_img_new.png"
+            }
+          },
+          "before_after_gd9PmY": {
+            "type": "before_after",
+            "settings": {
+              "before_image": "shopify://shop_images/before_img_new.png",
+              "after_image": "shopify://shop_images/after_img_new.png"
+            }
+          },
+          "before_after_9zFaP3": {
+            "type": "before_after",
+            "settings": {
+              "before_image": "shopify://shop_images/before_img_new.png",
+              "after_image": "shopify://shop_images/after_img_new.png"
+            }
+          }
+        },
+        "block_order": [
+          "before_after_7gpnDt",
+          "before_after_gd9PmY",
+          "before_after_9zFaP3"
+        ],
         "name": "After Before Carousel",
         "settings": {
           "custom_class": "",
