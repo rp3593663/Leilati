@@ -14,7 +14,16 @@
 
     <!-- MAIN FEATURE -->
     <div class="blog-carousel-wrapper">
-      {% assign first_article = blog.articles.first %}
+        {% assign first_article = blog.articles.first %}
+
+        <div class="blog_left_wrapper">
+            <div class="blog-main-image">
+                    <img id="mainBlogImage" src="{{ first_article.image | image_url: width: 900 }}" alt="{{ first_article.title }}">
+                <div id="mainBlogDate">{{ first_article.published_at | date: "%Y - %b - %d" }}</div>
+            </div>
+        </div>
+        <div class="blog_right_wrapper">
+        </div>
 
       <div class="blog-main">
         <div class="blog-main-image">
