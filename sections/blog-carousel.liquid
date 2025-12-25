@@ -37,18 +37,28 @@
 
       <!-- THUMBNAILS -->
       <div class="blog-thumbnails">
-        {% for article in blog.articles limit: 6 %}
-          <div
-            class="blog-thumb {% if forloop.first %}active{% endif %}"
-            data-title="{{ article.title | escape }}"
-            data-excerpt="{{ article.excerpt | strip_html | truncate: 160 | escape }}"
-            data-image="{{ article.image | image_url: width: 900 }}"
-            data-url="{{ article.url }}"
-            data-author="{{ article.author }}"
-          >
-            <img src="{{ article.image | image_url: width: 300 }}" alt="{{ article.title }}">
-          </div>
-        {% endfor %}
+        <div class="js-carousel slick-carousel" data-nav="false" data-dots="true" data-infinite="false"
+						data-autoplay="false"
+						data-autoplayspeed="2000"
+						data-columns="4"
+						data-column1440="4"
+						data-column1="4"
+						data-column2="3"
+						data-column3="3"
+						data-column4="3">
+            {% for article in blog.articles limit: 6 %}
+            <div
+                class="blog-thumb {% if forloop.first %}active{% endif %}"
+                data-title="{{ article.title | escape }}"
+                data-excerpt="{{ article.excerpt | strip_html | truncate: 160 | escape }}"
+                data-image="{{ article.image | image_url: width: 900 }}"
+                data-url="{{ article.url }}"
+                data-author="{{ article.author }}"
+            >
+                <img src="{{ article.image | image_url: width: 300 }}" alt="{{ article.title }}">
+            </div>
+            {% endfor %}
+        </div>
       </div>
 
     </div>
