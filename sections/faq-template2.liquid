@@ -42,28 +42,25 @@
 
 <section class="kretoss-section kretoss-section--faqs {{ section.settings.custom_class }}"  style="background-color: {{ section.settings.color_bg }};">
  	<div class="{{ container }}" {{ max_width }}>
-		<div class="page__inner">
-			<div class="page__content">
-				<div class="faq-page2">
-					<h2>{{ section.settings.title }}</h2>
-					<div id="accordion">
-						{%- if section.blocks.size > 0 -%}
-							{% for block in section.blocks %}
-								<div class="card">
-									<div class="card-header">
-										<a class="card-link{% unless forloop.first %} collapsed{% endunless %}" data-toggle="collapse" href="#collapse-{{ forloop.index }}">
-											{{ block.settings.title }}
-										</a>
-									</div>
-									<div id="collapse-{{ forloop.index }}" class="collapse{% if forloop.first %} show{% endif %}" data-parent="#accordion">
-										<div class="card-body">
-											{{ block.settings.content }}
-										</div>
+		<div class="faqs_page__inner">
+			<div class="faq-page2">
+				<div id="accordion">
+					{%- if section.blocks.size > 0 -%}
+						{% for block in section.blocks %}
+							<div class="card">
+								<div class="card-header">
+									<a class="card-link{% unless forloop.first %} collapsed{% endunless %}" data-toggle="collapse" href="#collapse-{{ forloop.index }}">
+										{{ block.settings.title }}
+									</a>
+								</div>
+								<div id="collapse-{{ forloop.index }}" class="collapse{% if forloop.first %} show{% endif %}" data-parent="#accordion">
+									<div class="card-body">
+										{{ block.settings.content }}
 									</div>
 								</div>
-							{% endfor %}
-						{%- endif -%}
-					</div>
+							</div>
+						{% endfor %}
+					{%- endif -%}
 				</div>
 			</div>
 		</div>
