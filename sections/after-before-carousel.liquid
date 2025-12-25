@@ -62,27 +62,31 @@
                     data-column2="1"
                     data-column3="1"
                     data-column4="1">
-                    <div class="slick-carousel__item">
+                    {% for block in section.blocks %}
+                      <div class="slick-carousel__item" {{ block.shopify_attributes }}>
                         <div class="after_before_card" data-block>
-                            <img src="https://cdn.shopify.com/s/files/1/0656/8352/1634/files/before_img_new.png?v=1766571206" class="before-img" />
-                            <img src="https://cdn.shopify.com/s/files/1/0656/8352/1634/files/after_img_new.png?v=1766571206" class="after-img" />
-                            <div class="slider" data-slider></div>
+                          {% if block.settings.before_image %}
+                            <img
+                              src="{{ block.settings.before_image | image_url: width: 800 }}"
+                              class="before-img"
+                              alt="Before image"
+                              loading="lazy"
+                            >
+                          {% endif %}
+
+                          {% if block.settings.after_image %}
+                            <img
+                              src="{{ block.settings.after_image | image_url: width: 800 }}"
+                              class="after-img"
+                              alt="After image"
+                              loading="lazy"
+                            >
+                          {% endif %}
+
+                          <div class="slider" data-slider></div>
                         </div>
-                    </div>
-                    <div class="slick-carousel__item">
-                        <div class="after_before_card" data-block>
-                            <img src="https://cdn.shopify.com/s/files/1/0656/8352/1634/files/before_img_new.png?v=1766571206" class="before-img" />
-                            <img src="https://cdn.shopify.com/s/files/1/0656/8352/1634/files/after_img_new.png?v=1766571206" class="after-img" />
-                            <div class="slider" data-slider></div>
-                        </div>
-                    </div>
-                    <div class="slick-carousel__item">
-                        <div class="after_before_card" data-block>
-                            <img src="https://cdn.shopify.com/s/files/1/0656/8352/1634/files/before_img_new.png?v=1766571206" class="before-img" />
-                            <img src="https://cdn.shopify.com/s/files/1/0656/8352/1634/files/after_img_new.png?v=1766571206" class="after-img" />
-                            <div class="slider" data-slider></div>
-                        </div>
-                    </div>
+                      </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
