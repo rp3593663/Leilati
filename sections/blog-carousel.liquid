@@ -21,7 +21,7 @@
             <div class="blog_img">
                 <img id="mainBlogImage" src="{{ first_article.image | image_url: width: 900 }}" alt="{{ first_article.title }}">
             </div>
-            <div id="mainBlogDate">{{ first_article.published_at | date: "%b - %d" }}</div>
+            <div id="mainBlogDate">{{ first_article.published_at | date: "%Y - %b - %d" }}</div>
         </div>
 
         <div class="blog-main-content">
