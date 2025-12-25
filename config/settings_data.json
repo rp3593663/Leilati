@@ -1505,6 +1505,17 @@
           "padding": "",
           "margin": "160px 0px 80px | | | 80px 0px 40px"
         }
+      },
+      "blog_carousel_Kyz7y4": {
+        "type": "blog-carousel",
+        "name": "Blog Carousel",
+        "settings": {
+          "blog": "leilati",
+          "color_bg": "#ffffff",
+          "max_width": "",
+          "fullwidth": false,
+          "custom_class": ""
+        }
       }
     },
     "content_for_index": [
@@ -1515,7 +1526,8 @@
       "unique_about_mamAn4",
       "custom_grid_banner_Cp9TJG",
       "featured_products_qgDe7q",
-      "after_before_carousel_Dq8VEg"
+      "after_before_carousel_Dq8VEg",
+      "blog_carousel_Kyz7y4"
     ]
   }
 }
