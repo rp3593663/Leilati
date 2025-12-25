@@ -46,7 +46,7 @@
 						data-column2="3"
 						data-column3="3"
 						data-column4="3">
-            {% for article in blog.articles limit: 6 %}
+            {% for article in blog.articles %}
                 <div class="slick-carousel__item">
                     <div class="blog-thumb {% if forloop.first %}active{% endif %}" data-title="{{ article.title | escape }}"  data-excerpt="{{ article.excerpt | strip_html | truncate: 160 | escape }}" data-image="{{ article.image | image_url: width: 900 }}" data-url="{{ article.url }}" data-author="{{ article.author }}">
                         <img src="{{ article.image | image_url: width: 300 }}" alt="{{ article.title }}">
