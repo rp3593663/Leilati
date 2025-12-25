@@ -1539,9 +1539,13 @@
         "name": "Blog Carousel",
         "settings": {
           "blog": "leilati",
+          "heading": "Trending Skincare",
+          "heading_highlight": "Blogs",
           "color_bg": "#ffffff",
           "max_width": "",
           "fullwidth": false,
+          "padding": "",
+          "margin": "",
           "custom_class": ""
         }
       }
