@@ -18,7 +18,10 @@
 
       <div class="blog-main">
         <div class="blog-main-image">
-          <img id="mainBlogImage" src="{{ first_article.image | image_url: width: 900 }}" alt="{{ first_article.title }}">
+            <div class="blog_img">
+                <img id="mainBlogImage" src="{{ first_article.image | image_url: width: 900 }}" alt="{{ first_article.title }}">
+            </div>
+            <div id="mainBlogDate">{{ first_article.author }}</div>
         </div>
 
         <div class="blog-main-content">
