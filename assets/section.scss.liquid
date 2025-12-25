@@ -6973,6 +6973,25 @@ $prefixes: ("-moz-", "");
 
 
 .kretoss-section--blog-carousel {
+	.kretoss_heading {
+		text-align: center;
+		margin-bottom: 40px;
+		@media(max-width: 767px){
+			margin-bottom: 30px;
+		}
+		h2 {
+			font-size: 40px;
+			font-weight: 400;
+			margin: 0px;
+			@media(max-width: 767px){
+				font-size: 28px;
+			}
+			span{
+				color: $theme-color;
+				font-weight: 700;
+			}
+		}
+	}
 	.blog-carousel-wrapper {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
