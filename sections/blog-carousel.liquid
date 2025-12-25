@@ -40,16 +40,19 @@
 }
 </style>
 
-<section
-  class="kretoss-section kretoss-section--blog-carousel {{ section.settings.custom_class }}"
-  style="background-color: {{ section.settings.color_bg }};"
->
-  <div
-    class="{{ container }}"
-    {% if section.settings.max_width != blank %}
-      style="max-width:{{ section.settings.max_width }}"
-    {% endif %}
-  >
+<section class="kretoss-section kretoss-section--blog-carousel {{ section.settings.custom_class }}"  style="background-color: {{ section.settings.color_bg }};">
+ <div class="{{ container }}" {{ max_width }}>
+
+    {% if section.settings.heading != blank %}
+      <div class="kretoss_heading">
+        <h2>
+          {{ section.settings.heading }}
+          {% if section.settings.heading_highlight != blank %}
+            <span>{{ section.settings.heading_highlight }}</span>
+          {% endif %}
+        </h2>
+      </div>
+      {% endif %}
     {% assign blog = blogs[section.settings.blog] %}
     {% if blog != blank %}
       <!-- MAIN FEATURE -->
