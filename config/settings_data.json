@@ -984,9 +984,7 @@
           "a093e3a6-3153-47ae-a48f-62a051913df6",
           "09d82ae8-b720-49d7-aaf6-370d48d60e0f"
         ],
-        "settings": {
-          "title": "Frequently Asked Questions."
-        }
+        "settings": {}
       },
       "166452443683aa5d29": {
         "type": "slideshow",
@@ -1327,7 +1325,7 @@
           "max_width": "",
           "fullwidth": false,
           "padding": "",
-          "margin": "60px 0px | | | 30px 0px",
+          "margin": "80px 0px | | | 40px 0px",
           "title": "Best <span>Sellers</span>",
           "button": "",
           "style_button": "style_1",
@@ -1548,6 +1546,19 @@
           "margin": "",
           "custom_class": ""
         }
+      },
+      "faq_template2_XyXBRN": {
+        "type": "faq-template2",
+        "name": "FAQs",
+        "settings": {
+          "heading": "Frequently Asked",
+          "heading_highlight": "Questions",
+          "color_bg": "#ffffff",
+          "max_width": "",
+          "fullwidth": false,
+          "padding": "",
+          "margin": "80px 0px | | | 40px 0px"
+        }
       }
     },
     "content_for_index": [
@@ -1559,7 +1570,8 @@
       "custom_grid_banner_Cp9TJG",
       "featured_products_qgDe7q",
       "after_before_carousel_Dq8VEg",
-      "blog_carousel_Kyz7y4"
+      "blog_carousel_Kyz7y4",
+      "faq_template2_XyXBRN"
     ]
   }
 }
