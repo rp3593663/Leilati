@@ -6834,6 +6834,10 @@ $prefixes: ("-moz-", "");
 				border-radius: 40px;
 				line-height: 38px;
 				box-shadow: 0px 0px 14px 0px #FFFFFF8C inset;
+				@media(max-width: 767px){
+					top: 50%;
+    				transform: translateY(-50%);
+				}
 				&:before {
 					font-size: 12px;
 					color: $white;
