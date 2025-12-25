@@ -6997,6 +6997,10 @@ $prefixes: ("-moz-", "");
 		grid-template-columns: 1fr 1fr;
 		gap: 30px;
 		align-items: center;
+		@media(max-width:767px){
+			grid-template-columns: 1fr;
+			gap: 20px;
+		}
 	}
 	.blog_left_wrapper{
 		.blog-main-image {
