@@ -3611,7 +3611,6 @@ body:not(.template-page,.template-index){
 			width: 35px;
     		height: 35px;
 			color:$menu-color;
-			@include rtl-padding-right(12px);
 			.count{
 				background: $theme-color;
 				color: $white;
@@ -3625,9 +3624,6 @@ body:not(.template-page,.template-index){
 			}
 			&:hover{
 				color:$menu-hover-color;
-			}
-			@media (max-width:767px){
-				@include rtl-margin-right(5px);
 			}
 		}
 	}
