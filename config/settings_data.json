@@ -412,32 +412,16 @@
           "c3b23a84-7647-4544-adf4-b5265037f060": {
             "type": "contact",
             "settings": {
-              "title": "Contact Us",
+              "image": "shopify://shop_images/logo.png",
+              "title": "",
               "color": "#000000",
               "font_size": 18,
               "line_height": 18,
               "letter_spacing": 0.2,
               "font_weight": "600",
               "margin": "0px 0px 24px 0px",
-              "content": "P.O Box 1111, Odessa, FL 33556<br>\n<p style=\"margin:0\"><b>Email :</b> <a href=\"mailto:support@leilati.com\">Support@leilati.com</a></p>\n<p style=\"margin:0\"><b>Phone :</b> <a href=\"tel:+457199%202516\">(+45) 7199 2516</a></p>",
-              "social": true,
-              "footer_width": 20,
-              "footer_width_ipad": 50,
-              "footer_width_mobi": 100
-            }
-          },
-          "contact_AzXwRU": {
-            "type": "contact",
-            "settings": {
-              "title": "Contact Us",
-              "color": "#000000",
-              "font_size": 18,
-              "line_height": 18,
-              "letter_spacing": 0.2,
-              "font_weight": "600",
-              "margin": "0px 0px 24px 0px",
-              "content": "P.O Box 1111, Odessa, FL 33556<br>\n<p style=\"margin:0\"><b>Email :</b> <a href=\"mailto:support@leilati.com\">Support@leilati.com</a></p>\n<p style=\"margin:0\"><b>Phone :</b> <a href=\"tel:+457199%202516\">(+45) 7199 2516</a></p>",
-              "social": true,
+              "content": "At Leilati, we believe beauty should be fun, safe, and make you smile every single day. Just like me! I loved beauty stuff SO much that I inspired my parents to start this whole luxurious beauty care product line!",
+              "social": false,
               "footer_width": 20,
               "footer_width_ipad": 50,
               "footer_width_mobi": 100
@@ -475,6 +459,23 @@
               "footer_width_mobi": 100
             }
           },
+          "contact_AzXwRU": {
+            "type": "contact",
+            "settings": {
+              "title": "Contact Us",
+              "color": "#000000",
+              "font_size": 18,
+              "line_height": 18,
+              "letter_spacing": 0.2,
+              "font_weight": "600",
+              "margin": "0px 0px 24px 0px",
+              "content": "P.O Box 1111, Odessa, FL 33556<br>\n<p style=\"margin:0\"><b>Email :</b> <a href=\"mailto:support@leilati.com\">Support@leilati.com</a></p>\n<p style=\"margin:0\"><b>Phone :</b> <a href=\"tel:+457199%202516\">(+45) 7199 2516</a></p>",
+              "social": true,
+              "footer_width": 20,
+              "footer_width_ipad": 50,
+              "footer_width_mobi": 100
+            }
+          },
           "8b6a6c22-37ab-4b74-9cec-2a73f072a8db": {
             "type": "newsletter",
             "settings": {
@@ -497,9 +498,9 @@
         },
         "block_order": [
           "c3b23a84-7647-4544-adf4-b5265037f060",
-          "contact_AzXwRU",
           "a37d68b3-5d69-4858-9056-ae386f8f1af2",
           "9c247b95-9a73-4ff3-bed6-5b3ef2f6b413",
+          "contact_AzXwRU",
           "8b6a6c22-37ab-4b74-9cec-2a73f072a8db"
         ],
         "settings": {
