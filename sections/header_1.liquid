@@ -5,7 +5,12 @@
 	.header-logo img {max-width: {{ logo_max_width | append: 'px' }};}
 	{% if section.settings.header_absolute %}
 		@media (min-width:991px){
-			body.template-index .bwp-header{position:absolute;width:100%;z-index: 2;}
+			body.template-index .bwp-header{
+				position:absolute;
+				width:100%;
+				z-index: 2;
+				border-bottom: 0.5px solid #ffffff24;
+			}
 			{% if section.settings.color_homepage_text %}
 				body.template-index .bwp-header .header-desktop .main-menu__nav-item>a{
 					color:{{ section.settings.color_homepage_text }}
