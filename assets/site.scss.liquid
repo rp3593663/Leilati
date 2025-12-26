@@ -2444,11 +2444,27 @@ body.active_search{
 		top: -5px;
 		transition: all .3s ease;
 		color:$menu-color;
+		font-size: 25px;
+		position: relative;
+		top: 0;
+		transition: all .3s ease;
+		color: #000;
+		background: #fff3;
+		backdrop-filter: blur(12px);
+		width: 40px;
+		height: 40px;
+		border-radius: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		&:hover{
 			color:$menu-hover-color;
 		}
 		span.text-header-right {
 			display: none;
+		}
+		@media(min-width: 992px){
+
 		}
 	}
 	@media (max-width:1199px){
