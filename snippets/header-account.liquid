@@ -29,12 +29,12 @@
 		{% if template contains 'customers' %}
 			<a class="login-account" href="{{ routes.account_url }}">
 				<span class="text-header-right">{{ section.settings.header_user_title | escape }}</span>
-				<i class="feather-user"></i>
+				<i class="bwp-icon-user"></i>
 			</a>
 		{% else %}
 			<a class="login-account" data-login-account href="#">
 				<span class="text-header-right">{{ section.settings.header_user_title | escape }}</span>
-				<i class="feather-user"></i>
+				<i class="bwp-icon-user"></i>
 			</a>
 			{% include 'login-register' %}
 		{%- endif -%}
