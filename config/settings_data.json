@@ -419,7 +419,7 @@
               "letter_spacing": 0.2,
               "font_weight": "600",
               "margin": "0px 0px 24px 0px",
-              "content": "<div><h2>Use HTML to format <div><span>Rains HQ, Jens Olsens Vej 13 ,8200 Aarhus<br>\nN, Denmark<br>\nEmail : sayhello@sienastore.com<br>\nPhone (+45) 7199 2516</span></div>\n</h2></div>",
+              "content": "P.O Box 1111, Odessa, FL 33556<br>\n<p style=\"margin:0\"><b>Email :</b> <a href=\"mailto:support@leilati.com\">Support@leilati.com</a></p>\n<p style=\"margin:0\"><b>Phone :</b> <a href=\"tel:+457199%202516\">(+45) 7199 2516</a></p>",
               "social": true,
               "footer_width": 25,
               "footer_width_ipad": 50,
