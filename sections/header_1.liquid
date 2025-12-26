@@ -74,7 +74,12 @@
 				<div class="header-right">
 					<div class="header-page-link">
 						{%- if section.settings.show_header_search -%}
-							<div class="search-toggle"><i class="feather-search"></i></div>
+							<div class="search-toggle">
+								<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21.7502 21.7502L16.6834 16.6834M16.6834 16.6834C17.5501 15.8167 18.2376 14.7878 18.7067 13.6554C19.1757 12.523 19.4172 11.3093 19.4172 10.0836C19.4172 8.85787 19.1757 7.64417 18.7067 6.51177C18.2376 5.37937 17.5501 4.35044 16.6834 3.48374C15.8167 2.61704 14.7878 1.92953 13.6554 1.46048C12.523 0.99142 11.3093 0.75 10.0836 0.75C8.85787 0.75 7.64417 0.99142 6.51177 1.46048C5.37937 1.92953 4.35044 2.61704 3.48374 3.48374C1.73336 5.23413 0.75 7.60816 0.75 10.0836C0.75 12.559 1.73336 14.933 3.48374 16.6834C5.23413 18.4338 7.60816 19.4172 10.0836 19.4172C12.559 19.4172 14.933 18.4338 16.6834 16.6834Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+							</div>
 							{% include 'header-search-toggle' %}
 						{%- endif -%}
 						{%- if section.settings.show_header_user -%}
