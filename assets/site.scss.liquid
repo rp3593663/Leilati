@@ -2575,11 +2575,17 @@ body:not(.template-page,.template-index){
 		padding:0 15px;
 		@media (max-width:991px){
 			margin-bottom: 30px;
+			&:last-child{
+				margin-bottom: 0px;
+			}
 		}
 	}
 	.contact_block  img {
 		margin-bottom: 25px;
 		height: 40px;
+		@media (max-width:991px){
+			margin-bottom: 20px;
+		}
 	}
 	.footer-block__content{
 		font-size: 16px;
