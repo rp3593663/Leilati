@@ -3151,14 +3151,15 @@ body:not(.template-page,.template-index){
 			color: $menu-hover-color;
 		}
 	}
-	&:hover,&:focus,&.active {
+	&:hover,&:focus {
 		> a {
-			color: $menu-hover-color;
+			text-decoration: underline;
 			font-weight: 600;
 		}
 	}
 	&:active{
 		> a {
+			color: $menu-hover-color;
 			font-weight: 600;
 		}
 	}
