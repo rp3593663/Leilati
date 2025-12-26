@@ -2560,16 +2560,23 @@ body.template-cart{
 }
 .header-cart__link {
 	position: relative;
-	display: block;
-	@include rtl-padding-right(20px);
-	color: $menu-color;
-	transition: all .3s ease;
-	font-size: 18px;
-	top: -1px;
+    color: #000;
+    transition: all .3s ease;
+    font-size: 18px;
+    top: 0px;
+    background: #fff3;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 	&:hover {
 		text-decoration: none;
 		color:$menu-hover-color;
-		top: -3px;
+		top: -2px;
 	}
 }
 .header-cart__count {
