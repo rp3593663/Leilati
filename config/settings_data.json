@@ -422,7 +422,7 @@
               "margin": "0px 0px 24px 0px",
               "content": "At Leilati, we believe beauty should be fun, safe, and make you smile every single day. Just like me! I loved beauty stuff SO much that I inspired my parents to start this whole luxurious beauty care product line!",
               "social": false,
-              "footer_width": 20,
+              "footer_width": 25,
               "footer_width_ipad": 50,
               "footer_width_mobi": 100
             }
@@ -438,7 +438,7 @@
               "font_weight": "600",
               "margin": "0px 0px 24px 0px",
               "footer_link_list": "footer",
-              "footer_width": 20,
+              "footer_width": 18,
               "footer_width_ipad": 50,
               "footer_width_mobi": 100
             }
@@ -454,7 +454,7 @@
               "font_weight": "600",
               "margin": "0px 0px 24px 0px",
               "footer_link_list": "footer-categories",
-              "footer_width": 20,
+              "footer_width": 14,
               "footer_width_ipad": 50,
               "footer_width_mobi": 100
             }
@@ -471,7 +471,7 @@
               "margin": "0px 0px 24px 0px",
               "content": "P.O Box 1111, Odessa, FL 33556<br>\n<p style=\"margin:0\"><b>Email :</b> <a href=\"mailto:support@leilati.com\">Support@leilati.com</a></p>\n<p style=\"margin:0\"><b>Phone :</b> <a href=\"tel:+457199%202516\">(+45) 7199 2516</a></p>",
               "social": true,
-              "footer_width": 20,
+              "footer_width": 21,
               "footer_width_ipad": 50,
               "footer_width_mobi": 100
             }
@@ -490,7 +490,7 @@
               "footer_desc": "Become a Outfie member and get 10% off your next purchase!",
               "mailchimp": true,
               "form_action": "",
-              "footer_width": 20,
+              "footer_width": 22,
               "footer_width_ipad": 50,
               "footer_width_mobi": 100
             }
