@@ -83,7 +83,11 @@
 							{% include 'header-account' %}
 						{%- endif -%}
 						{%- if section.settings.show_header_wishlist -%}
-							<a class="wishlist" href="/pages/wishlist" data-count-wishlist><span class="text-header-right">{{ section.settings.header_wishlist_title | escape }}</span><span class="count"></span></a>
+							<a class="wishlist" href="/pages/wishlist" data-count-wishlist>
+								{% comment %} <span class="text-header-right">{{ section.settings.header_wishlist_title | escape }}</span> {% endcomment %}
+								<i class="feather-heart"></i>
+								<span class="count"></span>
+							</a>
 						{%- endif -%}
 						{%- if section.settings.show_header_cart -%}
 							{% include 'header-cart' %}
