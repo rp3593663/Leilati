@@ -726,12 +726,12 @@
       "collection-breadcrumb": {
         "type": "collection-breadcrumb",
         "settings": {
-          "enable": false,
+          "enable": true,
           "bgimage": false,
           "enable_collection": false,
           "categories_menu": "",
           "style_collection": "style_2",
-          "navigation": true,
+          "navigation": false,
           "infinite": true,
           "columns": 5,
           "column1440": 5,
