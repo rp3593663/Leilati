@@ -155,8 +155,65 @@
         "description": "<ul><li>Making skincare feel like a fun sleepover activity</li><li>Finding products that smell awesome</li><li>Teaching my friends that taking care of your skin is like giving yourself a daily hug</li><li>Proving that you’re NEVER too young to have a skincare routine (even if it’s just washing your face and using lip balm!)</li></ul><p>My mom always says I have “an eye for beauty” which I think means I’m really good at picking out the prettiest things. I love trying new face masks (the ones that make you look like a panda are my favorite), testing lip balms, and organizing all my beauty stuff by color because it looks like a rainbow!</p><p>At Leilati, we believe beauty should be fun, safe, and make you smile every single day. Just like me!</p><p>*P.S. - Don’t forget to always ask a grown-up before trying new products! Safety first, sparkles second!</p>",
         "button_text": "",
         "button_link": "#",
-        "padding": "120px 0px 80px | 100px 0px 60px | 100px 0px 60px | 80px 0px 40px",
+        "padding": "120px 0px 0px | 100px 0px 0px | 100px 0px 0px | 80px 0px 0px",
         "margin": "-20px 0px 0px"
+      }
+    },
+    "faq_template2_iBtmP4": {
+      "type": "faq-template2",
+      "blocks": {
+        "faq_P46w6M": {
+          "type": "faq",
+          "settings": {
+            "title": "What type of products does Leilati offer?",
+            "content": "<p>Leilati offers a wide range of beauty and self-care essentials, including skincare, hair care, makeup, and curated beauty sets designed to elevate your natural glow.</p>"
+          }
+        },
+        "faq_cXwFF7": {
+          "type": "faq",
+          "settings": {
+            "title": "Are your products suitable for all skin types?",
+            "content": "<p>Leilati offers a wide range of beauty and self-care essentials, including skincare, hair care, makeup, and curated beauty sets designed to elevate your natural glow.</p>"
+          }
+        },
+        "faq_BPV7Qt": {
+          "type": "faq",
+          "settings": {
+            "title": "Do you use natural or clean ingredients?",
+            "content": "<p>Leilati offers a wide range of beauty and self-care essentials, including skincare, hair care, makeup, and curated beauty sets designed to elevate your natural glow.</p>"
+          }
+        },
+        "faq_DzKDfc": {
+          "type": "faq",
+          "settings": {
+            "title": "How long does shipping take?",
+            "content": "<p>Leilati offers a wide range of beauty and self-care essentials, including skincare, hair care, makeup, and curated beauty sets designed to elevate your natural glow.</p>"
+          }
+        },
+        "faq_zDQECw": {
+          "type": "faq",
+          "settings": {
+            "title": "Do you ship internationally?",
+            "content": "<p>Leilati offers a wide range of beauty and self-care essentials, including skincare, hair care, makeup, and curated beauty sets designed to elevate your natural glow.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_P46w6M",
+        "faq_cXwFF7",
+        "faq_BPV7Qt",
+        "faq_DzKDfc",
+        "faq_zDQECw"
+      ],
+      "name": "FAQs",
+      "settings": {
+        "heading": "Frequently Asked",
+        "heading_highlight": "Questions",
+        "color_bg": "#ffffff",
+        "max_width": "",
+        "fullwidth": false,
+        "padding": "",
+        "margin": "80px 0px | | | 40px 0px"
       }
     }
   },
@@ -166,6 +223,7 @@
     "featured_title_yCnTCh",
     "featured_marquee_QaCpUj",
     "unique_about_xNQagP",
-    "unique_about_BJyBGH"
+    "unique_about_BJyBGH",
+    "faq_template2_iBtmP4"
   ]
 }
