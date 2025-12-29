@@ -115,7 +115,7 @@
 	}
 {%- endstyle -%}
 
-<section class="kretoss-section kretoss-section--title kretoss-section--{{ section.id }} overflow-hidden" style="background-color:{{ color_bg }};">
+<section class="{{ section.settings.custom_class }}kretoss-section kretoss-section--title kretoss-section--{{ section.id }} overflow-hidden" style="background-color:{{ color_bg }};">
 	<div class="{{ container }}" {{ max_width }}>
 		<div class="kretoss-section__inner">
 			{%- for block in section.blocks -%}
