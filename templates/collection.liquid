@@ -7,8 +7,8 @@
 	{%- assign sidebar_left_class = 'col-12 col-lg-3' -%}
 	{%- assign sidebar_right_class = 'col-12 col-lg-9' -%}
 {%- endif -%}
-{% section 'collection-breadcrumb' %}
-{% section 'collection-banner' %}
+{% comment %} {% section 'collection-breadcrumb' %}
+{% section 'collection-banner' %} {% endcomment %}
 <section class="js-page-collection page-collection {{ settings.style_view_items }} {{ layout_filter }}{% if shop_full %} shop_full{% endif %}"{% if settings.style_view_items == 'viewmore' %} data-list_number="{{ settings.count_items }}"{% endif %}>
 	<div class="container">
 		<div class="page-collection__inner">
