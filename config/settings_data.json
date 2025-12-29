@@ -398,6 +398,86 @@
               "select_color_2": "",
               "show_image": false
             }
+          },
+          "color_fatdiL": {
+            "type": "color",
+            "settings": {
+              "title": ".Simply.Mauve",
+              "is_label": false,
+              "select_color_1": "#9e4138",
+              "select_color_2": "",
+              "show_image": false
+            }
+          },
+          "color_mWJfDx": {
+            "type": "color",
+            "settings": {
+              "title": ".Barely.Beige",
+              "is_label": false,
+              "select_color_1": "#ab553d",
+              "select_color_2": "",
+              "show_image": false
+            }
+          },
+          "color_nU83t6": {
+            "type": "color",
+            "settings": {
+              "title": ".Spicy.Rum",
+              "is_label": false,
+              "select_color_1": "#ae6a5b",
+              "select_color_2": "",
+              "show_image": false
+            }
+          },
+          "color_d7D4WF": {
+            "type": "color",
+            "settings": {
+              "title": ".Plum.Wine",
+              "is_label": false,
+              "select_color_1": "#7b3228",
+              "select_color_2": "",
+              "show_image": false
+            }
+          },
+          "color_CceCMF": {
+            "type": "color",
+            "settings": {
+              "title": "Fire.Cracker.Red",
+              "is_label": false,
+              "select_color_1": "#b02e1f",
+              "select_color_2": "",
+              "show_image": false
+            }
+          },
+          "color_cxLiFd": {
+            "type": "color",
+            "settings": {
+              "title": ".Creamy.Mauve",
+              "is_label": false,
+              "select_color_1": "#b74b3f",
+              "select_color_2": "",
+              "show_image": false
+            }
+          },
+          "color_YHaFmt": {
+            "type": "color",
+            "settings": {
+              "title": ".Pink.Pizzazz",
+              "is_label": false,
+              "select_color_1": "#a51f46",
+              "select_color_2": "",
+              "show_image": false
+            }
+          },
+          "color_at4AeG": {
+            "type": "color",
+            "settings": {
+              "title": ".Misty.Mauve",
+              "is_label": false,
+              "select_color_1": "#a24c3e",
+              "select_color_2": "",
+              "show_image": false
+            }
           }
         },
         "block_order": [
@@ -409,7 +489,15 @@
           "color_g8Gjke",
           "color_DJFE6W",
           "color_Umcrgy",
-          "color_XBMh8E"
+          "color_XBMh8E",
+          "color_fatdiL",
+          "color_mWJfDx",
+          "color_nU83t6",
+          "color_d7D4WF",
+          "color_CceCMF",
+          "color_cxLiFd",
+          "color_YHaFmt",
+          "color_at4AeG"
         ],
         "settings": {}
       },
