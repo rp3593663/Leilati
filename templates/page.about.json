@@ -25,10 +25,47 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "featured_title_yCnTCh": {
+      "type": "featured-title",
+      "blocks": {
+        "title_PWfwxA": {
+          "type": "title",
+          "settings": {
+            "title": "Hi! I’m <span>Leila!<span> 💖✨</span></span>",
+            "color": "#000",
+            "font_size": 30,
+            "line_height": 35,
+            "letter_spacing": 0,
+            "font_weight": "300",
+            "margin": "0px 0px 0px 0px",
+            "align": "left",
+            "color_mobi": "#000",
+            "font_size_mobi": 20,
+            "line_height_mobi": 20,
+            "letter_spacing_mobi": 0,
+            "margin_mobi": "0px 0px 0px 0px",
+            "align_mobi": "left"
+          }
+        }
+      },
+      "block_order": [
+        "title_PWfwxA"
+      ],
+      "name": "Kretoss title",
+      "settings": {
+        "custom_class": "about_title",
+        "color_bg": "#f9f2e1",
+        "max_width": "",
+        "fullwidth": false,
+        "padding": "",
+        "margin": ""
+      }
     }
   },
   "order": [
     "breadcrumb",
-    "main"
+    "main",
+    "featured_title_yCnTCh"
   ]
 }
