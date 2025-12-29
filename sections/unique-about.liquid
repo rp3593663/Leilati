@@ -74,17 +74,19 @@
 
         <!-- CONTENT BLOCK -->
         <div class="content_block">
-          {% if section.settings.icon_image %}
+          {% if section.settings.icon_image != blank %}
             <img class="lazyload fade-in about_icon"
               src="{{ section.settings.icon_image | image_url }}"
               alt=""
             >
           {% endif %}
 
+          {% if section.settings.heading != blank %}
           <h2>
             {{ section.settings.heading }}
             <span>{{ section.settings.highlight_text }}</span>
           </h2>
+          {% endif %}
 
           <p>{{ section.settings.description }}</p>
 
