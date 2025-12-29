@@ -123,7 +123,7 @@
       "type": "unique-about",
       "name": "Unique About",
       "settings": {
-        "custom_class": "",
+        "custom_class": "about_page_welcome",
         "color_bg": "#ffffff",
         "max_width": "",
         "fullwidth": false,
