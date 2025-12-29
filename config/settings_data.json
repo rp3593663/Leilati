@@ -328,11 +328,88 @@
               "select_color_2": "",
               "show_image": false
             }
+          },
+          "color_Hy6rkL": {
+            "type": "color",
+            "settings": {
+              "title": ".Naughty.Nude",
+              "is_label": false,
+              "select_color_1": "#915a4a",
+              "select_color_2": "",
+              "show_image": false
+            }
+          },
+          "color_JiEpUT": {
+            "type": "color",
+            "settings": {
+              "title": ".Runway.Red",
+              "is_label": false,
+              "select_color_1": "#661f19",
+              "select_color_2": "",
+              "show_image": false
+            }
+          },
+          "color_c8yfPX": {
+            "type": "color",
+            "settings": {
+              "title": ".Precious.Pink",
+              "is_label": false,
+              "select_color_1": "#d37891",
+              "select_color_2": "",
+              "show_image": false
+            }
+          },
+          "color_g8Gjke": {
+            "type": "color",
+            "settings": {
+              "title": ".Darling.Dahlia",
+              "is_label": false,
+              "select_color_1": "#bc5c63",
+              "select_color_2": "",
+              "show_image": false
+            }
+          },
+          "color_DJFE6W": {
+            "type": "color",
+            "settings": {
+              "title": ".Lustrous.Latte",
+              "is_label": false,
+              "select_color_1": "#995a51",
+              "select_color_2": "",
+              "show_image": false
+            }
+          },
+          "color_Umcrgy": {
+            "type": "color",
+            "settings": {
+              "title": ".Parisian.Pink",
+              "is_label": false,
+              "select_color_1": "#974b4f",
+              "select_color_2": "",
+              "show_image": false
+            }
+          },
+          "color_XBMh8E": {
+            "type": "color",
+            "settings": {
+              "title": ".Rambling.Rose",
+              "is_label": false,
+              "select_color_1": "#7b3438",
+              "select_color_2": "",
+              "show_image": false
+            }
           }
         },
         "block_order": [
           "color_AgRnMw",
-          "color_aAwat7"
+          "color_aAwat7",
+          "color_Hy6rkL",
+          "color_JiEpUT",
+          "color_c8yfPX",
+          "color_g8Gjke",
+          "color_DJFE6W",
+          "color_Umcrgy",
+          "color_XBMh8E"
         ],
         "settings": {}
       },
