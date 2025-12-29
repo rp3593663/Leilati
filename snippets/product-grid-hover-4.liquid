@@ -109,7 +109,7 @@
 			<div class="product-card__form" data-handle="{{ product.handle }}" data-title="{% if group_product == blank and external == blank %}{%- if variant_count > 1 and settings.sortby_variants == blank -%}{{ 'products.product.view_product' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endif %}{% else %}{{ 'products.product.buy_product' | t }}{% endif %}">
 				{% if group_product == blank and external == blank %}
 					{%- if variant_count > 1 and settings.sortby_variants == blank -%}
-						<a class="btn btn-link" href="{{ product_url }}"><i class="feather-arrow-right"></i>{{ 'products.product.view_product' | t }}</a>
+						<a class="btn btn-link" href="{{ product_url }}">{{ 'products.product.view_product' | t }}</a>
 					{% else %}
 						<form action="/cart/add" method="post" enctype="multipart/form-data" class="form-addtocart" data-product-form>
 							<input type="hidden" name="id" value="{{ variant.id }}" />
@@ -122,9 +122,9 @@
 						</form>
 					{% endif %}
 				{% elsif group_product == blank and external != blank %}
-					<a class="btn btn-link" href="{{ external }}"><i class="feather-arrow-right"></i>{{ 'products.product.view_product' | t }}</a>
+					<a class="btn btn-link" href="{{ external }}">{{ 'products.product.view_product' | t }}</a>
 				{% else %}
-					<a class="btn btn-link" href="{{ product_url }}"><i class="feather-arrow-right"></i>{{ 'products.product.view_product' | t }}</a>
+					<a class="btn btn-link" href="{{ product_url }}">{{ 'products.product.view_product' | t }}</a>
 				{% endif %}
 			</div>
 		{%- endunless -%}
