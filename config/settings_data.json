@@ -727,7 +727,8 @@
         "type": "collection-breadcrumb",
         "settings": {
           "enable": true,
-          "bgimage": false,
+          "bgimage": true,
+          "image": "shopify://shop_images/collection_bg.png",
           "enable_collection": false,
           "categories_menu": "",
           "style_collection": "style_2",
