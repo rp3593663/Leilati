@@ -53,15 +53,15 @@
           "settings": {
             "title": "Welcome to **Leilati** - that’s my name plus “ati” which means “my Leila” and sounds super fancy, right?! My name Leila means “night” which I think is perfect because nighttime is when you do all your best skincare routines!",
             "color": "#000000",
-            "font_size": 16,
-            "line_height": 28,
+            "font_size": 18,
+            "line_height": 30,
             "letter_spacing": 0,
             "font_weight": "400",
             "margin": "0px 0px 0px 0px",
             "align": "center",
             "color_mobi": "#000000",
-            "font_size_mobi": 14,
-            "line_height_mobi": 20,
+            "font_size_mobi": 16,
+            "line_height_mobi": 26,
             "letter_spacing_mobi": 0,
             "margin_mobi": "0px 0px 0px 0px",
             "align_mobi": "left"
