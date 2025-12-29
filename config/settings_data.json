@@ -309,30 +309,30 @@
       "customer-variant": {
         "type": "customer-variant",
         "blocks": {
-          "6b0ea3bf-ec26-4338-86c3-5d727272540c": {
+          "color_AgRnMw": {
             "type": "color",
             "settings": {
-              "title": ".Black",
+              "title": ".Magical.Mauve",
               "is_label": false,
-              "select_color_1": "#000000",
+              "select_color_1": "#b35462",
               "select_color_2": "",
               "show_image": false
             }
           },
-          "de424ee5-8a0d-49c7-82f3-863e0079df05": {
+          "color_aAwat7": {
             "type": "color",
             "settings": {
-              "title": ".Pink",
+              "title": ".Next.to.Nude",
               "is_label": false,
-              "select_color_1": "#e4d9d9",
+              "select_color_1": "#bb7266",
               "select_color_2": "",
               "show_image": false
             }
           }
         },
         "block_order": [
-          "6b0ea3bf-ec26-4338-86c3-5d727272540c",
-          "de424ee5-8a0d-49c7-82f3-863e0079df05"
+          "color_AgRnMw",
+          "color_aAwat7"
         ],
         "settings": {}
       },
