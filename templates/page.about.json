@@ -123,6 +123,27 @@
       "type": "unique-about",
       "name": "Unique About",
       "settings": {
+        "custom_class": "",
+        "color_bg": "#ffffff",
+        "max_width": "",
+        "fullwidth": false,
+        "shadow_image": "shopify://shop_images/about_shadow.png",
+        "svg_image": "shopify://shop_images/about_svg1.svg",
+        "main_image": "shopify://shop_images/1.png",
+        "star_image": "shopify://shop_images/about_star.svg",
+        "heading": "",
+        "highlight_text": "",
+        "description": "<p>I’m 10 years old and I LOVE everything that makes people feel sparkly and beautiful! My friends always ask me about lip gloss flavors (strawberry is obviously the best) and which nail polish colors look prettiest together. I’m basically like a beauty expert but way more fun!</p>\n<p>I loved beauty stuff SO much that I inspired my parents to start this whole luxurious beauty care product line! Can you believe it?! They said I had such amazing ideas that they just HAD to make them real. Plus, we’re donating part of our profits to charity because helping others makes everything even more beautiful!</p>\n<p>Oh, and I have two brothers who think I’m totally weird for having like 7 different lip balms, but secretly I’ve caught them using my vanilla one. Boys! 🙄</p>",
+        "button_text": "",
+        "button_link": "#",
+        "padding": "180px 0px 80px | 140px 0px 60px | 140px 0px 60px | 100px 0px 40px",
+        "margin": "-20px 0px 0px"
+      }
+    },
+    "unique_about_BJyBGH": {
+      "type": "unique-about",
+      "name": "Unique About",
+      "settings": {
         "custom_class": "about_page_welcome",
         "color_bg": "#ffffff",
         "max_width": "",
@@ -146,6 +167,7 @@
     "main",
     "featured_title_yCnTCh",
     "featured_marquee_QaCpUj",
-    "unique_about_xNQagP"
+    "unique_about_xNQagP",
+    "unique_about_BJyBGH"
   ]
 }
