@@ -165,7 +165,7 @@
         "settings": {
           "categories_enable": true,
           "categories_title": "Collections",
-          "categories_menu": "collection",
+          "categories_menu": "",
           "show_count": true,
           "enable_filtering": true
         }
@@ -726,7 +726,7 @@
       "collection-breadcrumb": {
         "type": "collection-breadcrumb",
         "settings": {
-          "enable": true,
+          "enable": false,
           "bgimage": false,
           "enable_collection": false,
           "categories_menu": "",
@@ -1417,7 +1417,7 @@
           "star_image": "shopify://shop_images/about_star.svg",
           "heading": "You can find your own",
           "highlight_text": "Beauty",
-          "description": "At Leilati, beauty is more than skin deep - it's a daily ritual of care, confidence, and self-expression. We bring you a curated range of Face Care, Body Care, Men's Care, Hair Care, Lip Gloss, and Makeup products, designed to nourish your skin and enhance your natural glow.",
+          "description": "<p>At Leilati, beauty is more than skin deep - it's a daily ritual of care, confidence, and self-expression. We bring you a curated range of Face Care, Body Care, Men's Care, Hair Care, Lip Gloss, and Makeup products, designed to nourish your skin and enhance your natural glow.</p>",
           "button_text": "Explore More",
           "button_link": "#",
           "padding": "180px 0px 80px | 140px 0px 60px | 140px 0px 60px | 100px 0px 40px",
