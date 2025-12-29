@@ -165,7 +165,7 @@
         "settings": {
           "categories_enable": true,
           "categories_title": "Collections",
-          "categories_menu": "",
+          "categories_menu": "footer-categories",
           "show_count": true,
           "enable_filtering": true
         }
