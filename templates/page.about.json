@@ -32,20 +32,20 @@
         "title_PWfwxA": {
           "type": "title",
           "settings": {
-            "title": "Hi! I’m <span>Leila!<span> 💖✨</span></span>",
+            "title": "Hi! I’m Leila! 💖✨",
             "color": "#000",
-            "font_size": 30,
-            "line_height": 35,
+            "font_size": 40,
+            "line_height": 40,
             "letter_spacing": 0,
-            "font_weight": "300",
+            "font_weight": "400",
             "margin": "0px 0px 0px 0px",
-            "align": "left",
+            "align": "center",
             "color_mobi": "#000",
-            "font_size_mobi": 20,
-            "line_height_mobi": 20,
+            "font_size_mobi": 28,
+            "line_height_mobi": 32,
             "letter_spacing_mobi": 0,
             "margin_mobi": "0px 0px 0px 0px",
-            "align_mobi": "left"
+            "align_mobi": "center"
           }
         }
       },
@@ -58,7 +58,7 @@
         "color_bg": "#f9f2e1",
         "max_width": "",
         "fullwidth": false,
-        "padding": "",
+        "padding": "80px 0px | | | 40px 0px",
         "margin": ""
       }
     }
