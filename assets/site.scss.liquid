@@ -4936,21 +4936,22 @@ body:not(.template-page,.template-index){
 			opacity:0;
 			visibility:hidden;
 			.btn-link{
-				background:$white;
-				color:$gray-dark;
-				text-transform:unset;
-				height:40px;
-				line-height:40px;
-				padding:0 30px;
-				display:inline-block;
-				font-size: $font-size-base;
-				text-decoration:none;
-				border-radius:3px;
-				position:relative;
-				overflow:hidden;
-				z-index:1;
-				border:0;
-				box-shadow: 0 0px 10px 2px rgba($gray-dark,0.04);
+				border: 1px solid $theme-color;
+				padding: 0 30px;
+				height: 40px;
+				line-height: 40px;
+				font-size: 14px;
+				text-transform: uppercase;
+				font-weight: 500;
+				letter-spacing: .5px;
+				color: $white;
+				background: $theme-color;
+				display: inline-block;
+				border-radius: 0;
+				position: relative;
+				overflow: hidden;
+				z-index: 1;
+				box-shadow: 0 0 14px #ffffff8c inset;
 				i{
 					@include rtl-margin-right(5px);
 					font-size:16px;
