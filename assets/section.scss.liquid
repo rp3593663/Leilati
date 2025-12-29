@@ -6517,6 +6517,9 @@ $prefixes: ("-moz-", "");
 			background: linear-gradient(0deg, #F2EBDE, #F2EBDE);
 			grid-template-columns: 1fr 1fr;
 			margin-left: unset;
+			@media(max-width: 767px){
+				grid-template-columns: 1fr;
+			}
 			.img_block{
 				.about_img{
 					transform: translate(60px,-120px);
