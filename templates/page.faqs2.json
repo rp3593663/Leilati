@@ -1,1 +1,82 @@
-{"sections":{"breadcrumb":{"type":"page-breadcrumb","settings":{"enable":false,"bgimage":false}},"main":{"type":"faq-template2","blocks":{"b304a99b-a182-407a-b88e-e8a51269e316":{"type":"faq","settings":{"title":"When do I receive my order?","content":"<p>When placing the order, a day of shipment is indicated. After the order has been placed, the same delivery time will also be stated on the order confirmation. It is therefore never possible that during the order, the shipping day on the website, is different than on the order confirmation.<\/p>"}},"98e1054a-63ec-46f1-92f4-559416117d51":{"type":"faq","settings":{"title":"I now see the longer delivery time of (a part of) my order. How can I cancel it?","content":"<p>When placing the order, a day of shipment is indicated. After the order has been placed, the same delivery time will also be stated on the order confirmation. It is therefore never possible that during the order, the shipping day on the website, is different than on the order confirmation.<\/p>"}},"7db28b32-5f9f-4f35-a02a-0afbfeb23edd":{"type":"faq","settings":{"title":"When will I receive the invoice for my order?","content":"<p>When placing the order, a day of shipment is indicated. After the order has been placed, the same delivery time will also be stated on the order confirmation. It is therefore never possible that during the order, the shipping day on the website, is different than on the order confirmation.<\/p>"}},"be5a0f8b-6381-4f02-a76e-f7ce26d4c8f5":{"type":"faq","settings":{"title":"How long will my order take to be delivered?","content":"<p>When placing the order, a day of shipment is indicated. After the order has been placed, the same delivery time will also be stated on the order confirmation. It is therefore never possible that during the order, the shipping day on the website, is different than on the order confirmation.<\/p>"}},"12ffb638-6e34-427a-ba86-22c2cb7a6b68":{"type":"faq","settings":{"title":"Do I need to create an account to place an order?","content":"<p>When placing the order, a day of shipment is indicated. After the order has been placed, the same delivery time will also be stated on the order confirmation. It is therefore never possible that during the order, the shipping day on the website, is different than on the order confirmation.<\/p>"}},"532e9c28-34ab-4f60-b2a1-1b09ee53c5ab":{"type":"faq","settings":{"title":"Can I choose my currency I pay in?","content":"<p>When placing the order, a day of shipment is indicated. After the order has been placed, the same delivery time will also be stated on the order confirmation. It is therefore never possible that during the order, the shipping day on the website, is different than on the order confirmation.<\/p>"}}},"block_order":["b304a99b-a182-407a-b88e-e8a51269e316","98e1054a-63ec-46f1-92f4-559416117d51","7db28b32-5f9f-4f35-a02a-0afbfeb23edd","be5a0f8b-6381-4f02-a76e-f7ce26d4c8f5","12ffb638-6e34-427a-ba86-22c2cb7a6b68","532e9c28-34ab-4f60-b2a1-1b09ee53c5ab"],"settings":{"title":"Frequently Asked Questions."}}},"order":["breadcrumb","main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumb": {
+      "type": "page-breadcrumb",
+      "settings": {
+        "enable": true,
+        "bgimage": true,
+        "image": "shopify://shop_images/collection_bg.png"
+      }
+    },
+    "faq_template2_EEh4ht": {
+      "type": "faq-template2",
+      "blocks": {
+        "faq_Ch6z3P": {
+          "type": "faq",
+          "settings": {
+            "title": "What type of products does Leilati offer?",
+            "content": "<p>Leilati offers a wide range of beauty and self-care essentials, including skincare, hair care, makeup, and curated beauty sets designed to elevate your natural glow.</p>"
+          }
+        },
+        "faq_NHxUfz": {
+          "type": "faq",
+          "settings": {
+            "title": "Are your products suitable for all skin types?",
+            "content": "<p>Leilati offers a wide range of beauty and self-care essentials, including skincare, hair care, makeup, and curated beauty sets designed to elevate your natural glow.</p>"
+          }
+        },
+        "faq_bKNdiw": {
+          "type": "faq",
+          "settings": {
+            "title": "Do you use natural or clean ingredients?",
+            "content": "<p>Leilati offers a wide range of beauty and self-care essentials, including skincare, hair care, makeup, and curated beauty sets designed to elevate your natural glow.</p>"
+          }
+        },
+        "faq_rmLeNC": {
+          "type": "faq",
+          "settings": {
+            "title": "How long does shipping take?",
+            "content": "<p>Leilati offers a wide range of beauty and self-care essentials, including skincare, hair care, makeup, and curated beauty sets designed to elevate your natural glow.</p>"
+          }
+        },
+        "faq_cnnQDT": {
+          "type": "faq",
+          "settings": {
+            "title": "Do you ship internationally?",
+            "content": "<p>Leilati offers a wide range of beauty and self-care essentials, including skincare, hair care, makeup, and curated beauty sets designed to elevate your natural glow.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_Ch6z3P",
+        "faq_NHxUfz",
+        "faq_bKNdiw",
+        "faq_rmLeNC",
+        "faq_cnnQDT"
+      ],
+      "name": "FAQs",
+      "settings": {
+        "heading": "Frequently Asked",
+        "heading_highlight": "Questions",
+        "color_bg": "#ffffff",
+        "max_width": "",
+        "fullwidth": false,
+        "padding": "",
+        "margin": "80px 0px | | | 40px 0px"
+      }
+    }
+  },
+  "order": [
+    "breadcrumb",
+    "faq_template2_EEh4ht"
+  ]
+}
