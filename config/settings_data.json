@@ -1334,7 +1334,7 @@
           "max_width": "",
           "fullwidth": false,
           "padding": "",
-          "margin": "60px 0px | | | 30px 0px"
+          "margin": "80px 0px | | | 40px 0px"
         }
       },
       "featured_products_qgDe7q": {
@@ -1474,7 +1474,7 @@
           "color_bg": "rgba(0,0,0,0)",
           "max_width": "",
           "fullwidth": false,
-          "padding": "60px 0px | | | 30px 0px",
+          "padding": "80px 0px | | | 40px 0px",
           "margin": "",
           "view_all_text": "View All",
           "view_all_link": "shopify://collections"
@@ -1487,7 +1487,7 @@
           "custom_class": "home_products",
           "max_width": "",
           "fullwidth": false,
-          "padding": "60px 0px | | | 30px 0px",
+          "padding": "80px 0px | | | 40px 0px",
           "margin": "",
           "title": "Gentle <span>Skincare</span> For Every Day",
           "button": "",
