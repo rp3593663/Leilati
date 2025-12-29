@@ -32,7 +32,7 @@
         "title_PWfwxA": {
           "type": "title",
           "settings": {
-            "title": "Hi! I’m Leila! 💖✨",
+            "title": "Hi! I’m <span>Leila!</span> 💖✨",
             "color": "#000000",
             "font_size": 40,
             "line_height": 40,
