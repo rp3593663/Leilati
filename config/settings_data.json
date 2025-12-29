@@ -422,7 +422,7 @@
       "collection-sidebarbottom": {
         "type": "collection-sidebarbottom",
         "settings": {
-          "products_enbale": true,
+          "products_enbale": false,
           "products_title": "Feature Product",
           "collection_handle": "frontpage",
           "products_limit": "3",
