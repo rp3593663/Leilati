@@ -12,8 +12,9 @@
     "breadcrumb": {
       "type": "page-breadcrumb",
       "settings": {
-        "enable": false,
-        "bgimage": false
+        "enable": true,
+        "bgimage": true,
+        "image": "shopify://shop_images/collection_bg.png"
       }
     },
     "main": {
