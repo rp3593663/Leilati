@@ -89,6 +89,7 @@
     "shipping_calculator_submit_button_label": "ESTIMATE",
     "sidebar_position": "without",
     "layout_blog": "grid",
+    "blog_categories_menu": "blog_categories_menu",
     "show_locale_selector": true,
     "show_currency_selector": true,
     "auto_currency": true,
@@ -183,8 +184,7 @@
         "settings": {
           "enable": true,
           "bgimage": true,
-          "image": "shopify://shop_images/collection_bg.png",
-          "blog_categories_menu": "blog_categories_menu"
+          "image": "shopify://shop_images/collection_bg.png"
         }
       },
       "blog-sidebar": {
