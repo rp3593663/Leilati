@@ -183,7 +183,7 @@
         "settings": {
           "enable": true,
           "bgimage": false,
-          "blog_categories_menu": ""
+          "blog_categories_menu": "blog_categories_menu"
         }
       },
       "blog-sidebar": {
