@@ -42,45 +42,32 @@
         "2d30cb30-b344-4e0b-8ac8-fcaf0c06314f": {
           "type": "contact",
           "settings": {
+            "icon": "shopify://shop_images/map.svg",
             "title": "Address",
-            "desc": "14 LE Gounlburn St, Sydney 1198NSA."
+            "desc": "P.O Box 1111, Odessa,\nFL 33556"
           }
         },
         "07472fc1-0f5c-4f7b-9484-fd46656c6a76": {
           "type": "contact",
           "settings": {
+            "icon": "shopify://shop_images/phone.svg",
             "title": "Phone",
-            "desc": "(+089) 19918989"
+            "desc": "(+45) 7199 2516"
           }
         },
         "e2e5831e-9da9-4c6d-873b-9bcc5333dfd0": {
           "type": "contact",
           "settings": {
+            "icon": "shopify://shop_images/email.svg",
             "title": "Email",
-            "desc": "support@domain.com"
-          }
-        },
-        "db09c0da-2d35-4727-b190-262e4c3a49b0": {
-          "type": "contact",
-          "settings": {
-            "title": "Opening Time",
-            "desc": "8:00Am – 10:00Pm, Sunday Close"
-          }
-        },
-        "ffdbd048-a083-47de-9662-39fe1acff923": {
-          "type": "contact",
-          "settings": {
-            "title": "Fax",
-            "desc": "0123456789"
+            "desc": "Support@leilati.com"
           }
         }
       },
       "block_order": [
         "2d30cb30-b344-4e0b-8ac8-fcaf0c06314f",
         "07472fc1-0f5c-4f7b-9484-fd46656c6a76",
-        "e2e5831e-9da9-4c6d-873b-9bcc5333dfd0",
-        "db09c0da-2d35-4727-b190-262e4c3a49b0",
-        "ffdbd048-a083-47de-9662-39fe1acff923"
+        "e2e5831e-9da9-4c6d-873b-9bcc5333dfd0"
       ],
       "settings": {
         "max_width": "",
