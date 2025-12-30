@@ -94,7 +94,7 @@
 						<div class="form-group">
 							<label>{{ "contact.form.message" | t }}</label>
 							<textarea id="contactFormMessage" class="form-control {% if form.errors contains 'body' %} is-invalid{% endif %}"
-								rows="10" name="contact[{{ 'contact.form.message' | t }}]" rows="4"
+								rows="5" name="contact[{{ 'contact.form.message' | t }}]" rows="4"
 								placeholder="Your message..."
 								required>{% if form.body %}{{ form.body }}{% endif %}</textarea>
 						</div>
