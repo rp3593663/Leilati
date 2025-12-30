@@ -11230,9 +11230,11 @@ button {
 			align-items: center;
 			justify-content: center;
 			gap: 100px;
+			@media(max-width: 991px){
+				gap: 20px;
+			}
 			@media(max-width: 767px){
 				justify-content: left;
-				gap: 20px;
 				overflow-x: auto;
 			}
 			.item-blog {
