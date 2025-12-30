@@ -182,7 +182,8 @@
         "type": "blog-breadcrumb",
         "settings": {
           "enable": true,
-          "bgimage": false,
+          "bgimage": true,
+          "image": "shopify://shop_images/collection_bg.png",
           "blog_categories_menu": "blog_categories_menu"
         }
       },
