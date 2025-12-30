@@ -11245,7 +11245,12 @@ button {
 					text-align: center;
 					vertical-align: middle;
 					display: flex;
-					padding: 0px 10px 12px;
+					padding: 0px 12px 10px;
+					white-space: nowrap;
+					@media(max-width: 767px){
+						font-size: 16px;
+    					line-height: 22px;
+					}
 				}
 				&.active{
 					a{
