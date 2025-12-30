@@ -1,10 +1,10 @@
 <section class="page-account">
+  <header class="page-header page-account__header">
+      <h1 class="page-title">{{ 'customer.activate_account.title' | t }}</h1>
+      <p>{{ 'customer.activate_account.subtext' | t }}</p>
+    </header>
   <div class="container">
     <div class="page-account__inner activate-account">
-      <header class="page-header page-account__header">
-        <h1 class="page-title">{{ 'customer.activate_account.title' | t }}</h1>
-        <p>{{ 'customer.activate_account.subtext' | t }}</p>
-      </header>
       <div class="activate-account__form">
         {% form 'activate_customer_password' %}
           {{ form.errors | default_errors }}

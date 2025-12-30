@@ -1,9 +1,9 @@
 {% paginate customer.orders by 20 %}
 <section class="page-account">
+	<header class="page-header page-account__header">
+		<h1 class="page-title">{{ 'customer.account.title' | t }}</h1>
+	</header>
 	<div class="container">
-		<header class="page-header page-account__header">
-			<h1 class="page-title">{{ 'customer.account.title' | t }}</h1>
-		</header>
 		<div class="page-account__inner dashboard">
 			<div class="page-account__content">
 				<div class="nav-StickySidebar">
