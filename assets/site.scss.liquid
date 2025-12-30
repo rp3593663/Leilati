@@ -11230,6 +11230,11 @@ button {
 			align-items: center;
 			justify-content: center;
 			gap: 100px;
+			@media(max-width: 767px){
+				justify-content: left;
+				gap: 50px;
+				overflow-x: auto;
+			}
 			.item-blog {
 				a{
 					color: #00000099;
