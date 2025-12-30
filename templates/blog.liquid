@@ -5,13 +5,15 @@
 	{%- if settings.blog_categories_menu -%}
 		<div class="kretoss-blog-list">
 			<div class="container">
-				{% for link in linklists[settings.blog_categories_menu].links %}
-					<div class="item-blog{% if link.handle == blog.handle %} active{% endif %}">
-						<a href="{{ link.url }}" title="{{ link.title | escape }}">
-							{{ link.title }}
-						</a>
-					</div>
-				{%- endfor -%}
+				<div class="blog-menu-list">
+					{% for link in linklists[settings.blog_categories_menu].links %}
+						<div class="item-blog{% if link.handle == blog.handle %} active{% endif %}">
+							<a href="{{ link.url }}" title="{{ link.title | escape }}">
+								{{ link.title }}
+							</a>
+						</div>
+					{%- endfor -%}
+				</div>
 			</div>
 		</div>
 	{%- endif -%}
