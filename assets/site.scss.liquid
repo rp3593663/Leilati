@@ -12948,16 +12948,15 @@ button {
 		}
 	}
 	.register-account{
-		padding:15px;
-		border:1px solid $gray-dark;
-		line-height:18px;
-		font-size:12px;
-		font-weight:500;
-		text-transform:uppercase;
-		letter-spacing:1px;
-		margin-top:20px;
-		text-align:center;
-		
+		border: 1px solid $theme-color;
+		background: $theme-color;
+		box-shadow: 0px 0px 14px 0px #FFFFFF8C inset;
+		color: $white;
+		&:hover{
+			color: $theme-color;
+			background: $white;
+			box-shadow: 0 0 14px #8f80638c inset;
+		}
 	}
 	.recover-password__form{
 		.form-link{
