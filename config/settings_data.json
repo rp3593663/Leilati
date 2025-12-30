@@ -807,7 +807,7 @@
         "type": "blog-template",
         "settings": {
           "limit": 6,
-          "limit-coloumn": 3,
+          "limit-coloumn": 4,
           "limit-coloumn2": 3,
           "show_date": true,
           "show_category": true,
