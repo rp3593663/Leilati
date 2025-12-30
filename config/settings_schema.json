@@ -992,6 +992,11 @@
           { "value": "standar", "label": "Standar" }
         ],
         "default": "standar"
+      },
+      {
+        "type": "link_list",
+        "id": "blog_categories_menu",
+        "label": "Blog Categories Menu"
       }
     ]
   },

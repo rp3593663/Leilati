@@ -4,9 +4,9 @@
 <section class="page-blog {{ sidebar_position }} {{ layout_blog }}">
 	<div class="container">
 		<div class="page-blog__inner">
-			{%- if section.settings.blog_categories_menu -%}
+			{%- if settings.blog_categories_menu -%}
 				<div class="kretoss-blog-list">
-					{% for link in linklists[section.settings.blog_categories_menu].links %}
+					{% for link in linklists[settings.blog_categories_menu].links %}
 						<div class="item-blog{% if link.handle == blog.handle %} active{% endif %}">
 							<a href="{{ link.url }}" title="{{ link.title | escape }}">
 								{{ link.title }}
