@@ -51,7 +51,7 @@
         "07472fc1-0f5c-4f7b-9484-fd46656c6a76": {
           "type": "contact",
           "settings": {
-            "icon": "shopify://shop_images/phone.svg",
+            "icon": "shopify://shop_images/call.svg",
             "title": "Phone",
             "desc": "(+45) 7199 2516"
           }
