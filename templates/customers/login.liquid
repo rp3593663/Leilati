@@ -32,7 +32,7 @@
 									{%- endif -%}
 									{%- if form.password_needed -%}
 										<div class="form-link">
-											<a class="js-forget-password theme_btn" href="#recover">{{ 'customer.login.forgot_password' | t }}</a>
+											<a class="js-forget-password" href="#recover">{{ 'customer.login.forgot_password' | t }}</a>
 										</div>
 									{%- endif -%}
 									<div class="form-button">
@@ -57,7 +57,7 @@
 											required/>
 										</div>
 										<div class="form-button">
-											<input type="submit" class="btn btn-primary" value="{{ 'customer.recover_password.submit' | t }}">
+											<input type="submit" class="btn theme_btn" value="{{ 'customer.recover_password.submit' | t }}">
 											<a class="js-forget-password" href="#customers-login">{{ 'customer.recover_password.cancel' | t }}</a>
 										</div>
 									{% endform %}
