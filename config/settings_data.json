@@ -808,7 +808,7 @@
         "settings": {
           "limit": 6,
           "limit-coloumn": 3,
-          "limit-coloumn2": 3,
+          "limit-coloumn2": 2,
           "show_date": false,
           "show_category": true,
           "select_pagination": "loadmore"
