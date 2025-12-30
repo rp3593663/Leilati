@@ -11853,7 +11853,10 @@ button {
     position: relative;
     font-size: 16px;
     transition: all .3s ease;
-	padding-bottom:5px;
+    padding-bottom: 5px;
+    line-height: 16px;
+    color: $theme-color;
+    font-weight: 500;
 	&:before{
 		content: "";
 		width: 100%;
@@ -11862,7 +11865,7 @@ button {
 		position: absolute;
 		bottom: 2px;
 		@include rtl-left(0);
-		background: $gray-dark;
+		background: $theme-color;
 	}
 	&:hover{
 		&:before{
