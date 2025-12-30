@@ -21,17 +21,7 @@
 			<div class="container">
 				<div class="kretoss-breadcrumbs__inner">
 					<h2 class="kretoss-breadcrumbs__title">{{ 'blogs.article.blogs' | t }}</h2>
-					{%- if section.settings.blog_categories_menu -%}
-						<div class="kretoss-blog-list">
-							{% for link in linklists[section.settings.blog_categories_menu].links %}
-								<div class="item-blog{% if link.handle == blog.handle %} active{% endif %}">
-									<a href="{{ link.url }}" title="{{ link.title | escape }}">
-										{{ link.title }}
-									</a>
-								</div>
-							{%- endfor -%}
-						</div>
-					{%- endif -%}
+					
 				</div>
 			</div>
 		</div>
