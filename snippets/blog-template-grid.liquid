@@ -31,7 +31,7 @@
 			<a class="article__heading-link" href="{{ article.url }}">{{ article.title }}</a>
 		</h2>
 		<div class="article__excerpt">
-			{{ article_content | strip_html | truncatewords: 30 }}
+			{{ article_content | strip_html | truncatewords: 20 }}
 			<div class="article__read-more">
 				<a class="article__read-more-url" href="{{ article.url }}">{{ 'blogs.article.read_more' | t }}</a>
 			</div>
