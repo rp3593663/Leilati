@@ -7067,7 +7067,7 @@ kretoss.ajax_blogpage = (function() {
 		};
 	};
 	ajaxBreadcrumbs = function() {
-		if ( $('.kretoss-breadcrumbs .kretoss-blog-list').length ) {
+		if ( $('.kretoss-blog-list').length ) {
 			var $categories_blog = $('.kretoss-blog-list');
 			$($categories_blog).on('click', 'a', function(e){
 				e.preventDefault();
