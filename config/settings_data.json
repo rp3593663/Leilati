@@ -809,7 +809,7 @@
           "limit": 6,
           "limit-coloumn": 4,
           "limit-coloumn2": 3,
-          "show_date": true,
+          "show_date": false,
           "show_category": true,
           "select_pagination": "loadmore"
         }
