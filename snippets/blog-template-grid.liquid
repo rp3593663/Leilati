@@ -33,9 +33,9 @@
 		<div class="article__excerpt">
 			{% comment %} {{ article_content | strip_html | truncatewords: 20 }} {% endcomment %}
 			{{ article_content }}
-			<div class="article__read-more">
-				<a class="article__read-more-url" href="{{ article.url }}">{{ 'blogs.article.read_more' | t }}</a>
-			</div>
+		</div>
+		<div class="article__read-more">
+			<a class="article__read-more-url" href="{{ article.url }}">{{ 'blogs.article.read_more' | t }}</a>
 		</div>
 	</div>
 </article>
