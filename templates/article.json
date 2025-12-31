@@ -47,7 +47,7 @@
         "bf930588-69b9-4d52-aea1-d3613423cc51"
       ],
       "settings": {
-        "layout_article": "sticky_title",
+        "layout_article": "prallax_image",
         "show_category": true,
         "show_author": true,
         "show_date": true
