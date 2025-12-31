@@ -11,6 +11,7 @@
   "sections": {
     "breadcrumb": {
       "type": "article-breadcrumb",
+      "disabled": true,
       "settings": {
         "text_align": "center"
       }
@@ -46,7 +47,7 @@
         "bf930588-69b9-4d52-aea1-d3613423cc51"
       ],
       "settings": {
-        "layout_article": "one_column",
+        "layout_article": "sticky_title",
         "show_category": true,
         "show_author": true,
         "show_date": true
