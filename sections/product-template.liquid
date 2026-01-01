@@ -66,6 +66,10 @@
 											<div class="product-single__description">
 												{{ product.content }}
 											</div>
+										{%- when 'icon_with_text' -%}
+											<div class="product__icon_with_text">
+												
+											</div>
 										{%- when 'title' -%}
 											<h1 class="product-single__title"{% if block.settings.product_title_margin != blank %} style="margin:{{ block.settings.product_title_margin }}"{% endif %} itemprop="name">{{ product.title }}</h1>
 										{%- when 'price' -%}
