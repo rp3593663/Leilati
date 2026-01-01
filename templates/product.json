@@ -116,7 +116,7 @@
         "product_button_wishlist": true,
         "product_button_compare": false,
         "show_sticky_cart": true,
-        "media_layout": "thumbnails",
+        "media_layout": "gird-sticky",
         "position_thumbnails": "left",
         "thumbnail_count": 5,
         "enable_video_looping": false,
