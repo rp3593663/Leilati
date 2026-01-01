@@ -58,6 +58,10 @@
 												</div> 
 												<!-- End of Judge.me code -->
 											{%- endif -%}
+										{%- when 'custom_html' -%}
+											<div class="product-single__html">
+												{{ block.settings.custom_html }}
+											</div>
 										{%- when 'title' -%}
 											<h1 class="product-single__title"{% if block.settings.product_title_margin != blank %} style="margin:{{ block.settings.product_title_margin }}"{% endif %} itemprop="name">{{ product.title }}</h1>
 										{%- when 'price' -%}
@@ -604,7 +608,7 @@
             ]
         },
 		{
-            "type": "html",
+            "type": "custom_html",
             "name": "Custom HTML",
 			"settings": [
 				{
