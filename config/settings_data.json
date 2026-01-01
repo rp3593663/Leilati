@@ -1803,6 +1803,13 @@
       "after_before_carousel_Dq8VEg",
       "blog_carousel_Kyz7y4",
       "faq_template2_XyXBRN"
-    ]
+    ],
+    "blocks": {
+      "14060646107696862457": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      }
+    }
   }
 }
