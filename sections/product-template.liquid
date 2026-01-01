@@ -62,6 +62,10 @@
 											<div class="product-single__html">
 												{{ block.settings.custom_html }}
 											</div>
+										{%- when 'description' -%}
+											<div class="product-single__html">
+												{{ product.content }}
+											</div>
 										{%- when 'title' -%}
 											<h1 class="product-single__title"{% if block.settings.product_title_margin != blank %} style="margin:{{ block.settings.product_title_margin }}"{% endif %} itemprop="name">{{ product.title }}</h1>
 										{%- when 'price' -%}
