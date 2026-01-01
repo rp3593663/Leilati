@@ -92,6 +92,14 @@
             "heading_2": "",
             "heading_3": ""
           }
+        },
+        "border_HmqDr8": {
+          "type": "border",
+          "settings": {
+            "border_color": "#d9d9d9",
+            "border_height": 1,
+            "border_space": "0 0 15px"
+          }
         }
       },
       "block_order": [
@@ -104,7 +112,8 @@
         "border_3Edh7Y",
         "d536ea46-cbed-4bde-aaea-fe78f24a6418",
         "41f383cc-7fbe-4e8e-bda6-b4760a2d78d7",
-        "icon_with_text_6tmikm"
+        "icon_with_text_6tmikm",
+        "border_HmqDr8"
       ],
       "settings": {
         "product_button_wishlist": true,
