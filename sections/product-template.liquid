@@ -68,8 +68,47 @@
 											</div>
 										{%- when 'icon_with_text' -%}
 											<div class="product__icon_with_text">
-												
+												{%- assign icon1 = product.metafields.custom.feature_icon_1 | default: block.settings.icon_1 -%}
+												{%- assign heading1 = product.metafields.custom.feature_heading_1 | default: block.settings.heading_1 -%}
+												{%- assign icon2 = product.metafields.custom.feature_icon_2 | default: block.settings.icon_2 -%}
+												{%- assign heading2 = product.metafields.custom.feature_heading_2 | default: block.settings.heading_2 -%}
+												{%- assign icon3 = product.metafields.custom.feature_icon_3 | default: block.settings.icon_3 -%}
+												{%- assign heading3 = product.metafields.custom.feature_heading_3 | default: block.settings.heading_3 -%}
+
+												<div class="icon-text-grid">
+													{% if icon1 != blank or heading1 != blank %}
+													<div class="icon-text-item">
+														{% if icon1 != blank %}
+														<img src="{{ icon1 | image_url: width: 80 }}" alt="{{ heading1 | escape }}">
+														{% endif %}
+														{% if heading1 != blank %}
+														<p>{{ heading1 }}</p>
+														{% endif %}
+													</div>
+													{% endif %}
+													{% if icon2 != blank or heading2 != blank %}
+													<div class="icon-text-item">
+														{% if icon2 != blank %}
+														<img src="{{ icon2 | image_url: width: 80 }}" alt="{{ heading2 | escape }}">
+														{% endif %}
+														{% if heading2 != blank %}
+														<p>{{ heading2 }}</p>
+														{% endif %}
+													</div>
+													{% endif %}
+													{% if icon3 != blank or heading3 != blank %}
+													<div class="icon-text-item">
+														{% if icon3 != blank %}
+														<img src="{{ icon3 | image_url: width: 80 }}" alt="{{ heading3 | escape }}">
+														{% endif %}
+														{% if heading3 != blank %}
+														<p>{{ heading3 }}</p>
+														{% endif %}
+													</div>
+													{% endif %}
+												</div>
 											</div>
+
 										{%- when 'title' -%}
 											<h1 class="product-single__title"{% if block.settings.product_title_margin != blank %} style="margin:{{ block.settings.product_title_margin }}"{% endif %} itemprop="name">{{ product.title }}</h1>
 										{%- when 'price' -%}
