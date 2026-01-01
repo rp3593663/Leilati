@@ -85,19 +85,12 @@
             "buy_more_quatily": 5
           }
         },
-        "a8494504-c014-4f6c-ab53-c68b90fb6096": {
-          "type": "ask-share",
-          "disabled": true,
+        "icon_with_text_6tmikm": {
+          "type": "icon_with_text",
           "settings": {
-            "product_ask-share_margin": "",
-            "social_ask_a_question": false,
-            "ask_a_question_title": "Ask a question",
-            "delivery_return": false,
-            "delivery_return_title": "Delivery & Return",
-            "delivery_return_heading": "Shipping info",
-            "delivery_return_content": "<p><b>Return Policy:</b> We will gladly accept returns for any reason within 30 days of receipt of delivery.</p>\n\n<p><b>Availability:</b> Ships anywhere in the United States</p>\n\n<p><b>Processing Time:</b> Allow 3-4 business days processing time for your order to ship.</p>",
-            "social_sharing_products": true,
-            "product_share_title": "Share"
+            "heading_1": "",
+            "heading_2": "",
+            "heading_3": ""
           }
         }
       },
@@ -111,7 +104,7 @@
         "border_3Edh7Y",
         "d536ea46-cbed-4bde-aaea-fe78f24a6418",
         "41f383cc-7fbe-4e8e-bda6-b4760a2d78d7",
-        "a8494504-c014-4f6c-ab53-c68b90fb6096"
+        "icon_with_text_6tmikm"
       ],
       "settings": {
         "product_button_wishlist": true,
