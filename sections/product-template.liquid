@@ -56,6 +56,7 @@
 													<span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
 												</div>
 											{%- endif -%}
+											
 										{%- when 'title' -%}
 											<h1 class="product-single__title"{% if block.settings.product_title_margin != blank %} style="margin:{{ block.settings.product_title_margin }}"{% endif %} itemprop="name">{{ product.title }}</h1>
 										{%- when 'price' -%}
