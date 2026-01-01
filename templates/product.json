@@ -87,6 +87,7 @@
         },
         "a8494504-c014-4f6c-ab53-c68b90fb6096": {
           "type": "ask-share",
+          "disabled": true,
           "settings": {
             "product_ask-share_margin": "",
             "social_ask_a_question": false,
