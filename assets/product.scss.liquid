@@ -1581,19 +1581,10 @@ $prefixes: ("-moz-", "");
 		.product__organization__text{
 			text-transform:capitalize;
 			a{
-				color:$grey-dark;
+				color: $grey-dark;
 				position:relative;
+				text-decoration: unset;
 				display:inline-block;
-				&:before{
-					content:"";
-					position:absolute;
-					bottom:1px;
-					right:0;
-					width:100%;
-					height:1px;
-					background:$theme-color;
-					transition:all 0.3s ease;
-				}
 				&:hover{
 					&:before{
 						left:0;
