@@ -79,7 +79,7 @@
 													{% if icon1 != blank or heading1 != blank %}
 													<div class="icon-text-item">
 														{% if icon1 != blank %}
-														<img src="{{ icon1 | image_url: width: 80 }}" alt="{{ heading1 | escape }}">
+														<img src="{{ icon1 | image_url }}" alt="{{ heading1 | escape }}">
 														{% endif %}
 														{% if heading1 != blank %}
 														<p>{{ heading1 }}</p>
@@ -89,7 +89,7 @@
 													{% if icon2 != blank or heading2 != blank %}
 													<div class="icon-text-item">
 														{% if icon2 != blank %}
-														<img src="{{ icon2 | image_url: width: 80 }}" alt="{{ heading2 | escape }}">
+														<img src="{{ icon2 | image_url }}" alt="{{ heading2 | escape }}">
 														{% endif %}
 														{% if heading2 != blank %}
 														<p>{{ heading2 }}</p>
@@ -99,7 +99,7 @@
 													{% if icon3 != blank or heading3 != blank %}
 													<div class="icon-text-item">
 														{% if icon3 != blank %}
-														<img src="{{ icon3 | image_url: width: 80 }}" alt="{{ heading3 | escape }}">
+														<img src="{{ icon3 | image_url }}" alt="{{ heading3 | escape }}">
 														{% endif %}
 														{% if heading3 != blank %}
 														<p>{{ heading3 }}</p>
