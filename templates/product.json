@@ -60,12 +60,6 @@
             "border_space": "0 0 15px"
           }
         },
-        "954a0c38-864c-4ab4-a7d3-53d9b57e5493": {
-          "type": "inventory",
-          "settings": {
-            "product_inventory_margin": ""
-          }
-        },
         "d536ea46-cbed-4bde-aaea-fe78f24a6418": {
           "type": "form_atc",
           "settings": {
@@ -114,7 +108,6 @@
         "927ef033-d3ed-4607-8fbd-5f6ace340713",
         "description_x3BCUk",
         "border_3Edh7Y",
-        "954a0c38-864c-4ab4-a7d3-53d9b57e5493",
         "d536ea46-cbed-4bde-aaea-fe78f24a6418",
         "41f383cc-7fbe-4e8e-bda6-b4760a2d78d7",
         "a8494504-c014-4f6c-ab53-c68b90fb6096"
