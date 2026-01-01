@@ -52,16 +52,18 @@
           "type": "description",
           "settings": {}
         },
+        "border_3Edh7Y": {
+          "type": "border",
+          "settings": {
+            "border_color": "#d9d9d9",
+            "border_height": 1,
+            "border_space": "0 0 15px"
+          }
+        },
         "954a0c38-864c-4ab4-a7d3-53d9b57e5493": {
           "type": "inventory",
           "settings": {
             "product_inventory_margin": ""
-          }
-        },
-        "047e2033-07a0-42bb-9bcb-895808ae3999": {
-          "type": "shipping_policy",
-          "settings": {
-            "product_shipping_policy_margin": ""
           }
         },
         "d536ea46-cbed-4bde-aaea-fe78f24a6418": {
@@ -111,15 +113,15 @@
         "979d480a-ca3a-4236-8042-920780f3e1ba",
         "927ef033-d3ed-4607-8fbd-5f6ace340713",
         "description_x3BCUk",
+        "border_3Edh7Y",
         "954a0c38-864c-4ab4-a7d3-53d9b57e5493",
-        "047e2033-07a0-42bb-9bcb-895808ae3999",
         "d536ea46-cbed-4bde-aaea-fe78f24a6418",
         "41f383cc-7fbe-4e8e-bda6-b4760a2d78d7",
         "a8494504-c014-4f6c-ab53-c68b90fb6096"
       ],
       "settings": {
         "product_button_wishlist": true,
-        "product_button_compare": true,
+        "product_button_compare": false,
         "show_sticky_cart": true,
         "media_layout": "thumbnails",
         "position_thumbnails": "left",
