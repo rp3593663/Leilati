@@ -97,7 +97,8 @@
 												</div>
 											{% else %}		
 												{% include 'product-price', variant: current_variant %}
-											{% endif %}		
+											{% endif %}	
+											<div class="shipping_text">Shipping calculated at checkout.</div>	
 										{%- when 'vendor' -%}
 												<div class="product__vendor"{% if block.settings.product_vendor_margin != blank %} style="margin:{{ block.settings.product_vendor_margin }}"{% endif %}>
 													<div class="product__organization__text"><a href="/collections/vendors?q={{ product.vendor }}">{{ product.vendor }}</a></div>
