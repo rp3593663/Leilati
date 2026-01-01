@@ -94,7 +94,6 @@
 											{% endif %}		
 										{%- when 'vendor' -%}
 												<div class="product__vendor"{% if block.settings.product_vendor_margin != blank %} style="margin:{{ block.settings.product_vendor_margin }}"{% endif %}>
-													<div class="product__organization__label">{{ 'products.product.vendor' | t }}</div>
 													<div class="product__organization__text"><a href="/collections/vendors?q={{ product.vendor }}">{{ product.vendor }}</a></div>
 												</div>
 										{%- when 'inventory' -%}
