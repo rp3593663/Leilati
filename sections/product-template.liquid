@@ -52,11 +52,12 @@
 									{%- case block.type -%}
 										{%- when 'rating' -%}
 											{%- if settings.product_reviews_enable -%}
-												<div class="product-single__reviews product-review">
-													<span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
-												</div>
+												<!-- Start of Judge.me code --> 
+												<div style='{{ jm_style }}' class='jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}' data-auto-install='false'> 
+													{{ product.metafields.judgeme.badge }} 
+												</div> 
+												<!-- End of Judge.me code -->
 											{%- endif -%}
-											
 										{%- when 'title' -%}
 											<h1 class="product-single__title"{% if block.settings.product_title_margin != blank %} style="margin:{{ block.settings.product_title_margin }}"{% endif %} itemprop="name">{{ product.title }}</h1>
 										{%- when 'price' -%}
